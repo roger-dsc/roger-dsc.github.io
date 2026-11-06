@@ -1,0 +1,163 @@
+<!doctype html>
+<!-- The City Lab: plan the city behind the map with the levers urban planners use. Every rule of thumb is quoted
+     from its source (numbered, listed at the end). Linked from Central → City Planning Office. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City Lab · roger_dsc</title>
+    <meta name="description" content="Plan the city behind the metro map with the levers urban planners use, and see how your plan measures up." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="/favicon.png" />
+    <style>:root{--ink:#101418;--muted:#5e666e;--plate:#fff;--land-2:#f3f4f4;--line-soft:#1014181f;--focus:#101418;--live:#8a9199;--f:"Helvetica Neue", Helvetica, Inter, sans-serif}*{box-sizing:border-box}button,select,input{font-family:inherit}body{font-family:var(--f);color:var(--ink);background:var(--plate);margin:0;line-height:1.5}.topbar{border-bottom:1px solid var(--line-soft);justify-content:space-between;align-items:center;gap:16px;height:60px;padding:0 20px;display:flex}.brand{color:inherit;align-items:center;gap:12px;text-decoration:none;display:flex}.brand img{background:var(--plate);border:1px solid #10141817;border-radius:5px;flex:none;width:28px;height:28px;padding:2px}.brand-text{flex-direction:column;line-height:1.1;display:flex}.brand-text strong{font:700 1.25rem/1 var(--f);letter-spacing:-.01em}.brand-text small{color:var(--muted);letter-spacing:.04em;font-size:.75rem}@media (width<=700px){.topbar{gap:8px;padding:0 12px}.brand-text small{display:none}.brand{margin:-8px;padding:8px}}@media (width<=480px){.brand-text{display:none}}.back{color:var(--ink);border:1px solid var(--ink);white-space:nowrap;border-radius:4px;padding:7px 12px;font-weight:500;text-decoration:none}.back:hover{background:var(--ink);color:var(--plate)}main{gap:28px;max-width:1180px;margin:0 auto;padding:32px 16px 72px;display:grid}h1{text-wrap:balance;margin:0 0 6px;font-size:1.75rem}h2{letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;font-size:.75rem;font-weight:700}h3{margin:0 0 4px;font-size:1rem}p{margin:0}.lede{color:var(--muted);max-width:70ch}a{color:var(--ink);text-underline-offset:3px}:focus-visible{outline:2px solid var(--focus);outline-offset:2px}.regions{gap:10px;display:grid}.chips{flex-wrap:wrap;gap:8px;display:flex}.chips button{font:500 15px var(--f);border:1px solid var(--line-soft);background:var(--plate);color:var(--ink);cursor:pointer;border-radius:4px;padding:7px 12px}.chips button[aria-pressed=true]{background:var(--ink);color:var(--plate);border-color:var(--ink)}.region-note{color:var(--muted);max-width:80ch;min-height:1.5em;font-size:14px}figure{gap:8px;margin:0;display:grid}.stage{background:#f3f4f4;border-radius:6px;padding:8px;position:relative}.stage svg{width:100%;height:auto;display:block}.stage .busy{color:var(--muted);font-size:13px;position:absolute;top:12px;right:14px}figcaption{color:var(--muted);font-size:13px}.score{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;display:grid}.tile{border:1px solid var(--line-soft);border-radius:6px;align-content:start;gap:4px;padding:12px 14px;display:grid}.tile .k{color:var(--muted);font-size:13px}.tile .v{font-variant-numeric:tabular-nums;font-size:1.35rem;font-weight:700}.tile .t{color:var(--muted);font-size:13px}.tile .t b{color:var(--ink);font-weight:500}.levers{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 28px;display:grid}fieldset{border:0;align-content:start;gap:14px;min-width:0;margin:0;padding:0;display:grid}legend{letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;padding:0;font-size:.75rem;font-weight:700}.lever{gap:4px;display:grid}.lever label{justify-content:space-between;gap:10px;font-weight:500;display:flex}.lever output{color:var(--muted);text-align:right;font-size:14px;font-weight:400}.lever small{color:var(--muted);font-size:13px;line-height:1.4}input[type=range]{width:100%;accent-color:var(--ink)}.check{align-items:center;gap:8px;font-weight:500;display:flex}.actions{flex-wrap:wrap;gap:10px;display:flex}.actions button{font:500 15px var(--f);cursor:pointer;border:1px solid var(--ink);background:var(--plate);color:var(--ink);border-radius:4px;padding:10px 14px}.actions button.primary{background:var(--ink);color:var(--plate)}.actions .done{color:var(--muted);align-self:center;font-size:14px}.learn{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 36px;display:grid}.learn article{gap:6px;max-width:62ch;display:grid}.learn p{color:var(--ink);font-size:15px}q{quotes:"“" "”"}sup a{color:var(--muted);padding-left:1px;font-size:11px;text-decoration:none}.sources ol{color:var(--muted);gap:6px;margin:0;padding-left:1.4em;font-size:14px;display:grid}.sources li a{color:var(--ink)}.fine{color:var(--muted);max-width:80ch;font-size:13px}.compare{gap:10px;display:grid}.find{flex-wrap:wrap;gap:8px;display:flex}.find input{min-width:0;max-width:420px;font:400 16px var(--f);color:var(--ink);background:var(--plate);border:1px solid var(--line-soft);border-radius:4px;flex:240px;padding:8px 12px}.find button{font:500 15px var(--f);cursor:pointer;border:1px solid var(--ink);background:var(--ink);color:var(--plate);border-radius:4px;padding:8px 14px}.find button:disabled{opacity:.6;cursor:default}.chips button small{color:inherit;opacity:.7;font-size:13px;font-weight:400}.compare .tile .t a{color:inherit}.compare .score{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.compare .tile .k{justify-content:space-between;align-items:baseline;gap:8px;display:flex}.live-tag{letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line-soft);white-space:nowrap;border-radius:3px;padding:1px 6px;font-size:11px;font-weight:500;text-decoration:none}.live-tag:hover{color:var(--ink);border-color:var(--ink)}.compare-key{color:var(--muted);flex-wrap:wrap;gap:6px 18px;font-size:13px;display:flex}.compare-key>span{align-items:center;gap:6px;display:inline-flex}.swatch{background:var(--ink);border-radius:0 4px 4px 0;flex:none;width:16px;height:10px}.bars{grid-template-columns:minmax(0,max-content) minmax(60px,1fr) auto;align-items:center;gap:8px 10px;margin:6px 0 4px;display:grid}.bars .who{text-overflow:ellipsis;white-space:nowrap;max-width:9em;font-size:14px;font-weight:500;overflow:hidden}.bars .track{background:var(--land-2);border-radius:0 4px 4px 0;height:10px}.bars .bar{background:var(--ink);border-radius:0 4px 4px 0;max-width:100%;height:100%;display:block}.swatch.is-live,.bars .bar.is-live{background:var(--live)}.bars .num{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap;font-size:14px;font-weight:700}.facts{margin:4px 0 2px;display:grid}.facts>div{border-top:1px solid var(--line-soft);justify-content:space-between;align-items:baseline;gap:12px;padding:7px 0;display:flex}.facts>div:first-child{border-top:0}.facts dt{font-size:14px}.facts dd{font-variant-numeric:tabular-nums;text-align:right;min-width:0;margin:0;font-size:14px;font-weight:700}.facts dd a{color:inherit;text-decoration:none}.facts dd a:hover{text-decoration:underline}.facts dt small{color:var(--muted);margin-left:4px;font-size:13px}.facts dd small{color:var(--muted);font-size:13px;font-weight:400;display:block}@media (width<=900px){.score{grid-template-columns:repeat(2,minmax(0,1fr))}.levers,.learn{grid-template-columns:minmax(0,1fr)}}</style>
+    <script type="module" crossorigin src="/assets/cityLab-xpZfaYZC.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/700-C5UiCGSs.js">
+    <link rel="modulepreload" crossorigin href="/assets/data-Dd5ynzkT.js">
+    <link rel="stylesheet" crossorigin href="/assets/700-_IUOKiS0.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">
+        <img src="/logo.png" alt="" width="28" height="28" />
+        <span class="brand-text"><strong>roger_dsc</strong><small>together, onward</small></span>
+      </a>
+      <nav style="display:flex;gap:8px"><a class="back" href="/#/station/central" style="border-color:var(--line-soft)">Central</a><a class="back" href="/">← Map</a></nav>
+    </header>
+    <main>
+      <section>
+        <h1>City Lab</h1>
+        <p class="lede">Plan the city behind the map with the levers urban planners use. Every station stays where the map puts it, on its line and in its order; the rest follows your plan. The rules of thumb are quoted from their sources, listed at the end.</p>
+      </section>
+
+      <section class="regions" aria-labelledby="regions-h">
+        <h2 id="regions-h">Start from a real city's density</h2>
+        <div class="chips" id="regions"></div>
+        <p class="region-note" id="region-note"></p>
+      </section>
+
+      <figure>
+        <div class="stage"><svg id="city" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The city drawn from the map as a white architectural model"></svg><span class="busy" id="busy" hidden>Redrawing…</span></div>
+        <figcaption>Drawn from the map's own data: the three lines, every station and district. Buildings are simple blocks by type; zoom in to see the streets. Added transit is drawn in ink: rail as track with ties, light rail as a fine line, guided bus dashed, buses dotted.</figcaption>
+      </figure>
+
+      <section aria-labelledby="score-h">
+        <h2 id="score-h">How your plan measures up</h2>
+        <div class="score" id="score"></div>
+        <p class="fine" style="margin-top:10px">Estimates from the drawing: homes are counted by building type with the density ranges of the City of Hamilton's official plan<sup><a href="#s-hamilton">5</a></sup>, people with the average household size of the chosen city's country<sup><a href="#s-undesa">10</a></sup>. Rough, for comparing plans, not for planning a real city.</p>
+      </section>
+
+      <section class="compare" aria-labelledby="compare-h">
+        <h2 id="compare-h">Compare with a real city</h2>
+        <form class="find" id="find" role="search">
+          <input id="find-q" type="search" name="city" placeholder="A city, such as Vancouver or Seoul" aria-label="A real city" autocomplete="off" enterkeyhint="search">
+          <button type="submit">Look up</button>
+        </form>
+        <div class="chips" id="places"></div>
+        <p class="region-note" id="place-note" aria-live="polite"></p>
+        <p class="compare-key" id="compare-key" hidden><span><span class="live-tag">Live</span><span class="swatch is-live" aria-hidden="true"></span>Looked up live from Wikidata or the World Bank</span><span><span class="swatch" aria-hidden="true"></span>Our plan, from the drawing</span></p>
+        <div class="score" id="compare"></div>
+        <div class="score" id="compare-more"></div>
+        <p class="fine">Looked up live from Wikidata<sup><a href="#s-wikidata">18</a></sup> and the World Bank<sup><a href="#s-wb">19</a></sup> when you search: your search goes to them, and nothing is sent otherwise. The figures are as they hold them today, not checked by us; each links to its record. A city's density here is over its official area, which may be only its dense core or may take in parks, water and farmland, so it can differ a lot from built-up density, the measure our plan and the regions above use: the City of Paris has about 200 people per hectare<sup><a href="#s-wikidata">18</a></sup>, Paris's whole built-up area 64.<sup><a href="#s-unh">4</a></sup></p>
+      </section>
+
+      <section aria-labelledby="levers-h">
+        <h2 id="levers-h">The levers, by the D variables of the built environment<sup><a href="#s-ds">1</a></sup></h2>
+        <div class="levers" id="levers"></div>
+        <div class="actions" style="margin-top:18px">
+          <button type="button" class="primary" id="share">Copy a link to your plan</button>
+          <button type="button" id="reseed">New layout</button>
+          <button type="button" id="reset">Back to our plan</button>
+          <span class="done" id="done" aria-live="polite"></span>
+        </div>
+      </section>
+
+      <section aria-labelledby="learn-h">
+        <h2 id="learn-h">How urban planning works</h2>
+        <div class="learn">
+          <article>
+            <h3>Plans and zoning</h3>
+            <p>A city sets out where it is going in a comprehensive plan, <q>an ordered process that determines community goals and aspirations in terms of community development</q>.<sup><a href="#s-plan">2</a></sup> Zoning puts it into practice: a municipality <q>divides land into land-use and building "zones", each of which has a set of regulations for new development</q>.<sup><a href="#s-zoning">3</a></sup></p>
+          </article>
+          <article>
+            <h3>The D variables</h3>
+            <p>In travel research, <q>urban development patterns have come to be characterized by "D" variables. The original "three Ds," coined by Cervero and Kockelman (1997), are density, diversity, and design</q>, later joined by destination accessibility and distance to transit. The authors add that <q>the Ds are rough categories</q>.<sup><a href="#s-ds">1</a></sup></p>
+          </article>
+          <article>
+            <h3>Density</h3>
+            <p>Planners count homes per hectare. One official plan sets detached houses at 0–20 units per hectare, townhouses and duplexes at 20–40, low-rise apartments at 60–75 and apartments at 100–200.<sup><a href="#s-hamilton">5</a></sup> Between houses and towers is the <q>missing middle</q>, a term <q>coined by architect Daniel Parolek in 2010</q>.<sup><a href="#s-middle">6</a></sup> UN-Habitat recommends <q>at least 15,000 people per km², that is 150 people/ha</q> for a sustainable neighbourhood.<sup><a href="#s-unh">4</a></sup></p>
+          </article>
+          <article>
+            <h3>Height and floor area</h3>
+            <p>Downtown, heights are set through the floor area ratio: <q>the ratio of a building's total floor area (gross floor area) to the size of the piece of land upon which it is built</q>.<sup><a href="#s-far">7</a></sup> In this lab, the downtown height lever stands in for it.</p>
+          </article>
+          <article>
+            <h3>Diversity: mixed use</h3>
+            <p>UN-Habitat's third principle: <q>At least 40 per cent of floor space should be allocated for economic use in any neighbourhood</q>, and <q>single function blocks should cover less than 10 per cent of any neighbourhood</q>.<sup><a href="#s-unh">4</a></sup> Ewing and Cervero found that <q>walking is most strongly related to measures of land use diversity, intersection density, and the number of destinations within walking distance</q>.<sup><a href="#s-ds">1</a></sup></p>
+          </article>
+          <article>
+            <h3>Design: the street network</h3>
+            <p>Design <q>includes street network characteristics within a neighborhood</q>, measured <q>in terms of average block size, proportion of four-way intersections, or number of intersections per square mile</q>.<sup><a href="#s-ds">1</a></sup> UN-Habitat's first principle: <q>The street network should occupy at least 30 per cent of the land and at least 18 km of street length per km²</q>.<sup><a href="#s-unh">4</a></sup></p>
+          </article>
+          <article>
+            <h3>Distance to transit</h3>
+            <p>Transit-oriented development puts homes and jobs near stations: <q>The densest areas of TOD are normally located within a radius of 1/4 to 1/2 mile (400 to 800 m) around the central transit stop</q>. <q>A half mile (800 m) corresponds to the distance someone can walk in 10 minutes</q>.<sup><a href="#s-tod">8</a></sup></p>
+          </article>
+          <article>
+            <h3>Other kinds of transit</h3>
+            <p>Each mode serves a different width of city. UN-Habitat's table of catchments gives, for each, the stop interval and the corridor width served: bus <q>200M</q> and <q>800M</q>, guided bus <q>300M</q> and <q>800M</q>, light rail <q>600M</q> and <q>1,000M</q>, rail <q>1,000M+</q> and <q>2,000M+</q>. <q>Combining walkability and public transport catchment, the suggested distance between two arterial routes is between 800 to 1,000 m.</q><sup><a href="#s-unh">4</a></sup></p>
+          </article>
+          <article>
+            <h3>Station spacing</h3>
+            <p>The map spaces stations evenly so it reads well; a real city doesn't. Modelling the best placement of stations, Crampton found <q>that stations should indeed be significantly more dispersed in the suburbs</q>.<sup><a href="#s-crampton">9</a></sup></p>
+          </article>
+          <article>
+            <h3>Destination accessibility</h3>
+            <p><q>Destination accessibility is synonymous with access to trip attractions</q>, and <q>in some studies, destination accessibility is simply represented by distance to the central business district</q>, as it is here. It mattered most for driving: <q>vehicle miles traveled (VMT) is most strongly related to measures of accessibility to destinations</q>.<sup><a href="#s-ds">1</a></sup></p>
+          </article>
+          <article>
+            <h3>Green space: 3+30+300</h3>
+            <p>A rule of thumb launched by Cecil Konijnendijk in 2021: <q>3 mature trees from every home</q>, <q>30 percent tree canopy cover in every neighbourhood</q> and <q>300 metres walking distance from the nearest high-quality public park or other green space</q>.<sup><a href="#s-333">11</a></sup></p>
+          </article>
+          <article>
+            <h3>Where the city stops</h3>
+            <p>An urban growth boundary is <q>a regional boundary, set in an attempt to control urban sprawl</q>; in the United States, <q>the first urban growth boundary was established in 1958, around the city of Lexington, Kentucky</q>.<sup><a href="#s-ugb">12</a></sup> Across 120 cities, built-up densities <q>declined significantly, at an average annual rate of 2.0±0.4 percent, between 1990 and 2000</q>.<sup><a href="#s-angel">13</a></sup></p>
+          </article>
+          <article>
+            <h3>The map and the city</h3>
+            <p>This site's map follows London's: <q>The first schematic Tube map was designed by Harry Beck in 1931</q>, and <q>as a schematic diagram, it shows not the geographic locations but the relative positions of the stations</q>.<sup><a href="#s-tube">14</a></sup> The first lever moves between the two.</p>
+          </article>
+          <article>
+            <h3>Taking part</h3>
+            <p>Planning works best with the people who live in the city. Sherry Arnstein's 1969 ladder runs from <q>non-participation</q> through <q>tokenism</q> to <q>citizen power</q>.<sup><a href="#s-arnstein">15</a></sup> The IAP2 spectrum has <q>five levels: information, consultation, involvement, collaboration and empowerment</q>.<sup><a href="#s-iap2">16</a></sup> A charrette is <q>a collaborative design process that involves all necessary disciplines at key decision points to produce a feasible plan</q>.<sup><a href="#s-charrette">17</a></sup> This lab is a small one: shape the city, then share the link to your plan with us.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="sources" aria-labelledby="sources-h">
+        <h2 id="sources-h">Sources</h2>
+        <ol>
+          <li id="s-ds">Reid Ewing and Robert Cervero (2010), <a href="https://econpapers.repec.org/RePEc:taf:rjpaxx:v:76:y:2010:i:3:p:265-294" target="_blank" rel="noopener">Travel and the Built Environment: A Meta-Analysis</a>, Journal of the American Planning Association 76(3): 265–294. Quoted from the abstract and from the paper as reproduced in <a href="https://ptod.lib.utah.edu/docs/A.pdf" target="_blank" rel="noopener">Appendix A: What the Travel Literature Tells Us</a>.</li>
+          <li id="s-plan">Wikipedia, <a href="https://en.wikipedia.org/wiki/Comprehensive_planning" target="_blank" rel="noopener">Comprehensive planning</a>.</li>
+          <li id="s-zoning">Wikipedia, <a href="https://en.wikipedia.org/wiki/Zoning" target="_blank" rel="noopener">Zoning</a>.</li>
+          <li id="s-unh">UN-Habitat (2014), <a href="https://unhabitat.org/five-principles-of-neighbourhood-design" target="_blank" rel="noopener">A New Strategy of Sustainable Neighbourhood Planning: Five Principles</a>, Urban Planning Discussion Note 3.</li>
+          <li id="s-hamilton">City of Hamilton (2013), <a href="https://www.hamilton.ca/sites/default/files/2022-07/uhop-volume2-appendixb-secondaryplanresidentialdensitychart.pdf" target="_blank" rel="noopener">Urban Hamilton Official Plan, Appendix B: Secondary Plan Residential Density Chart</a>.</li>
+          <li id="s-middle">Wikipedia, <a href="https://en.wikipedia.org/wiki/Missing_middle_housing" target="_blank" rel="noopener">Missing middle housing</a>.</li>
+          <li id="s-far">Wikipedia, <a href="https://en.wikipedia.org/wiki/Floor_area_ratio" target="_blank" rel="noopener">Floor area ratio</a>.</li>
+          <li id="s-tod">Wikipedia, <a href="https://en.wikipedia.org/wiki/Transit-oriented_development" target="_blank" rel="noopener">Transit-oriented development</a>.</li>
+          <li id="s-crampton">Graham R. Crampton (2000), <a href="https://ideas.repec.org/a/sae/urbstu/v37y2000i3p623-632.html" target="_blank" rel="noopener">Urban Economic Structure and the Optimal Rail System</a>, Urban Studies 37(3): 623–632.</li>
+          <li id="s-undesa">United Nations, Department of Economic and Social Affairs, Population Division (2022), <a href="https://www.un.org/development/desa/pd/data/household-size-and-composition" target="_blank" rel="noopener">Database on Household Size and Composition 2022</a>.</li>
+          <li id="s-333">Nature Based Solutions Institute, <a href="https://nbsi.eu/330300-principle/" target="_blank" rel="noopener">The 3+30+300 Principle</a>.</li>
+          <li id="s-ugb">Wikipedia, <a href="https://en.wikipedia.org/wiki/Urban_growth_boundary" target="_blank" rel="noopener">Urban growth boundary</a>.</li>
+          <li id="s-angel">Shlomo Angel, Jason Parent, Daniel L. Civco and Alejandro Blei (2010), <a href="https://www.lincolninst.edu/publications/working-papers/persistent-decline-urban-densities/" target="_blank" rel="noopener">The Persistent Decline in Urban Densities: Global and Historical Evidence of 'Sprawl'</a>, Lincoln Institute of Land Policy.</li>
+          <li id="s-tube">Wikipedia, <a href="https://en.wikipedia.org/wiki/Tube_map" target="_blank" rel="noopener">Tube map</a>.</li>
+          <li id="s-arnstein">Sherry R. Arnstein (1969), <a href="https://lithgow-schmidt.dk/sherry-arnstein/ladder-of-citizen-participation.html" target="_blank" rel="noopener">A Ladder of Citizen Participation</a>, Journal of the American Institute of Planners 35(4): 216–224.</li>
+          <li id="s-iap2">Wikipedia, <a href="https://en.wikipedia.org/wiki/Public_participation_(decision_making)" target="_blank" rel="noopener">Public participation (decision making)</a>.</li>
+          <li id="s-charrette">Wikipedia, <a href="https://en.wikipedia.org/wiki/Charrette" target="_blank" rel="noopener">Charrette</a> (the National Charrette Institute's definition).</li>
+          <li id="s-wikidata"><a href="https://www.wikidata.org/" target="_blank" rel="noopener">Wikidata</a>, looked up live: a city's population (with the source Wikidata cites for it, when it cites one), official area, country, founding date, sister cities and GDP when recorded, and the World Heritage Sites, museums and galleries, universities, and theatres and concert halls it records near the centre.</li>
+          <li id="s-wb">The World Bank, World Development Indicators, looked up live: <a href="https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS" target="_blank" rel="noopener">Urban population (% of total population)</a> and <a href="https://data.worldbank.org/indicator/SP.URB.GROW" target="_blank" rel="noopener">Urban population growth (annual %)</a>, both from the United Nations' <a href="https://population.un.org/wup/" target="_blank" rel="noopener">World Urbanization Prospects</a>; <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD" target="_blank" rel="noopener">GDP per capita (current US$)</a>, from national statistics; <a href="https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS" target="_blank" rel="noopener">Unemployment, total (% of total labor force) (modeled ILO estimate)</a>, from the International Labour Organization; and the <a href="https://data.worldbank.org/indicator/SI.POV.GINI" target="_blank" rel="noopener">Gini index</a>, from the World Bank's Poverty and Inequality Platform.</li>
+        </ol>
+      </section>
+    </main>
+
+  </body>
+</html>

@@ -1,0 +1,160 @@
+import"./700-C5UiCGSs.js";import{c as e,d as t,f as n,h as r,i,l as a,m as o,o as s,p as c,r as l,s as u,t as d,u as f}from"./map-CFt65r91.js";import{n as p,r as m,t as h}from"./data-Dd5ynzkT.js";import{c as g,l as _,u as v}from"./chime-D_qcpDa9.js";var y={central:`<circle cx="12" cy="12" r="5"/><path d="M2 12h5M17 12h5M12 2v5M12 17v5"/>`,flag:`<path d="M5 21V3"/><path d="M5 4h13l-3 4 3 4H5"/>`,plane:`<path d="M2 14l20-6-8 13-3-6z"/><path d="M11 15l3-3"/>`,gate:`<path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-7a3 3 0 0 1 6 0v7"/>`,people:`<circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 20a5 5 0 0 1 10 0M11 20a5 5 0 0 1 10 0"/>`,dome:`<path d="M4 10a8 6 0 0 1 16 0z"/><path d="M12 4V2M3 10h18M6 10v8M10 10v8M14 10v8M18 10v8M3 21h18"/>`,waves:`<path d="M2 9c3-3 5 3 8 0s5 3 8 0 3 0 4 0M2 15c3-3 5 3 8 0s5 3 8 0 3 0 4 0"/>`,chart:`<path d="M4 21V11M10 21V5M16 21v-7M22 21H2"/>`,chip:`<rect x="7" y="7" width="10" height="10" rx="1"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/>`,bolt:`<path d="M13 2L5 14h6l-1 8 8-12h-6z"/>`,mountain:`<path d="M2 20l7-12 4 6 3-4 6 10z"/><path d="M7.5 11l1.5 1.5 1.5-1.5"/>`,roof:`<path d="M2 7h20M4 7c2 1 14 1 16 0M6 7v14M18 7v14M4 12h16"/>`,library:`<path d="M3 4h4v16H3zM8 7h4v13H8z"/><path d="M14 8l3.9-1 3.6 13-3.9 1z"/>`,book:`<path d="M12 6c-2-2-6-2-9-1v14c3-1 7-1 9 1 2-2 6-2 9-1V5c-3-1-7-1-9 1z"/><path d="M12 6v14"/>`,frame:`<rect x="3" y="4" width="18" height="16"/><path d="M3 16l5-5 4 4 3-3 6 6"/><circle cx="16" cy="9" r="1.5"/>`,signal:`<circle cx="12" cy="12" r="2"/><path d="M8 8a6 6 0 0 0 0 8M16 8a6 6 0 0 1 0 8M5 5a10 10 0 0 0 0 14M19 5a10 10 0 0 1 0 14"/>`,leaf:`<path d="M5 19C5 9 11 4 20 4c0 9-5 15-15 15z"/><path d="M5 19l8-8"/>`,track:`<rect x="2" y="6" width="20" height="12" rx="6"/><rect x="6" y="9.5" width="12" height="5" rx="2.5"/>`,sun:`<circle cx="12" cy="11" r="4"/><path d="M12 3v2M5 11H3M21 11h-2M6.3 5.3l1.4 1.4M17.7 5.3l-1.4 1.4M2 18c3-2 5 2 8 0s5 2 8 0 3 0 4 0"/>`,house:`<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>`,tree:`<path d="M12 3l6 9h-3l4 6H5l4-6H6z"/><path d="M12 18v3"/>`,anchor:`<circle cx="12" cy="5" r="2"/><path d="M12 7v14M8 11h8M4 14a8 8 0 0 0 16 0"/>`,crane:`<path d="M6 21V4h12M6 4l12 0-4 4M14 8v5"/><rect x="12" y="13" width="4" height="3"/><path d="M3 21h8"/>`,cottage:`<path d="M4 20V11l8-6 8 6v9z"/><path d="M10 20v-5h4v5"/><path d="M16 7V4h2v4.5"/>`,apartment:`<rect x="6" y="3" width="12" height="18"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M11 21v-3h2v3"/>`,terrace:`<path d="M2 20V10l4-3 4 3 4-3 4 3 4-3v13z"/><path d="M6 20v-4M12 20v-4M18 20v-4"/>`,houses:`<path d="M2 20v-7l5-4 5 4v7z"/><path d="M12 20v-9l5-4 5 4v9z"/><path d="M7 20v-3M17 20v-4"/>`,clock:`<rect x="7" y="2" width="10" height="20"/><circle cx="12" cy="8" r="3"/><path d="M12 6.5V8l1 1M10 22v-5h4v5"/>`,dumbbell:`<path d="M6 8v8M18 8v8M3 10v4M21 10v4M6 12h12"/>`,telescope:`<path d="M3 11l14-6 2 5-14 6z"/><path d="M10 14l-3 7M12 13l3 8M17 5l1-2"/>`,speech:`<path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9h8M8 12h5"/>`,ship:`<path d="M3 15h18l-3 5H6z"/><path d="M12 3v12M12 4l6 9h-6"/>`,lighthouse:`<path d="M9 22l1.5-14h3L15 22z"/><path d="M8 22h8M10 8h4V5l-2-2-2 2zM4 6l4 1M20 6l-4 1"/>`,guild:`<path d="M3 21h18M5 21V10M19 21V10M9 21v-6M15 21v-6M3 10l9-6 9 6z"/><circle cx="12" cy="8" r="1"/>`,envelope:`<rect x="3" y="6" width="18" height="13" rx="1"/><path d="M3 7l9 6 9-6"/>`,easel:`<rect x="4" y="3" width="16" height="11"/><path d="M12 14v3M7 21l5-4 5 4M8 10l3-3 2 2 3-3"/>`,lookout:`<path d="M2 21l7-9 4 4 3-3 6 8z"/><circle cx="9" cy="5" r="2"/><path d="M9 7v5M7 9h4"/>`,stage:`<path d="M2 20h20M4 20V5c3 2 5 2 8 0 3 2 5 2 8 0v15"/><path d="M4 5c0 6 3 9 5 9M20 5c0 6-3 9-5 9"/>`,music:`<path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/>`,teacup:`<path d="M4 10h13v4a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H16M8 3c-1 1.5 1 2.5 0 4M12 3c-1 1.5 1 2.5 0 4M3 21h16"/>`,seaplane:`<path d="M3 11l18-3-5 6H8z"/><path d="M10 9l2-5h2l-1 5M9 14v3M15 14v3M5 18h6M13 18h6"/>`,market:`<path d="M3 9l2-5h14l2 5"/><path d="M3 9c0 1.7 1.3 3 3 3s3-1.3 3-3c0 1.7 1.3 3 3 3s3-1.3 3-3c0 1.7 1.3 3 3 3s3-1.3 3-3"/><path d="M5 12v9h14v-9M10 21v-5h4v5"/>`,car:`<path d="M3 16v-4l2-5h14l2 5v4z"/><path d="M3 12h18M7 16v2M17 16v2"/><circle cx="7.5" cy="14" r="1"/><circle cx="16.5" cy="14" r="1"/>`,dojo:`<path d="M2 8h20M4 8c2-2 14-2 16 0"/><path d="M5 8v13M19 8v13M3 21h18M9 21v-6h6v6M8 12h8"/>`};function b(e,t=28){let n=y[e];return n?`<svg class="picto" viewBox="0 0 24 24" width="${t}" height="${t}" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${n}</svg>`:``}var x=(e,n=`zh`)=>r(e)?`<span class="${n}" lang="${t()}">${r(e)}</span>`:``,S=e=>String(e).replace(/[&<>"']/g,e=>({"&":`&amp;`,"<":`&lt;`,">":`&gt;`,'"':`&quot;`,"'":`&#39;`})[e]),ee=`connect@rogerluo.org`,te=e=>String.fromCharCode(65+e);function C(e,t=``){let n=h[e];return`<span class="badge ${t} ${n.construction?`badge--construction`:``} ${n.express?`badge--express`:``}" style="--c:${n.color}" title="Line ${n.code} · ${S(n.name)}${n.construction?` (under construction)`:``}">${n.code}</span>`}var w=e=>`Line ${h[e].code} · ${S(h[e].name)} ${x(h[e])}${h[e].express?` <span class="under-construction">Express</span>`:``}${h[e].construction?` <span class="under-construction">Under construction</span>`:``}`;function ne(e,t){let n=i[t],r=n.indexOf(e),a=h[t],o=n.map((e,n)=>`
+    <a href="#/station/${e}?line=${t}" class="strip-stop ${n<r?`is-past`:``} ${n===r?`is-here`:``} ${p[e].kind===`unexplored`?`is-unexplored`:``}"
+       ${n===r?`aria-current="location"`:``}>
+      <span class="strip-dot"></span>
+      <span class="strip-name">${S(p[e].name)}${x(p[e],`zh zh--sm`)}</span>
+    </a>`).join(``);return`
+    <nav class="car" style="--c:${a.color}" aria-label="Line ${a.code} stops">
+      <div class="car-top"><a class="car-line" href="#/line/${a.code}">${C(t,`badge--sm`)} ${w(t)}</a>
+        <span class="car-towards">${a.loop?a.express?`Express loop`:`Loop line`:`towards ${S(p[n[n.length-1]].name)}`}</span></div>
+      <div class="car-strip" style="--n:${n.length}">${o}</div>
+    </nav>`}function re(e){if(!m.prev&&!m.next&&!m.home&&!m.random)return`<p class="empty-note">Webring connection coming soon.</p>`;let t=(e,t)=>t?`<a class="btn" href="${S(t)}" target="_blank" rel="noopener">${e}</a>`:`<span class="btn is-disabled" title="Set in WEBRING in src/data.js">${e} · not set</span>`;return`<div class="links">${(e.webring===`prev`?[t(`← Previous site`,m.prev),t(`All sites in the ring`,m.home)]:[t(`Next site →`,m.next),t(`Random site`,m.random)]).join(``)}</div>`}var ie=e=>e.replace(/\[([^\]]+)\]\((#\/[^)\s]+)\)/g,`<a href="$2">$1</a>`),ae=(e,t)=>e.toLowerCase().replace(/[^a-z0-9]/g,``)===t.toLowerCase().replace(/[^a-z0-9]/g,``);function oe(e){let t=(p[e].exits??[]).map((t,n)=>({x:t,letter:te(n),articles:f(e,t.id).filter(e=>!e.parent)})).filter(e=>e.articles.length);return t.length?`
+    <ol class="exits">
+      ${t.map(({x:t,letter:n,articles:r})=>`
+        <li class="exit" id="exit-${t.id}">
+          <span class="exit-letter" aria-label="Exit ${n}">${n}</span>
+          <div class="exit-body">
+            <h3 class="exit-name">${S(t.label)}${t.name&&t.name!==t.label?` <span class="exit-building">${S(t.name)}</span>`:``}</h3>
+            <ul class="exit-dests">
+              ${r.map(n=>`<li><a href="#/station/${e}/${n.slug}"${ae(n.title,t.label)&&r.length===1?` aria-label="${S(n.title)}">Learn more`:`>${S(n.title)}`}</a>${n.org?` <span class="exit-note">${S(n.org)}</span>`:``}</li>`).join(``)}
+              ${(t.links??[]).map(e=>`<li><a href="${S(e.href)}">${S(e.label)}</a>${e.note?` <span class="exit-note">${S(e.note)}</span>`:``}</li>`).join(``)}
+            </ul>
+          </div>
+        </li>`).join(``)}
+    </ol>`:``}function se(e,t){let n=p[e],r=u[e]??[],a=t&&r.includes(t)?t:r.find(e=>!h[e].construction)??r[0],o=h[a].color,s=n.kind===`unexplored`,c=i[a],l=c.indexOf(e),d=h[a].loop,f=c[l-1]??(d?c[c.length-1]:void 0),m=c[l+1]??(d?c[0]:void 0),g=(e,t)=>e?`<a class="nb-side nb-side--${t}" href="#/station/${e}?line=${a}">
+         ${t===`prev`?`<span class="nb-arrow">◀&#xFE0E;</span>`:``}
+         <span>${S(p[e].name)}${x(p[e],`zh zh--band`)}</span>
+         ${t===`next`?`<span class="nb-arrow">▶&#xFE0E;</span>`:``}
+       </a>`:`<span class="nb-side nb-side--${t} is-end"><span>${t===`prev`?`Start of line`:`End of line`}</span></span>`,_=r.length>1?`
+    <div class="transfer">
+      <span>Change here for</span>
+      ${r.filter(e=>e!==a).map(t=>`
+        <a href="#/station/${e}?line=${t}" class="transfer-link">${C(t,`badge--sm`)} ${w(t)}</a>`).join(``)}
+    </div>`:``,v=(n.links??[]).map(e=>`<a class="btn" href="${S(e.href)}" target="_blank" rel="noopener">${S(e.label)}<i class="ext-arrow" aria-hidden="true"></i></a>`).join(``),y=oe(e),te=`mailto:${ee}?subject=${encodeURIComponent(`A note for ${n.name} station`)}`;return`
+    <article class="station-page ${s?`is-unexplored`:``}" style="--c:${o}">
+      <header class="nameboard">
+        <div class="nb-top">
+          <span class="nb-art">${b(n.art,34)}</span>
+          <h1 class="nb-name">${S(n.name)}${x(n,`nb-zh`)}</h1>
+          <span class="nb-codes">${r.map(e=>C(e)).join(``)}</span>
+        </div>
+        <div class="nb-band">
+          ${g(f,`prev`)}
+          ${g(m,`next`)}
+        </div>
+      </header>
+
+      <section class="intro${n.photo?v?` has-photo is-profile`:` has-photo`:``}">
+        ${n.photo?`<div class="intro-text">`:``}
+        ${n.district&&n.district!==n.name||s?`<p class="nb-sub">${S(n.district??``)}${s?`${n.district?` · `:``}Future station`:``}</p>`:``}
+        ${n.about?`<p class="tagline">${S(n.about)}</p>`:``}
+        ${n.quote?`<blockquote class="station-quote"><p>${S(n.quote.text)}</p><p class="cite">― ${S(n.quote.by)}</p></blockquote>`:``}
+        ${[n.description??[]].flat().map(e=>`<p class="station-desc">${ie(S(e))}</p>`).join(``)}
+        ${v?`<div class="intro-connect"><h2 class="section-title">Connect with me</h2><div class="links">${v}</div></div>`:``}
+        ${n.photo?`</div>`:``}
+        ${n.photo?`<figure class="station-figure${n.photo.wide?` is-wide`:``}"><img class="station-photo" src="${S(n.photo.src)}" alt="${S(n.photo.alt??``)}">${n.photo.caption?`<figcaption>${S(n.photo.caption)}</figcaption>`:``}</figure>`:``}
+      </section>
+
+      ${n.webring?`<section class="above"><h2 class="section-title">Webring</h2>${re(n)}</section>`:``}
+      ${y?`<section class="above"><h2 class="section-title">Exits</h2>${y}</section>`:``}
+      ${!y&&!n.webring?`<p class="empty-note">Nothing written here yet.</p>`:``}
+
+      <section class="above say">
+        <h2 class="section-title">I have something to say</h2>
+        <div class="say-row"><a class="btn" href="${te}">Leave a note</a></div>
+      </section>
+
+      <footer class="ride">
+        ${_}
+        ${ne(e,a)}
+      </footer>
+    </article>`}var ce={n:[0,-18,`middle`],s:[0,32,`middle`],e:[16,7,`start`],w:[-16,7,`end`],ne:[12,-10,`start`],nw:[-12,-10,`end`],se:[12,24,`start`],sw:[-12,24,`end`]};function le(e){let n=h[e],a=e=>[p[e].x,p[e].y],o=(e,t=24)=>e.length*t*.56,c=Object.keys(h).filter(t=>t!==e).map(e=>`<path d="${s(h[e].route)}" class="lm-other"/>`).join(``),l=n.route.map(e=>typeof e==`string`?a(e):e),d=n.loop?l.slice(1).map((e,t)=>{let n=l[t];if(Math.hypot(e[0]-n[0],e[1]-n[1])<170)return``;let r=Math.atan2(e[1]-n[1],e[0]-n[0])*180/Math.PI;return`<path d="M-9,-9 L5,0 L-9,9" class="lm-arrow" transform="translate(${(n[0]+e[0])/2},${(n[1]+e[1])/2}) rotate(${r})"/>`}).join(``):``,f={x0:1/0,y0:1/0,x1:-1/0,y1:-1/0},m=(e,t,n,r)=>{f.x0=Math.min(f.x0,e),f.y0=Math.min(f.y0,t),f.x1=Math.max(f.x1,n),f.y1=Math.max(f.y1,r)};for(let[e,t]of l)m(e-20,t-20,e+20,t+20);let g=(n.phases??[]).map(e=>{let n=Math.max(o(e.name,28)*1.1,o(r(e),21)*1.6);return m(e.at[0]-n/2,e.at[1]-26,e.at[0]+n/2,e.at[1]+36),`
+    <g class="lm-phase">
+      ${e.stations.map(e=>`<circle cx="${a(e)[0]}" cy="${a(e)[1]}" r="26"/>`).join(``)}
+      <text x="${e.at[0]}" y="${e.at[1]}" text-anchor="middle"><tspan class="lm-step">${S(e.name.toUpperCase())}</tspan><tspan x="${e.at[0]}" dy="28" lang="${t()}">${S(r(e))}</tspan></text>
+    </g>`}).join(``),_=i[e],v=_.map(t=>{let[n,r]=a(t),i=p[t].name,s=o(i),c=(u[t]??[]).length>1,l=_.filter(e=>e!==t&&Math.abs(p[e].y-r)<2&&Math.abs(p[e].x-n)<160),d;if(l.length){let e=Math.cos(.7),t=Math.sin(.7);m(n,r-16-s*t-24,n+s*e+24,r),d=`<text transform="translate(${n+4},${r-18}) rotate(-40)" class="lm-name">${S(i)}</text>`}else{let[e,a,o]=ce[p[t].label??`s`],l=c?7:0,u=e+Math.sign(e)*l,f=o===`middle`?a+Math.sign(a)*l:a,h=n+u,g=o===`start`?h:o===`end`?h-s:h-s/2;m(g,r+f-24,g+s,r+f+6),d=`<text x="${h}" y="${r+f}" text-anchor="${o}" class="lm-name">${S(i)}</text>`}return`<a href="#/station/${t}?line=${e}"><circle cx="${n}" cy="${r}" r="${c?13:9}" class="lm-dot ${c?`is-hub`:``}"/>${d}</a>`}).join(``),y=f.x1-f.x0+60,b=f.y1-f.y0+60,x=[f.x0-30,f.y0-30,y,b].map(Math.round).join(` `);return{W:y,H:b,svg:e=>`<figure class="line-map" style="--c:${n.color}">
+    <svg viewBox="${x}" style="--w:${Math.round(y*e)}px; --h:${Math.round(b*e)}px" role="img" aria-label="Map of Line ${n.code} · ${S(n.name)}${n.phases?`, grouped into `+n.phases.map(e=>e.name).join(`, `):``}">
+      ${c}${g}<path d="${s(n.route)}" class="lm-line"/>${d}${v}
+    </svg>
+    <p class="lm-hint">Swipe to see the whole line → <span lang="${t()}">${ue[t()]??``}</span></p>
+    ${n.phasesNote?`<figcaption>${S(n.phasesNote)}</figcaption>`:``}
+  </figure>`}}var ue={"zh-Hans":`左右滑动查看整条线路`,"zh-Hant":`左右滑動查看整條路線`,ja:`スワイプして路線全体を見る`},de=760;function fe(e){let t=Math.max(...Object.keys(h).map(e=>le(e).W));return le(e).svg(de/t)}var pe=e=>Object.keys(h).find(t=>h[t].code===e);function me(e){let n=h[e],r=n.i18n?.[t()],a=i[e],o=l(e),s=Math.round(o/32*60/5)*5,c=a.filter(e=>(u[e]??[]).length>1),d=(e,t)=>`<div class="lf"><dt>${e}</dt><dd>${t}</dd></div>`,f=a.map((t,r)=>{let i=p[t],o=(u[t]??[]).filter(t=>t!==e),s=!n.loop&&(r===0||r===a.length-1);return`<li class="lr-stop ${i.kind===`unexplored`?``:`is-written`} ${i.kind===`unexplored`?`is-unexplored`:``} ${o.length?`is-hub`:``}">
+      <a href="#/station/${t}?line=${e}">
+        <span class="lr-dot"></span>
+        <span class="lr-text">
+          <b>${i.kind===`airport`?`✈&#xFE0E; `:``}${S(i.name)}${x(i)}${s?` <small>Terminus</small>`:``}</b>
+          ${i.about?`<span>${S(i.about)}</span>`:``}
+        </span>
+      </a>
+      ${o.length?`<span class="lr-change">${o.map(e=>`<a href="#/line/${h[e].code}" title="Line ${h[e].code} · ${S(h[e].name)}">${C(e,`badge--sm`)}</a>`).join(``)}</span>`:``}
+    </li>`}).join(``),m=Object.keys(h).filter(t=>t!==e);return`
+    <article class="line-page" style="--c:${n.color}">
+      <header class="line-board">
+        ${C(e,`badge--lg`)}
+        <div>
+          <p class="nb-sub">Line ${n.code} · ${n.loop?`Loop line`:`${S(p[a[0]].name)} – ${S(p[a[a.length-1]].name)}`}</p>
+          <h1 class="nb-name">${S(n.name)}${x(n,`nb-zh`)}</h1>
+        </div>
+      </header>
+      <div class="line-intro">
+      <section class="intro">
+        <nav class="lang-tabs" aria-label="Second language">
+          ${[[`hans`,`zh-Hans`],[`hant`,`zh-Hant`],[`ja`,`ja`]].map(([e,n])=>`<button type="button" data-script="${e}" lang="${n}" class="${t()===n?`is-active`:``}" aria-pressed="${t()===n}">${ge[n]}</button>`).join(``)}
+        </nav>
+        ${n.about?`<p class="tagline">${S(n.about)}</p>`:``}
+        ${r?.about?`<p class="tagline tagline--tr" lang="${t()}">${S(r.about)}</p>`:``}
+        ${n.description?`<p class="station-desc">${S(n.description)}</p>`:``}
+        ${r?.description?`<p class="station-desc station-desc--tr" lang="${t()}">${S(r.description)}</p>`:``}
+      </section>
+      ${fe(e)}
+      </div>
+      <dl class="line-facts">
+        ${d(`Stations`,a.length)}
+        ${d(`Length`,`about ${o.toFixed(+(o<10))} km`)}
+        ${d(n.loop?`Once around`:`End to end`,`about ${s} min`)}
+        ${d(`Interchanges`,c.length)}
+      </dl>
+      <section>
+        <h2 class="section-title">${n.loop?`Stations, clockwise`:`Stations`}</h2>
+        <ol class="line-route ${n.loop?`is-loop`:``}">${f}</ol>
+      </section>
+      <nav class="line-others">
+        <h2 class="section-title">Other lines</h2>
+        ${m.map(e=>`<a class="transfer-link" href="#/line/${h[e].code}">${C(e,`badge--sm`)} ${w(e)}</a>`).join(``)}
+      </nav>
+    </article>`}var he=e=>new Date(e+`T12:00`).toLocaleDateString(`en-GB`,{day:`numeric`,month:`short`,year:`numeric`}),ge={en:`English`,"zh-Hans":`简体中文`,"zh-Hant":`繁體中文`,ja:`日本語`};function _e(e,t,n=`en`){let r=p[e],i=f(e).find(e=>e.slug===t);if(!i)return null;let o=[`zh-Hans`,`zh-Hant`,`ja`],s=a(t).sort((e,t)=>o.indexOf(e.lang)-o.indexOf(t.lang)),c=s.find(e=>e.lang===n)??i,l=s.length?`
+      <nav class="lang-tabs" aria-label="Language">
+        ${[{lang:`en`},...s].map(n=>`<a href="#/station/${e}/${t}${n.lang===`en`?``:`?lang=${n.lang}`}"
+          class="${n.lang===`en`&&c===i||n.lang===c.lang?`is-active`:``}" lang="${n.lang===`en`?`en`:n.lang}">${ge[n.lang]??n.lang}</a>`).join(``)}
+      </nav>`:``,d=(u[e]??[]).find(e=>!h[e].construction)??(u[e]??[])[0],m=(r.exits??[]).find(e=>e.id===c.exit);return`
+    <article class="article" style="--c:${h[d].color}">
+      <a class="crumb" href="#/station/${e}">${C(d,`badge--sm`)} ${S(r.name)}${m?` · ${S(m.label)}`:``}</a>
+      ${c.date?`<p class="entry-meta">${he(c.date)}</p>`:``}
+      ${l}
+      <h1 ${c.lang?`lang="${c.lang}"`:``}>${S(c.title)}</h1>
+      ${c.summary||c.org?`<p class="lede" ${c.lang?`lang="${c.lang}"`:``}>${[c.org,c.summary].filter(Boolean).map(S).join(` · `)}</p>`:``}
+      <div class="prose" ${c.lang?`lang="${c.lang}"`:``}>${c.html}</div>
+    </article>`}var T=null,ve=null,E=0,D=!1,O=`/`,ye=()=>(T||(T=new Audio,T.preload=`auto`,T.setAttribute(`playsinline`,``)),T),be=()=>ve??=fetch(`${O}audio/manifest.json`).then(e=>e.ok?e.json():null).catch(()=>null);be();function k(){if(D)return;D=!0;let e=ye();e.src=`${O}audio/silent.mp3`,e.play().catch(()=>{D=!1})}function xe(){E++,T?.pause()}var Se=(e,t)=>new Promise(n=>{e.onended=e.onerror=()=>n(),e.src=t,e.play().catch(()=>n())}),Ce=e=>new Promise(t=>setTimeout(t,e));async function we(e,{languages:t}={}){let n=++E,r=await be();if(n!==E)return!1;let i=ye();for(let a of e){let e=a===`chime`?[r?.chime??`audio/chime.mp3`]:Object.entries(r?.clips?.[a]??{}).filter(([e])=>!t||t.includes(e)).map(([,e])=>e);for(let t of e){if(n!==E)return!1;await Se(i,O+t),await Ce(a===`chime`?150:350)}}return n===E}var Te={n:[0,-1],s:[0,1],e:[1,0],w:[-1,0],ne:[1,-1],nw:[-1,-1],se:[1,1],sw:[-1,1]},Ee=e=>typeof e==`string`?[p[e].x,p[e].y]:e,A=e=>h[e].route.filter(e=>typeof e==`string`),j=e=>h[e].loop?[`cw`,`acw`]:[A(e)[0],A(e).at(-1)];function De(e,t,n){let r=h[t],i=!!r.loop,[a]=j(t);n??=i?`cw`:e===a?a:j(t)[1];let o=i?n===`acw`:n===a,s=r.route.map(Ee),c=A(t);o&&(s=s.reverse(),c=c.reverse());let l=Ee(e),u=s.findIndex(([e,t])=>e===l[0]&&t===l[1]),d=s[u-1]??(i?s.at(-2):null),f=s[u+1],m=d?[l[0]-d[0],l[1]-d[1]]:[f[0]-l[0],f[1]-l[1]],[g,_]=Te[p[e].label??`s`],v=c.indexOf(e),y=c[v+1]??(i?c[1]:null),b=v>0?c[v-1]:i?c.at(-2):null;return{towards:n,nextStop:y,prevStop:b,terminus:!i&&n===e,side:m[0]*_-m[1]*g<0?`left`:`right`}}var M={closing:()=>`closing`,departure:(e,t,n)=>`dep:${e}:${t}:${n}`,arrival:(e,t,n)=>`arr:${e}:${t}:${n}`},N=e=>document.querySelector(e),P=(e,n=`zh`)=>r(e)?` <span class="${n}" lang="${t()}">${r(e)}</span>`:``,F=matchMedia(`(prefers-reduced-motion: reduce)`).matches,I=N(`#tooltip`),L=d(N(`#map`),{onStation:e=>{location.hash=`#/station/${e}`},onHover(e,t){if(!e){I.classList.remove(`is-visible`);return}let n=p[e];I.innerHTML=`<div class="tt-head">${(u[e]??[]).map(e=>`<i style="background:${h[e].color}"></i>`).join(``)}<b>${n.name}${P(n)}</b></div>${n.about?`<div class="tt-sub">${n.about}</div>`:``}${n.kind===`unexplored`?`<div class="tt-sub">Future station</div>`:``}`;let r=t.querySelector(`.hit`).getBoundingClientRect();I.style.left=`${r.left+r.width/2}px`,I.style.top=`${r.top}px`,I.classList.add(`is-visible`)}}),R=null,Oe=()=>{N(`#legend-lines`).innerHTML=Object.entries(h).map(([e,t])=>`
+  <div class="legend-row">
+  <button class="legend-line" data-line="${e}" style="--c:${t.color}" aria-pressed="false">
+    <span class="badge badge--sm ${t.construction?`badge--construction`:``} ${t.express?`badge--express`:``}" style="--c:${t.color}">${t.code}</span><b>Line ${t.code} · ${t.name}${P(t)}${t.express?` <small>express loop</small>`:``}${t.construction?` <small>under construction</small>`:``}</b>
+  </button>
+  <a class="legend-about" href="#/line/${t.code}" aria-label="About Line ${t.code} · ${t.name}">About →</a>
+  </div>`).join(``)};Oe(),N(`#legend-lines`).addEventListener(`click`,e=>{let t=e.target.closest(`.legend-line`);t&&(R=R===t.dataset.line?null:t.dataset.line,L.focusLine(R),document.querySelectorAll(`.legend-line`).forEach(e=>e.setAttribute(`aria-pressed`,e.dataset.line===R)))});var z=N(`#lines-view`),B=e=>String(e).replace(/[&<>"]/g,e=>({"&":`&amp;`,"<":`&lt;`,">":`&gt;`,'"':`&quot;`})[e]),ke=()=>{z.innerHTML=`<div class="lv-wrap">`+Object.entries(h).map(([e,t])=>{let n=i[e];return`
+  <section class="lv-line" style="--c:${t.color}">
+     <h2 class="lv-head"><a class="lv-line-link" href="#/line/${t.code}"><span class="badge badge--sm ${t.construction?`badge--construction`:``} ${t.express?`badge--express`:``}" style="--c:${t.color}">${t.code}</span>
+      <span class="lv-name">Line ${t.code} · ${B(t.name)}${P(t,`zh lv-zh`)}</span></a>
+      <a class="lv-more" href="#/line/${t.code}">About this line →</a>
+      <small>${t.loop?t.express?`Express loop`:`Loop line`:`${B(p[n[0]].name)} – ${B(p[n[n.length-1]].name)}`}${t.construction?` · under construction`:``}</small></h2>
+    <ol class="lv-stops">
+      ${n.map(t=>{let n=p[t],r=(u[t]??[]).filter(t=>t!==e);return`<li class="lv-stop ${n.kind===`unexplored`?`is-unexplored`:``} ${r.length||n.kind===`airport`?`is-hub`:``} ${n.kind===`unexplored`?``:`is-written`}">
+          <a href="#/station/${t}?line=${e}">
+            <span class="lv-dot"></span>
+            <span class="lv-text"><b>${n.kind===`airport`?`✈&#xFE0E; `:``}${B(n.name)}${P(n)}</b></span>
+            ${r.map(e=>`<span class="badge badge--sm" style="--c:${h[e].color}">${h[e].code}</span>`).join(``)}
+          </a></li>`}).join(``)}
+    </ol>
+  </section>`}).join(``)+`</div>`};ke();var Ae=N(`.orient`);function je(){document.body.classList.contains(`is-lines`)?z.prepend(Ae):z.before(Ae)}function V(e){let t=e===`lines`;z.hidden=!t,N(`#view-map`).setAttribute(`aria-pressed`,!t),N(`#view-lines`).setAttribute(`aria-pressed`,t),document.body.classList.toggle(`is-lines`,t),je();try{localStorage.setItem(`view`,e)}catch{}}N(`#view-map`).onclick=()=>V(`map`),N(`#view-lines`).onclick=()=>V(`lines`);var Me=null;try{Me=localStorage.getItem(`view`)}catch{}V(Me??`map`);var H=Object.entries(p).map(([e,t])=>({kind:`Station`,label:t.name,sub:t.about??t.district??``,href:`#/station/${e}`,text:`${t.name} ${t.zh?.hans??``} ${t.zh?.hant??``} ${t.ja??``} ${t.district??``} ${t.about??``}`}));H.push(...Object.values(h).map(e=>({kind:`Line`,label:`Line ${e.code} · ${e.name}`,sub:e.about??``,href:`#/line/${e.code}`,text:`line ${e.code} ${e.name} ${e.zh?.hans??``} ${e.zh?.hant??``} ${e.ja??``} ${e.about??``}`}))),H.push(...e.map(e=>{let t=p[e.station],n=t?.exits?.find(t=>t.id===e.exit);return{kind:`Article`,label:e.org?`${e.title} · ${e.org}`:e.title,sub:`${t?.name??``}${n?` · ${n.label}`:``}`,href:`#/station/${e.station}/${e.slug}`,text:`${e.title} ${e.org??``} ${e.summary??``}`}}));var U=N(`#search`),W=N(`#search-input`),Ne=N(`#search-results`),G=[],K=0;function q(){let e=W.value.trim().toLowerCase();G=e?H.filter(t=>t.text.toLowerCase().includes(e)).slice(0,12):H.filter(e=>e.kind===`Station`).slice(0,12),K=Math.min(K,Math.max(G.length-1,0)),Ne.innerHTML=G.length?G.map((e,t)=>`
+    <li role="option" aria-selected="${t===K}" data-i="${t}">
+      <span class="sr-kind">${e.kind}</span><span class="sr-label">${B(e.label)}</span><span class="sr-sub">${B(e.sub)}</span>
+    </li>`).join(``):`<li class="sr-empty">No stations or articles match.</li>`}function Pe(e){e&&(J(),e.external?window.open(e.href,`_blank`,`noopener`):location.hash=e.href)}function Fe(){U.hidden=!1,W.value=``,K=0,q(),W.focus()}function J(){U.hidden=!0}N(`#search-open`).onclick=Fe,W.addEventListener(`input`,()=>{K=0,q()}),W.addEventListener(`keydown`,e=>{e.key===`ArrowDown`&&(K=Math.min(K+1,G.length-1),q(),e.preventDefault()),e.key===`ArrowUp`&&(K=Math.max(K-1,0),q(),e.preventDefault()),e.key===`Enter`&&Pe(G[K])}),Ne.addEventListener(`click`,e=>{let t=e.target.closest(`[data-i]`);t&&Pe(G[+t.dataset.i])}),U.addEventListener(`click`,e=>{e.target===U&&J()}),addEventListener(`keydown`,e=>{e.key===`/`&&U.hidden&&!/input|textarea/i.test(document.activeElement?.tagName)?(e.preventDefault(),Fe()):e.key===`Escape`&&!U.hidden&&(e.stopImmediatePropagation(),J())},!0);function Ie(){document.querySelectorAll(`[data-script]`).forEach(e=>e.setAttribute(`aria-pressed`,e.dataset.script===c()))}document.querySelectorAll(`[data-script]`).forEach(e=>{e.onclick=()=>o(e.dataset.script)});var Le={hans:[`一座想象中的城市。`,`点击车站开始探索。`,`为什么是一座城市 →`,`zh-Hans`],hant:[`一座想像中的城市。`,`點選車站開始探索。`,`為什麼是一座城市 →`,`zh-Hant`],ja:[`想像上の都市。`,`駅をタップして探索してください。`,`なぜ都市なのか →`,`ja`]};function Re(){let[e,t,n,r]=Le[c()];N(`.orient-tr`).innerHTML=`<span lang="${r}">${e}<span class="wide-only">${t}</span><a href="#/station/central/why-a-city?lang=${r}">${n}</a></span>`}Re();try{localStorage.removeItem(`orient`)}catch{}n(()=>{Ie(),Re(),L.setScript(),Oe(),ke(),je(),Y.classList.contains(`is-open`)&&We()}),Ie();function ze(){document.querySelectorAll(`.sound-btn`).forEach(e=>{e.setAttribute(`aria-pressed`,!g()),e.title=g()?`Chime off`:`Chime on`})}var Be=()=>we([`chime`]);document.querySelectorAll(`.sound-btn`).forEach(e=>{e.onclick=()=>{v(!g()),ze(),g()?xe():(k(),Be())}}),document.querySelectorAll(`.chime-test`).forEach(e=>{e.onclick=async()=>{k();let t=await Be();e.classList.remove(`is-playing`),e.offsetWidth,e.classList.add(`is-playing`),e.title=t?`Playing the arrival chime`:`This browser blocked audio`}}),ze();for(let e of[`pointerdown`,`touchend`,`keydown`])addEventListener(e,()=>{g()||(k(),_())},{passive:!0,capture:!0});function Ve(e,t,n){if(g())return;let r=i[n],a=!!h[n].loop,[o,s]=j(n),c=null,l=!1;if(e&&r.includes(e)){let n=r.indexOf(e),i=r.indexOf(t),u=r.length,d=i===n+1||a&&n===u-1&&i===0,f=i===n-1||a&&n===0&&i===u-1;(d||f)&&(l=!0,c=a?d?`cw`:`acw`:d?s:o)}c??=De(t,n).towards,we([`chime`,...l?[M.closing(),M.departure(e,n,c),M.arrival(t,n,c)]:[M.arrival(t,n,c)]])}N(`.legend-close`).onclick=()=>{N(`#legend`).open=!1},N(`#zoom-in`).onclick=()=>L.zoom.in(),N(`#zoom-out`).onclick=()=>L.zoom.out(),N(`#zoom-reset`).onclick=()=>L.zoom.reset();var Y=N(`#page`),X=N(`#page-body`),Z={station:null,line:null};function Q(e=location.hash){let[t,n=``]=e.replace(/^#/,``).split(`?`),[,r,i,a]=t.split(`/`),o=new URLSearchParams(n).get(`line`);return r===`line`&&pe(i)?{lineId:pe(i)}:r===`station`&&p[i]?{id:i,slug:a,line:o}:null}function He(e){return!Y.classList.contains(`is-open`)&&(Y.style.setProperty(`--door`,e),Y.hidden=!1,requestAnimationFrame(()=>Y.classList.add(`is-open`)),Y.focus({preventScroll:!0}),!0)}var Ue=()=>`<footer class="page-foot">© Roger Luo ${new Date().getFullYear()}</footer>`;function We(){let t=Q();if(!t){Ke();return}if(t.lineId){let e=h[t.lineId];Z={station:null,line:t.lineId},X.innerHTML=me(t.lineId)+Ue(),N(`.page-hint`).textContent=`← → for the other lines · Esc for map`,X.scrollTop=0,Y.scrollTop=0,document.title=`Line ${e.code} · ${e.name} · roger_dsc`,I.classList.remove(`is-visible`),He(e.color),requestAnimationFrame(()=>{let e=X.querySelector(`.line-map`);e&&e.scrollWidth>e.clientWidth+2&&(e.classList.add(`is-scrollable`),e.addEventListener(`scroll`,()=>e.classList.add(`was-scrolled`),{once:!0}))});return}let n=u[t.id]??[],r=t.line&&n.includes(t.line)?t.line:Z.line&&n.includes(Z.line)?Z.line:n.find(e=>!h[e].construction)??n[0],a=0;if(Z.station&&Z.station!==t.id&&!t.slug){let e=i[r];a=e.indexOf(t.id)>e.indexOf(Z.station)?1:-1}let o=new URLSearchParams(location.hash.split(`?`)[1]??``).get(`lang`)??`en`,s=t.slug?_e(t.id,t.slug,o):se(t.id,r),c=new URLSearchParams(location.hash.split(`?`)[1]??``).get(`section`);if(!s){let n=t.slug&&e.find(e=>e.slug===t.slug);location.replace(n?`#/station/${n.station}/${t.slug}${o===`en`?``:`?lang=${o}`}`:`#/station/${t.id}`);return}let l=Y.classList.contains(`is-open`);N(`.page-hint`).textContent=`← → to ride the line · Esc for map`,!t.slug&&t.id!==Z.station&&Ve(Z.station,t.id,r),Z={station:t.id,line:r},X.innerHTML=s+Ue(),X.scrollTop=0,Y.scrollTop=0,c&&Ge(c),document.title=`${p[t.id].name} · roger_dsc`,I.classList.remove(`is-visible`),l?a&&!F&&X.animate([{transform:`translateX(${a*60}px)`,opacity:0},{transform:`none`,opacity:1}],{duration:380,easing:`cubic-bezier(.2,.8,.2,1)`}):He(h[r].color)}function Ge(e){let t=e=>e.replace(/[*_]/g,``).trim().toLowerCase(),n=[...X.querySelectorAll(`.prose summary, .prose h2, .prose h3`)].find(n=>t(n.textContent)===t(e));if(!n)return;let r=n.closest(`details`);r&&(r.open=!0),requestAnimationFrame(()=>{n.scrollIntoView({block:`start`}),(r??n).classList.add(`is-flash`)})}function Ke(){if(!Y.classList.contains(`is-open`))return;xe(),Y.classList.remove(`is-open`);let e=Z.station;Z={station:null,line:null},document.title=`roger_dsc`,setTimeout(()=>{Y.hidden=!0},F?0:350),document.querySelector(`.station[data-id="${e}"]`)?.focus({preventScroll:!0})}X.addEventListener(`click`,e=>{let t=e.target.closest(`[data-script]`);if(t){o(t.dataset.script);return}let n=e.target.closest(`[data-jump]`);if(!n)return;let r=document.getElementById(n.dataset.jump);r&&(r.scrollIntoView({behavior:F?`auto`:`smooth`,block:`center`}),r.classList.remove(`is-flash`),r.offsetWidth,r.classList.add(`is-flash`))});var qe=t=>t?.slug?e.find(e=>e.slug===t.slug)?.parent:null;function Je(){let e=Q(),t=qe(e);return t?`#/station/${e.id}/${t}`:e?.slug?`#/station/${e.id}`:``}function Ye(){let t=Q(),n=qe(t),r=n?e.find(e=>e.slug===n)?.title.split(` `)[0]:t?.slug?p[t.id].name:null;N(`.back-to`).textContent=r??`map`,N(`.back-to-short`).textContent=r??`Map`,N(`#page-close`).setAttribute(`aria-label`,`Back to ${r??`map`}`),N(`.page-hint`).hidden=!!t?.slug}N(`#page-close`).onclick=()=>{location.hash=Je()},addEventListener(`hashchange`,Ye),Ye();var Xe=`trail`,Ze=()=>{try{return JSON.parse(sessionStorage.getItem(Xe))??[]}catch{return[]}},Qe=e=>{try{sessionStorage.setItem(Xe,JSON.stringify(e.slice(-40)))}catch{}},$=e=>(e||``).replace(/^#/,``).split(`?`)[0].replace(/\/$/,``);function $e(t){let n=Q(t);if(!n)return`Map`;if(n.lineId)return h[n.lineId].name;if(!n.slug)return p[n.id].name;let r=e.find(e=>e.slug===n.slug)?.title??p[n.id].name;return r.length>30?`${r.slice(0,28).trim()}…`:r}var et=location.hash,tt=!1;addEventListener(`hashchange`,()=>{let e=Ze();tt?tt=!1:$(et)!==$(location.hash)&&e.push(et),Qe(e),et=location.hash,nt()});function nt(){let e=Ze().at(-1),t=N(`#page-prev`),n=e!==void 0&&$(e)!==$(location.hash)&&$(e)!==$(Je())&&!!Q();if(t.hidden=!n,n){let n=$e(e);t.querySelector(`.prev-name`).textContent=n,t.setAttribute(`aria-label`,`Previous page: ${n}`)}}N(`#page-prev`).onclick=()=>{let e=Ze(),t=e.pop();Qe(e),tt=!0,location.hash=t??``},nt(),addEventListener(`keydown`,e=>{if(!Y.classList.contains(`is-open`))return;if(e.key===`Escape`){location.hash=Je();return}let t=Q();if(!t||t.slug||![`ArrowLeft`,`ArrowRight`].includes(e.key))return;if(t.lineId){let n=Object.values(h).map(e=>e.code),r=(n.indexOf(h[t.lineId].code)+(e.key===`ArrowRight`?1:-1)+n.length)%n.length;location.hash=`#/line/${n[r]}`;return}let n=i[Z.line],r=n.indexOf(t.id)+(e.key===`ArrowRight`?1:-1);h[Z.line].loop&&(r=(r+n.length)%n.length);let a=n[r];a&&(location.hash=`#/station/${a}?line=${Z.line}`)}),addEventListener(`hashchange`,We),We();

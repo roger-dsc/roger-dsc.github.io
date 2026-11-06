@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>roger_dsc</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="description" content="An imaginary city. Tap a station to explore." />
+    <!-- Link previews (Messages, Slack, social): the map, not the tiny tab icon -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://roger-dsc.github.io/" />
+    <meta property="og:title" content="roger_dsc" />
+    <meta property="og:description" content="An imaginary city. Tap a station to explore." />
+    <meta property="og:image" content="https://roger-dsc.github.io/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A metro map of an imaginary city with three lines" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="module" crossorigin src="/assets/main-B00XQXtv.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/700-C5UiCGSs.js">
+    <link rel="modulepreload" crossorigin href="/assets/data-Dd5ynzkT.js">
+    <link rel="modulepreload" crossorigin href="/assets/map-CFt65r91.js">
+    <link rel="modulepreload" crossorigin href="/assets/chime-D_qcpDa9.js">
+    <link rel="stylesheet" crossorigin href="/assets/700-_IUOKiS0.css">
+    <link rel="stylesheet" crossorigin href="/assets/main-BPwaMFRL.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#">
+        <img class="logo" src="/logo.png" alt="" width="28" height="28" />
+        <span class="brand-text"><strong>roger_dsc</strong><small>together, onward</small></span>
+      </a>
+      <span class="latest"></span>
+      <div class="top-actions">
+        <div class="view-toggle script-toggle" role="group" aria-label="Second language">
+          <button data-script="hans" aria-pressed="true" lang="zh-Hans" title="简体中文">简</button>
+          <button data-script="hant" aria-pressed="false" lang="zh-Hant" title="繁體中文">繁</button>
+          <button data-script="ja" aria-pressed="false" lang="ja" title="日本語">日</button>
+        </div>
+        <div class="view-toggle" role="group" aria-label="View">
+          <button id="view-map" aria-pressed="true">Map</button>
+          <button id="view-lines" aria-pressed="false">Lines</button>
+        </div>
+        <div class="sound-group" role="group" aria-label="Arrival chime"><button class="sound-btn" type="button" aria-pressed="false" aria-label="Arrival chime"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8h3l4-3v10l-4-3H3z"/><path d="M13 7.5a3.5 3.5 0 0 1 0 5M15.5 5a7 7 0 0 1 0 10"/></svg></button><button class="chime-test" type="button" title="Play the arrival chime"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 4l10 6-10 6z"/></svg></button><a class="chime-tune" href="/chime-lab.html" title="Sound lab: play with the chime and announcements" aria-label="Sound lab"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 3v14M10 3v14M16 3v14"/><circle cx="4" cy="12" r="2"/><circle cx="10" cy="7" r="2"/><circle cx="16" cy="13" r="2"/></svg></a></div>
+        <button id="search-open" class="search-btn" aria-label="Search stations (press /)">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6" /><path d="M13 13l5 5" /></svg>
+          <span>Search</span><kbd>/</kbd>
+        </button>
+      </div>
+    </header>
+
+    <main class="stage">
+      <div id="map" class="map"></div>
+      <p class="orient card">An imaginary city. <span class="wide-only">Tap a station to explore. </span><a href="#/station/central/why-a-city">Why a city →</a><span class="orient-tr"></span></p>
+
+      <details id="legend" class="legend card">
+        <summary>Lines</summary>
+        <button class="legend-close" type="button" aria-label="Close the lines box">×</button>
+        <div id="legend-lines" class="legend-lines"></div>
+        <div class="legend-key">
+          <span><i class="key key--written"></i>Station</span>
+          <span><i class="key key--unexplored"></i>Future station</span>
+          <span><i class="key key--transfer"></i>Interchange</span>
+          <span><i class="key key--walk"></i>Walking link</span>
+          <span><i class="key key--heritage">◇</i>Heritage</span>
+        </div>
+      </details>
+
+      <div class="zoom card" role="group" aria-label="Zoom">
+        <button id="zoom-in" aria-label="Zoom in">+</button>
+        <button id="zoom-out" aria-label="Zoom out">−</button>
+        <button id="zoom-reset" aria-label="Reset view">⤢</button>
+      </div>
+
+      <div id="lines-view" class="lines-view" hidden></div>
+      <div id="tooltip" class="tooltip" role="tooltip"></div>
+    </main>
+
+    <div id="search" class="search" hidden>
+      <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search the city">
+        <input id="search-input" type="search" placeholder="Search stations and articles" autocomplete="off" />
+        <ul id="search-results" class="search-results" role="listbox"></ul>
+        <p class="search-foot">↑ ↓ to choose · Enter to go · Esc to close</p>
+      </div>
+    </div>
+
+    <div id="page" class="page" tabindex="-1" hidden>
+      <div class="page-bar">
+        <div class="page-nav"><button id="page-close" class="btn btn--ghost" aria-label="Back to map">← <span class="wide-only">Back to <span class="back-to">map</span></span><span class="narrow-only back-to-short">Map</span></button><button id="page-prev" class="btn btn--ghost page-prev" type="button" hidden><span class="wide-only">Previous:</span><span class="prev-name"></span></button></div>
+        <div class="page-tools">
+          <span class="page-hint">← → to ride the line · Esc for map</span>
+          <div class="sound-group" role="group" aria-label="Arrival chime"><button class="sound-btn" type="button" aria-pressed="false" aria-label="Arrival chime"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8h3l4-3v10l-4-3H3z"/><path d="M13 7.5a3.5 3.5 0 0 1 0 5M15.5 5a7 7 0 0 1 0 10"/></svg></button><button class="chime-test" type="button" title="Play the arrival chime"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 4l10 6-10 6z"/></svg></button><a class="chime-tune" href="/chime-lab.html" title="Sound lab: play with the chime and announcements" aria-label="Sound lab"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 3v14M10 3v14M16 3v14"/><circle cx="4" cy="12" r="2"/><circle cx="10" cy="7" r="2"/><circle cx="16" cy="13" r="2"/></svg></a></div>
+        </div>
+      </div>
+      <div id="page-body" class="page-body"></div>
+    </div>
+
+  </body>
+</html>
