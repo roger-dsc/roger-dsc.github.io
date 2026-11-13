@@ -1,0 +1,296 @@
+<!doctype html>
+<!-- Human Energy: the energy a person runs on — where it comes from, where it goes, and what the mind and mood do
+     with it. Every figure is quoted from its source (numbered, listed at the end) or computed by a published equation
+     named beside it; what the lab assumes is listed under How it works. Foods are looked up live from USDA FoodData
+     Central, as the City Lab looks up cities. Linked from Energy Center → Human Energy. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Human Energy Lab · roger_dsc</title>
+    <meta name="description" content="Where your energy comes and goes." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="/favicon.png" />
+    <style>:root{--ink:#101418;--muted:#5e666e;--plate:#fff;--land-2:#f4f4f6;--line-soft:#1014181f;--focus:#101418;--v0:#f5f8e8;--v1:#d5d9dc;--v2:#b2b9bf;--v3:#8b949b;--v4:#646d75;--v5:#3b434a;--v6:#101418;--volt:#c4f135;--volt-line:#84b300;--coral:#101418;--coral-0:#eef8c8;--f:"Helvetica Neue", Helvetica, Inter, sans-serif}*{box-sizing:border-box}button,select,input{font-family:inherit}body{font-family:var(--f);color:var(--ink);background:var(--plate);margin:0;line-height:1.5}.topbar{border-bottom:1px solid var(--line-soft);justify-content:space-between;align-items:center;gap:16px;height:60px;padding:0 20px;display:flex}.brand{color:inherit;align-items:center;gap:12px;text-decoration:none;display:flex}.brand img{background:var(--plate);border:1px solid #10141817;border-radius:5px;flex:none;width:28px;height:28px;padding:2px}.brand-text{flex-direction:column;line-height:1.1;display:flex}.brand-text strong{font:700 1.25rem/1 var(--f);letter-spacing:-.01em}.brand-text small{color:var(--muted);letter-spacing:.04em;font-size:.75rem}@media (width<=700px){.topbar{gap:8px;padding:0 12px}.brand-text small{display:none}.brand{margin:-8px;padding:8px}}@media (width<=480px){.brand-text{display:none}}.back{color:var(--ink);border:1px solid var(--ink);white-space:nowrap;border-radius:4px;padding:7px 12px;font-weight:500;text-decoration:none}.back:hover{background:var(--ink);color:var(--plate)}main{gap:24px;max-width:1180px;margin:0 auto;padding:32px 16px 72px;display:grid}h1{text-wrap:balance;margin:0 0 6px;font-size:1.75rem}h2{letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;font-size:.75rem;font-weight:700}h3{margin:0 0 8px;font-size:1rem}p{margin:0}.eyebrow{color:var(--muted);margin-bottom:4px;font-size:14px}.lede{color:var(--muted);max-width:66ch}a{color:var(--ink);text-underline-offset:3px}:focus-visible{outline:2px solid var(--focus);outline-offset:2px}sup a{color:var(--muted);padding-left:1px;font-size:11px;text-decoration:none}q{quotes:"“" "”"}.fine{color:var(--muted);max-width:80ch;font-size:13px}.you{border:1px solid var(--line-soft);border-top:6px solid var(--volt);border-radius:8px;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:18px 28px;padding:18px;display:grid}.you-controls{grid-template-columns:repeat(2,minmax(0,1fr));align-content:start;gap:12px 18px;display:grid}.field{gap:4px;min-width:0;display:grid}.field label,.field .lbl{justify-content:space-between;gap:10px;font-size:14px;font-weight:500;display:flex}.field output{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:400}input[type=range]{width:100%;accent-color:var(--ink)}.seg{border:1px solid var(--line-soft);border-radius:4px;width:fit-content;display:inline-flex;overflow:hidden}.seg button{font:500 14px var(--f);background:var(--plate);color:var(--ink);cursor:pointer;border:0;padding:6px 12px}.seg button+button{border-left:1px solid var(--line-soft)}.seg button[aria-pressed=true]{background:var(--ink);color:var(--volt)}.stack{align-content:start;gap:12px;display:grid}.lab-tabs{border-bottom:1px solid var(--line-soft);scrollbar-width:none;z-index:3;background:var(--plate);gap:4px;display:flex;position:sticky;top:0;overflow-x:auto}.lab-tabs::-webkit-scrollbar{display:none}.lab-tabs button{font:500 15px var(--f);color:var(--muted);cursor:pointer;background:0 0;border:0;border-bottom:3px solid #0000;flex:none;padding:12px 14px 10px}.lab-tabs button[aria-selected=true]{color:var(--ink);border-bottom:4px solid var(--volt);font-weight:700}.lab-tabs button:hover{color:var(--ink)}.tab-panel{gap:22px;padding-top:6px;display:grid}.tab-panel[hidden]{display:none}.split{grid-template-columns:minmax(0,360px) minmax(0,1fr);align-items:start;gap:24px 32px;display:grid}.side{border:1px solid var(--line-soft);background:var(--plate);border-radius:8px;align-content:start;gap:14px;padding:16px;display:grid}.side h3{margin:0}.results{gap:20px;min-width:0;display:grid}.two{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:24px 32px;display:grid}.tiles{grid-template-columns:repeat(auto-fit,minmax(170px,1fr));align-content:start;gap:12px;display:grid}.tile{background:var(--v0);border-radius:8px;align-content:start;gap:2px;padding:12px 14px;display:grid}.tile.is-key{background:var(--coral-0)}.tile .k{color:var(--muted);font-size:13px}.tile .v{letter-spacing:-.02em;font-variant-numeric:tabular-nums;font-size:clamp(1.5rem,2.6vw,2rem);font-weight:700;line-height:1.15}.tile .v.is-word{padding-top:4px;font-size:1.35rem;line-height:1.25}.tile .v small{color:var(--muted);letter-spacing:0;margin-left:4px;font-size:.9rem;font-weight:500}.tile .t{color:var(--muted);font-size:13px}.figure{align-content:start;gap:8px;min-width:0;display:grid}.chart{width:100%}.chart svg{width:100%;height:auto;display:block;overflow:visible}.chart text{font-family:var(--f);fill:var(--ink)}.chart .axis{fill:var(--muted);font-size:11px}.chart .grid{stroke:var(--line-soft);stroke-width:1px}.equation{background:var(--land-2);white-space:nowrap;border-radius:6px;padding:10px 12px;font:500 14px/1.6 ui-monospace,SF Mono,Menlo,monospace;overflow-x:auto}.equation b{font-weight:700}.acts{border-top:1px solid var(--line-soft);display:grid}.act{border-bottom:1px solid var(--line-soft);grid-template-columns:12px minmax(0,1fr) 100px;align-items:center;gap:10px;padding:6px 0;display:grid}.act .sw{border-radius:3px;width:12px;height:12px}.act .name{min-width:0;font-size:14px;font-weight:500}.act .name small{color:var(--muted);font-size:12px;font-weight:400;display:block}.stepper{border:1px solid var(--line-soft);border-radius:4px;grid-template-columns:28px 1fr 28px;align-items:center;display:grid}.stepper button{background:var(--plate);height:28px;color:var(--ink);font:500 16px var(--f);cursor:pointer;border:0}.stepper button:disabled{color:#c9cdd1;cursor:default}.stepper button:not(:disabled):hover{background:var(--v0)}.stepper output{text-align:center;font-variant-numeric:tabular-nums;font-size:13px}.act.is-rest .name{color:var(--muted)}.find{gap:8px;display:flex}.find input{min-width:0;font:400 16px var(--f);color:var(--ink);background:var(--plate);border:1px solid var(--line-soft);border-radius:4px;flex:1;padding:8px 12px}.find button{font:700 15px var(--f);cursor:pointer;border:1px solid var(--ink);background:var(--ink);color:var(--volt);border-radius:4px;padding:8px 14px}.find button:disabled{opacity:.6;cursor:default}.found{gap:4px;display:grid}.found:empty{display:none}.found button{text-align:left;font:400 14px var(--f);background:var(--plate);color:var(--ink);border:1px solid var(--line-soft);cursor:pointer;border-radius:4px;justify-content:space-between;gap:10px;padding:7px 10px;display:flex}.found button:hover{border-color:var(--ink);background:var(--v0)}.found small{color:var(--muted);white-space:nowrap}.live-note{color:var(--muted);font-size:13px}.live-note:empty{display:none}.foods{border-top:1px solid var(--line-soft);max-height:460px;display:grid;overflow-y:auto}.food{border-bottom:1px solid var(--line-soft);grid-template-columns:minmax(0,1fr) 72px 50px 22px;align-items:center;gap:8px;padding:6px 0;font-size:14px;display:grid}.food .fname{min-width:0}.food .fname a{text-decoration:none}.food .fname a:hover{text-decoration:underline}.food .fname small{color:var(--muted);text-overflow:ellipsis;white-space:nowrap;font-size:12px;display:block;overflow:hidden}.food label{color:var(--muted);align-items:center;gap:2px;font-size:12px;display:flex}.food input{width:100%;font:400 14px var(--f);border:1px solid var(--line-soft);text-align:right;border-radius:4px;padding:4px}.food .kcal{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted);font-size:13px}.food .x{color:var(--muted);cursor:pointer;background:0 0;border:0;padding:0;font-size:16px;line-height:1}.food .x:hover{color:var(--coral)}.foods .empty{justify-items:start;gap:8px;padding:10px 0 12px;display:grid}.badge{font:700 10px/1 var(--f);letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--ink);color:var(--ink);white-space:nowrap;vertical-align:1px;border-radius:3px;padding:4px 6px 3px;display:inline-block}.badge.b-guide{background:var(--ink);color:var(--volt)}.badge.b-trials{background:var(--v4);border-color:var(--v4);color:var(--plate)}.badge.b-large,.badge.b-lab{background:var(--v0)}.badge.b-early{color:var(--muted);border-style:dashed;border-color:var(--muted)}.badge.b-failed{color:var(--coral);border-color:var(--coral);text-decoration:line-through}.cards{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;display:grid}.card{border:1px solid var(--line-soft);border-radius:8px;align-content:start;gap:6px;padding:12px 14px;display:grid}.card h3{margin:0;font-size:15px}.card p{font-size:14px}.card.is-help{background:var(--coral-0);border-color:#0000}.tabs{flex-wrap:wrap;gap:8px;display:flex}.tabs button{font:500 14px var(--f);border:1px solid var(--line-soft);background:var(--plate);color:var(--ink);cursor:pointer;border-radius:4px;padding:6px 11px}.tabs button[aria-pressed=true]{background:var(--ink);color:var(--volt);border-color:var(--ink)}.gauges{gap:16px;display:grid}.who5-wrap{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:start;gap:24px 32px;display:grid}.who5-result{position:sticky;top:64px}.who5{border-top:1px solid var(--line-soft);display:grid}.who5 .q{border-bottom:1px solid var(--line-soft);grid-template-columns:minmax(0,1fr) 234px;align-items:center;gap:8px 16px;padding:10px 0;display:grid}.who5 .stmt{font-size:14px;font-weight:500;display:block}.who5 .said{color:var(--muted);font-size:12px;display:block}.who5 .said.is-set{color:var(--ink)}.who5 .clear{padding-top:12px}.who5 .scale{border:1px solid var(--line-soft);border-radius:4px;grid-template-columns:repeat(6,minmax(0,1fr));display:grid;overflow:hidden}.who5 .scale button{background:var(--plate);height:34px;font:500 14px var(--f);color:var(--ink);cursor:pointer;font-variant-numeric:tabular-nums;border:0}.who5 .scale button+button{border-left:1px solid var(--line-soft)}@media (hover:hover){.who5 .scale button:hover{background:var(--v0)}}.who5 .scale button[aria-pressed=true]{background:var(--ink);color:var(--volt)}.h-note{color:var(--muted);font-size:13px;font-weight:400}.btn{font:500 14px var(--f);cursor:pointer;border:1px solid var(--ink);background:var(--ink);color:#fff;border-radius:4px;padding:8px 14px}.btn:hover{color:var(--volt)}.btn.quiet{background:var(--plate);color:var(--ink);border-color:var(--line-soft)}.btn.quiet:hover{border-color:var(--ink);color:var(--ink)}.share-row{flex-wrap:wrap;align-items:center;gap:8px 12px;margin-top:4px;display:flex}.share-row .live-note{overflow-wrap:anywhere}.gauge{gap:2px;display:grid}.gauge .verdict{color:var(--muted);font-size:13px}.tip{z-index:10;pointer-events:none;background:var(--ink);color:var(--plate);opacity:0;border-radius:4px;max-width:260px;padding:6px 9px;font-size:13px;line-height:1.35;transition:opacity .1s;position:fixed}.tip.on{opacity:1}.fold summary,.sources summary{cursor:pointer;align-items:center;gap:10px;width:fit-content;list-style:none;display:flex}.fold summary::-webkit-details-marker{display:none}.sources summary::-webkit-details-marker{display:none}.fold summary:before,.sources summary:before{content:"";border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);width:6px;height:6px;margin:0 2px;transition:transform .15s;transform:rotate(-45deg)}.fold[open] summary:before,.sources details[open] summary:before{transform:rotate(45deg)}.fold summary h2,.sources summary h2{margin:0}.fold summary:hover h2,.sources summary:hover h2,.sources summary:hover .n{color:var(--ink)}.fold[open] summary{margin-bottom:14px}.sources summary .n{color:var(--muted);font-size:13px}.sources ol{color:var(--muted);gap:8px;margin:12px 0 0;padding-left:1.6em;font-size:14px;display:grid}.sources li a,.sources li:target{color:var(--ink)}.sources li .cred{font-size:13px;display:block}.how ul{gap:6px;max-width:80ch;margin:0;padding-left:1.2em;font-size:14px;display:grid}.reading{border-top:1px solid var(--line-soft);gap:18px;padding-top:18px;display:grid}@media (prefers-reduced-motion:reduce){.fold summary:before,.sources summary:before{transition:none}}.sure{--open-w:min(1148px, calc(100vw - 32px));height:calc(var(--tab-h,46px) + 24px)}.sure-drawer{z-index:6;width:var(--tab-w,360px);height:var(--tab-h,46px);background:var(--ink);color:#e9ecee;border-radius:8px 8px 0 0;transition:width .34s cubic-bezier(.45,0,.2,1) 60ms,height .34s cubic-bezier(.45,0,.2,1) 60ms;position:fixed;bottom:0;left:50%;overflow:hidden;transform:translate(-50%);box-shadow:0 -10px 34px -16px #1014188c}.sure.is-open .sure-drawer{width:var(--open-w);height:var(--open-h,320px);transition:width .52s cubic-bezier(.16,1,.3,1),height .52s cubic-bezier(.16,1,.3,1);box-shadow:0 -24px 60px -20px #00000073}.sure-tab{width:max-content;padding:12px 18px calc(12px + env(safe-area-inset-bottom));color:#fff;cursor:pointer;white-space:nowrap;background:0 0;border:0;align-items:center;gap:12px;transition:opacity .22s .24s,visibility 0s .24s;display:flex;position:absolute;top:0;left:0}.sure.is-open .sure-tab{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .1s linear,visibility 0s .1s}.sure-tab:hover .sure-cue{transform:translateY(-2px)}.sure-cue{fill:none;width:10px;height:10px;stroke:var(--volt);stroke-width:1.6px;stroke-linecap:round;stroke-linejoin:round;flex:none;transition:transform .2s}.sure-label{font:500 14px var(--f)}.sure-mini{gap:6px;display:flex}.sure-mini .badge{cursor:inherit}.sure-panel{width:var(--open-w);max-height:var(--open-h,320px);overscroll-behavior:contain;padding:4px 22px calc(16px + env(safe-area-inset-bottom));opacity:0;visibility:hidden;scrollbar-width:thin;scrollbar-color:#3a444b transparent;transition:opacity .12s linear,visibility 0s .12s;position:absolute;top:0;left:50%;overflow-y:auto;transform:translate(-50%)}.sure.is-open .sure-panel{opacity:1;visibility:visible;transition:opacity .3s .12s,visibility}.sure-head{z-index:1;background:var(--ink);align-items:center;gap:16px;padding:12px 0 10px;display:flex;position:sticky;top:0}.sure-head h2{font:500 14px var(--f);letter-spacing:0;text-transform:none;color:#fff;margin:0}.sure-intro{color:#9aa7af;flex:1;font-size:13px}.sure-close{color:#fff;cursor:pointer;background:0 0;border:1px solid #2a3138;border-radius:4px;flex:none;place-items:center;width:32px;height:32px;margin-right:-6px;padding:0;display:grid}.sure-close:hover{background:#1e252b}.sure-close svg{fill:none;stroke:currentColor;stroke-width:1.6px;stroke-linecap:round;stroke-linejoin:round;width:12px;height:12px;transition:transform .2s}.sure-close:hover svg{transform:translateY(2px)}.sure-levels{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:28px;display:grid}.sure-level{border-top:1px solid #2a3138;border-left:3px solid #0000;align-content:start;gap:6px;padding:12px 10px 12px 12px;transition:border-color .2s,background-color .2s;display:grid}.sure-level.is-on{border-left-color:var(--volt);background:#1a2026}.sure-level p{color:#c5ced3;font-size:13px}.sure .badge{color:#e9ecee;background:0 0;border-color:#e9ecee}.sure .badge.b-guide{background:var(--volt);color:var(--ink);border-color:var(--volt)}.sure .badge.b-trials{color:#fff;background:#3b434a;border-color:#3b434a}.sure .badge.b-early,.sure .badge.b-failed{color:#9aa7af;border-color:#9aa7af}.sure-tab:focus-visible{outline:2px solid var(--volt);outline-offset:-4px;border-radius:4px}.sure-close:focus-visible{outline:2px solid var(--volt);outline-offset:2px}main .badge{cursor:help}@media (prefers-reduced-motion:reduce){.sure-drawer,.sure.is-open .sure-drawer{transition:none}}@media (width<=900px){.you,.split,.two,.who5-wrap{grid-template-columns:minmax(0,1fr)}.who5-result{position:static}}@media (width<=1100px) and (width>=901px),(width<=560px){.who5 .q{grid-template-columns:minmax(0,1fr)}}@media (width<=1000px){.sure-mini{display:none}.sure-levels{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (width<=700px){.sure{--open-w:calc(100vw - 16px)}.sure-head{flex-wrap:wrap}.sure-intro{flex-basis:100%;order:3}.sure-close{margin-left:auto}}@media (width<=520px){.sure-panel{padding-inline:14px}.sure-levels{column-gap:12px}.sure-level{padding:10px 4px 10px 8px}.sure-level p{font-size:12.5px}}</style>
+    <script type="module" crossorigin src="/assets/humanEnergyLab-BcOPnqfa.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/700-C5UiCGSs.js">
+    <link rel="stylesheet" crossorigin href="/assets/700-_IUOKiS0.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">
+        <img src="/logo.png" alt="" width="28" height="28" />
+        <span class="brand-text"><strong>roger_dsc</strong><small>together, onward</small></span>
+      </a>
+      <nav style="display:flex;gap:8px"><a class="back" href="/#/station/powerstation" style="border-color:var(--line-soft)">Energy Center</a><a class="back" href="/">← Map</a></nav>
+    </header>
+    <main>
+      <section>
+        <p class="eyebrow">Energy Center · Human Energy</p>
+        <h1>Human Energy Lab</h1>
+        <p class="lede">Where your energy comes and goes.</p>
+      </section>
+
+      <section class="you" aria-labelledby="you-h">
+        <div class="stack">
+          <h2 id="you-h" style="margin:0">You</h2>
+          <div class="you-controls" id="profile"></div>
+          <div class="share-row"><button type="button" class="btn" id="share">Copy a link to your setup</button><span class="live-note" id="share-note" aria-live="polite"></span></div>
+        </div>
+        <div class="tiles" id="rest-tiles"></div>
+      </section>
+
+      <nav class="lab-tabs" role="tablist" aria-label="Human Energy Lab">
+        <button type="button" role="tab" id="t-body" aria-controls="p-body" data-tab="body">Body</button>
+        <button type="button" role="tab" id="t-day" aria-controls="p-day" data-tab="day">Day</button>
+        <button type="button" role="tab" id="t-food" aria-controls="p-food" data-tab="food">Food</button>
+        <button type="button" role="tab" id="t-sleep" aria-controls="p-sleep" data-tab="sleep">Sleep</button>
+        <button type="button" role="tab" id="t-mind" aria-controls="p-mind" data-tab="mind">Mind</button>
+      </nav>
+
+      <!-- Body: what rest costs -->
+      <section class="tab-panel" id="p-body" role="tabpanel" aria-labelledby="t-body">
+        <div class="two">
+          <div class="figure">
+            <h3>Your resting energy, term by term</h3>
+            <div class="chart" id="eq-chart"></div>
+            <p class="equation" id="eq-work"></p>
+            <p class="fine" id="eq-note"></p>
+          </div>
+          <div class="figure">
+            <h3>Where it goes</h3>
+            <div class="chart" id="organ-chart"></div>
+            <p class="fine" id="organ-note"></p>
+          </div>
+        </div>
+        <div class="split">
+          <div class="side">
+            <h3>Your body fat</h3>
+            <div class="stack" id="fat-controls"></div>
+            <p class="fine">If you know it, from a scan or scales. Fat-free mass is everything but the fat: muscle, organs, bone, water.</p>
+          </div>
+          <div class="results">
+            <div class="figure">
+              <h3>Resting energy, three ways</h3>
+              <div class="chart" id="ffm-chart"></div>
+              <p class="equation" id="ffm-work"></p>
+              <p class="fine" id="ffm-note"></p>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <h3>Thinking hard <span class="badge b-lab" data-level="lab">Lab finding</span></h3>
+            <p>The brain is about 2% of the body’s weight and uses about 20% of its energy. That rate is <q>remarkably constant despite widely varying mental and motoric activity</q>: measured over the whole brain during intense mental work, it <q>failed to demonstrate any change</q><sup><a href="#s-raichle">?</a></sup>. A hard day of thinking costs about the same fuel as an easy one; why it still tires you is under Mind.</p>
+          </div>
+          <div class="card" id="age-card"></div>
+        </div>
+      </section>
+
+      <!-- Day: what living costs -->
+      <section class="tab-panel" id="p-day" role="tabpanel" aria-labelledby="t-day" hidden>
+        <div class="split">
+          <div class="side">
+            <h3>Your 24 hours</h3>
+            <p class="fine">Add or take away half hours. Each activity costs a multiple of your resting rate, from the FAO/WHO/UNU tables<sup><a href="#s-fao04">?</a></sup>; time left over is sitting quietly.</p>
+            <div class="acts" id="acts"></div>
+          </div>
+          <div class="results">
+            <div class="tiles" id="day-tiles"></div>
+            <div class="two">
+              <div class="figure"><div class="chart" id="day-ring"></div></div>
+              <div class="figure">
+                <h3>Your activity level</h3>
+                <div class="chart" id="pal-scale"></div>
+                <p class="fine" id="day-note"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="split">
+          <div class="side">
+            <h3>Your steps and sitting</h3>
+            <div class="stack" id="step-controls"></div>
+            <div class="tiles" id="sit-tiles"></div>
+            <p class="fine" id="sit-note"></p>
+          </div>
+          <div class="results">
+            <div class="figure">
+              <h3>Steps a day and the risk of dying <span class="badge b-large" data-level="large">Large study</span></h3>
+              <div class="chart" id="steps-chart"></div>
+              <p class="fine" id="steps-note"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Food: where it comes from -->
+      <section class="tab-panel" id="p-food" role="tabpanel" aria-labelledby="t-food" hidden>
+        <div class="split">
+          <div class="side">
+            <h3>What you ate</h3>
+            <form class="find" id="find" role="search">
+              <input id="find-q" type="search" placeholder="A food, such as oats or salmon" aria-label="Find a food" autocomplete="off" enterkeyhint="search">
+              <button type="submit">Find</button>
+            </form>
+            <p class="live-note" id="find-note" aria-live="polite"></p>
+            <div class="found" id="found"></div>
+            <div class="foods" id="foods"></div>
+            <p class="fine">Foods from USDA FoodData Central<sup><a href="#s-usda">?</a></sup>, looked up live in your browser when you search: your search goes to USDA, and nothing is sent otherwise. Values are as USDA holds them, not checked by us; each food links to its record.</p>
+            <h3 style="margin-top:6px">What you drank</h3>
+            <div class="acts">
+              <div class="act" id="drinks">
+                <span class="sw" aria-hidden="true" style="background:var(--v5)"></span>
+                <span class="name">Glasses<small>Water, tea, coffee or juice: 250 ml each</small></span>
+                <span class="stepper"><button type="button" data-drink="-1" aria-label="One glass less">−</button><output></output><button type="button" data-drink="1" aria-label="One glass more">+</button></span>
+              </div>
+            </div>
+          </div>
+          <div class="results">
+            <div class="tiles" id="food-tiles"></div>
+            <div class="figure">
+              <h3>From food to energy</h3>
+              <div class="chart" id="bridge"></div>
+              <p class="fine" id="bridge-note"></p>
+            </div>
+            <div class="figure">
+              <h3>Water <span class="badge b-guide" data-level="guide">Guideline</span></h3>
+              <div class="tiles" id="water-tiles"></div>
+              <div class="chart" id="water-chart"></div>
+              <p class="fine" id="water-note"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sleep: how rest restores -->
+      <section class="tab-panel" id="p-sleep" role="tabpanel" aria-labelledby="t-sleep" hidden>
+        <div class="split">
+          <div class="side">
+            <h3>Your nights</h3>
+            <div class="stack" id="sleep-controls"></div>
+            <h3 style="margin-top:6px">Your caffeine</h3>
+            <div class="stack" id="caffeine-controls"></div>
+            <h3 style="margin-top:6px">Your nap</h3>
+            <div class="stack" id="nap-controls"></div>
+          </div>
+          <div class="results">
+            <div class="tiles" id="sleep-tiles"></div>
+            <div class="figure">
+              <h3>Two days of sleep pressure</h3>
+              <div class="chart" id="sleep-chart"></div>
+              <p class="fine" id="sleep-note"></p>
+            </div>
+            <div class="two">
+              <div class="figure">
+                <h3>A fortnight on this sleep</h3>
+                <div class="chart" id="debt-chart"></div>
+                <p class="fine" id="debt-note"></p>
+              </div>
+              <div class="figure">
+                <h3>Caffeine through the day</h3>
+                <div class="chart" id="caffeine-chart"></div>
+                <p class="fine" id="caffeine-note"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="two">
+          <div class="card">
+            <h3>Naps <span class="badge b-trials" data-level="trials">Trials pooled</span></h3>
+            <p>Across 11 studies of 381 people, a daytime nap improved thinking afterwards (effect size 0.18), alertness most (0.29), mainly over the next two hours<sup><a href="#s-dutheil">?</a></sup>. Airline pilots given a planned 40-minute rest on long-haul flights fell asleep in 5.6 minutes, slept about 26, and stayed more alert through descent and landing, with no cost to their sleep later<sup><a href="#s-rosekind">?</a></sup>.</p>
+          </div>
+          <div class="card">
+            <h3>Light and your body clock <span class="badge b-lab" data-level="lab">Lab finding</span></h3>
+            <p>Light before your body’s low point in the night moves your clock later; light after it, in the morning, moves it earlier; and no long stretch of the day is blind to light<sup><a href="#s-khalsa">?</a></sup>. Ordinary room light before bed delayed melatonin, the body’s night signal, in 99% of people and shortened it by about 90 minutes<sup><a href="#s-gooley">?</a></sup>.</p>
+            <div class="chart" id="light-chart"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mind: how energy is felt -->
+      <section class="tab-panel" id="p-mind" role="tabpanel" aria-labelledby="t-mind" hidden>
+        <div class="cards">
+          <div class="card">
+            <h3>Burn-out <span class="badge b-guide" data-level="guide">Guideline</span></h3>
+            <p>The WHO defines it by three dimensions, the first <q>feelings of energy depletion or exhaustion</q>, from <q>chronic workplace stress that has not been successfully managed</q><sup><a href="#s-who-burnout">?</a></sup>.</p>
+          </div>
+          <div class="card">
+            <h3>Depression <span class="badge b-guide" data-level="guide">Guideline</span></h3>
+            <p>Its symptoms include <q>feeling very tired or low in energy</q>; an episode lasts <q>most of the day, nearly every day, for at least two weeks</q>. About 5.2% of adults live with it<sup><a href="#s-who-depression">?</a></sup>.</p>
+          </div>
+          <div class="card is-help">
+            <h3>When to ask for help</h3>
+            <p>If you have felt low or drained most days for two weeks or more, talk to a doctor or someone you trust: depression is treatable<sup><a href="#s-who-depression">?</a></sup>. If you think of harming yourself, call your local emergency number now.</p>
+          </div>
+        </div>
+        <div class="who5-wrap">
+          <div class="side">
+            <h3>How have you been? <small class="h-note">over the last two weeks</small></h3>
+            <div class="who5" id="who5"></div>
+            <p class="fine">Your answers stay on this page: not saved, not sent, not in a shared link.</p>
+          </div>
+          <div class="figure who5-result">
+            <h3>Your wellbeing score, the WHO-5 <span class="badge b-large" data-level="large">Large study</span></h3>
+            <div class="tiles" id="who5-tiles"></div>
+            <div class="chart" id="who5-chart"></div>
+            <p class="fine" id="who5-note"></p>
+          </div>
+        </div>
+        <div class="split">
+          <div class="side">
+            <h3>Your week</h3>
+            <div class="gauges" id="gauges"></div>
+          </div>
+          <div class="results">
+            <div class="figure">
+              <h3>What helps, and how much</h3>
+              <div class="tabs" id="help-tabs" role="group" aria-label="Outcome"></div>
+              <div class="chart" id="forest"></div>
+              <p class="fine" id="forest-note"></p>
+            </div>
+          </div>
+        </div>
+        <div class="figure">
+          <h3>What drains attention and mood</h3>
+          <div class="cards" id="drains"></div>
+        </div>
+      </section>
+
+      <div class="reading">
+        <section aria-labelledby="how-h" class="how">
+          <details class="fold">
+          <summary><h2 id="how-h">How it works</h2></summary>
+          <ul id="how"></ul>
+          </details>
+        </section>
+        <section class="sources" aria-labelledby="sources-h">
+          <details id="sources">
+          <summary><h2 id="sources-h">Sources</h2><span class="n" id="sources-n"></span></summary>
+          <ol id="source-list"></ol>
+          </details>
+        </section>
+      </div>
+    </main>
+    <!-- How sure is this? The legend for the evidence badges, as a drawer at the bottom edge: closed, a tab with the six
+         badges; open, what each one means, side by side. Any badge on the page opens it at its level. -->
+    <aside class="sure" aria-label="How sure is this?">
+      <div class="sure-drawer">
+        <button class="sure-tab" type="button" aria-expanded="false" aria-controls="sure-panel">
+          <svg class="sure-cue" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 6.5 5 3.5l3 3"/></svg>
+          <span class="sure-label">How sure is this?</span>
+          <span class="sure-mini" id="sure-mini" aria-hidden="true"></span>
+        </button>
+        <section class="sure-panel" id="sure-panel" aria-labelledby="sure-h">
+          <header class="sure-head">
+            <h2 id="sure-h">How sure is this?</h2>
+            <p class="sure-intro">Every claim carries one of these; every source says why it can be trusted.</p>
+            <button class="sure-close" type="button" aria-label="Close"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5l3-3"/></svg></button>
+          </header>
+          <div class="sure-levels" id="levels"></div>
+        </section>
+      </div>
+    </aside>
+    <div class="tip" id="tip" role="status" aria-live="polite"></div>
+  </body>
+</html>

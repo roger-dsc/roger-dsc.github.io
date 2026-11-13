@@ -1,0 +1,64 @@
+<!doctype html>
+<!-- The Jet Lag Lab: pick a trip, see when to seek light, when to avoid it, and when you'll be back in step. Time zones
+     come from the IANA database in the reader's browser; the rules from a consensus statement and laboratory studies,
+     numbered to their sources. Simple first; the reasons open on request. Linked from Airport → Arrivals. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jet Lag Lab · roger_dsc</title>
+    <meta name="description" content="Arrive in step with the clock." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="/favicon.png" />
+    <style>:root{--ink:#101418;--muted:#5e666e;--plate:#fff;--land-2:#f4f4f6;--line-soft:#1014181f;--focus:#101418;--v0:#f5f8e8;--v1:#d5d9dc;--v2:#b2b9bf;--v3:#8b949b;--v4:#646d75;--v5:#3b434a;--volt:#c4f135;--volt-line:#84b300;--volt-0:#eef8c8;--f:"Helvetica Neue", Helvetica, Inter, sans-serif}*{box-sizing:border-box}button,select,input{font-family:inherit}body{font-family:var(--f);color:var(--ink);background:var(--plate);margin:0;line-height:1.5}.topbar{border-bottom:1px solid var(--line-soft);justify-content:space-between;align-items:center;gap:16px;height:60px;padding:0 20px;display:flex}.brand{color:inherit;align-items:center;gap:12px;text-decoration:none;display:flex}.brand img{background:var(--plate);border:1px solid #10141817;border-radius:5px;flex:none;width:28px;height:28px;padding:2px}.brand-text{flex-direction:column;line-height:1.1;display:flex}.brand-text strong{font:700 1.25rem/1 var(--f);letter-spacing:-.01em}.brand-text small{color:var(--muted);letter-spacing:.04em;font-size:.75rem}@media (width<=700px){.topbar{gap:8px;padding:0 12px}.brand-text small{display:none}.brand{margin:-8px;padding:8px}}@media (width<=480px){.brand-text{display:none}}.back{color:var(--ink);border:1px solid var(--ink);white-space:nowrap;border-radius:4px;padding:7px 12px;font-weight:500;text-decoration:none}.back:hover{background:var(--ink);color:var(--plate)}main{gap:26px;max-width:1180px;margin:0 auto;padding:32px 16px 72px;display:grid}h1{text-wrap:balance;margin:0 0 6px;font-size:1.75rem}h2{letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;font-size:.75rem;font-weight:700}p{margin:0}.eyebrow{color:var(--muted);margin-bottom:4px;font-size:14px}.lede{color:var(--muted);max-width:62ch}a{color:var(--ink);text-underline-offset:3px}:focus-visible{outline:2px solid var(--focus);outline-offset:2px}sup a{color:var(--muted);padding-left:1px;font-size:11px;text-decoration:none}.fine{color:var(--muted);max-width:80ch;font-size:13px}.trip{border:1px solid var(--line-soft);border-top:6px solid var(--volt);border-radius:8px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));align-items:end;gap:14px 18px;padding:18px;display:grid}.field{gap:4px;min-width:0;display:grid}.field label{font-size:14px;font-weight:500}.field input,.field select{width:100%;font:400 16px var(--f);color:var(--ink);background:var(--plate);border:1px solid var(--line-soft);border-radius:4px;padding:8px 10px}.field small{color:var(--muted);font-size:12px}.check{align-items:center;gap:8px;font-size:14px;font-weight:500;display:flex}.check input{width:18px;height:18px;accent-color:var(--ink)}.check[hidden]{display:none}.answer{gap:14px;display:grid}.say{text-wrap:pretty;max-width:46ch;font-size:clamp(1.15rem,2.2vw,1.45rem);font-weight:500;line-height:1.35}.say b{font-weight:700}.tiles{grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;display:grid}.tile{background:var(--v0);border-radius:8px;gap:2px;padding:12px 14px;display:grid}.tile.is-key{background:var(--volt-0)}.tile .k{color:var(--muted);font-size:13px}.tile .v{letter-spacing:-.02em;font-variant-numeric:tabular-nums;font-size:clamp(1.4rem,2.6vw,1.9rem);font-weight:700;line-height:1.15}.tile .v small{color:var(--muted);letter-spacing:0;margin-left:4px;font-size:.9rem;font-weight:500}.tile .t{color:var(--muted);font-size:13px}.plan{gap:8px;display:grid}.chart svg{width:100%;height:auto;display:block;overflow:visible}.chart text{font-family:var(--f);fill:var(--ink)}.chart .axis{fill:var(--muted);font-size:11px}.chart .grid{stroke:var(--line-soft)}.chart .day{cursor:pointer;outline:none}.chart .day:focus-visible .row-bg,.chart .day.is-on .row-bg{fill:var(--v0)}.legend{color:var(--muted);flex-wrap:wrap;gap:6px 16px;font-size:13px;display:flex}.legend span{align-items:center;gap:6px;display:inline-flex}.sw{border-radius:2px;width:14px;height:10px;display:inline-block}.sw.sleep{background:var(--v4)}.sw.seek{background:var(--volt);outline:1px solid var(--volt-line)}.sw.avoid{background:repeating-linear-gradient(135deg, var(--v1) 0 3px, var(--plate) 3px 6px);outline:1px solid var(--v2)}.sw.low{background:var(--plate);border:2px solid var(--ink);border-radius:50%;width:10px;height:10px}.detail{background:var(--land-2);border-radius:6px;max-width:80ch;min-height:3em;padding:10px 12px;font-size:14px}.detail b{font-weight:700}.more{border-top:1px solid var(--line-soft);gap:10px;padding-top:16px;display:grid}details summary{cursor:pointer;align-items:center;gap:10px;width:fit-content;font-size:15px;font-weight:700;list-style:none;display:flex}details summary::-webkit-details-marker{display:none}details summary:before{content:"";border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);width:6px;height:6px;margin:0 2px;transition:transform .15s;transform:rotate(-45deg)}details[open] summary:before{transform:rotate(45deg)}details>div,details>ol,details>ul{gap:8px;max-width:78ch;margin:10px 0 4px 20px;font-size:14px;display:grid}details ol,details ul{padding-left:1.4em}.sources li{color:var(--muted)}.sources li a{color:var(--ink)}.sources .cred{font-size:13px;display:block}@media (prefers-reduced-motion:reduce){details summary:before{transition:none}}.tip{z-index:10;pointer-events:none;background:var(--ink);color:var(--plate);opacity:0;border-radius:4px;max-width:260px;padding:6px 9px;font-size:13px;line-height:1.35;transition:opacity .1s;position:fixed}.tip.on{opacity:1}</style>
+    <script type="module" crossorigin src="/assets/jetLagLab-DIng3oCS.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/700-C5UiCGSs.js">
+    <link rel="stylesheet" crossorigin href="/assets/700-_IUOKiS0.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">
+        <img src="/logo.png" alt="" width="28" height="28" />
+        <span class="brand-text"><strong>roger_dsc</strong><small>together, onward</small></span>
+      </a>
+      <nav style="display:flex;gap:8px"><a class="back" href="/#/station/westairport" style="border-color:var(--line-soft)">Airport</a><a class="back" href="/">← Map</a></nav>
+    </header>
+    <main>
+      <section>
+        <p class="eyebrow">Airport · Arrivals</p>
+        <h1>Jet Lag Lab</h1>
+        <p class="lede">Arrive in step with the clock.</p>
+      </section>
+
+      <section class="trip" aria-label="Your trip">
+        <div class="field"><label for="from">From</label><input id="from" list="cities" autocomplete="off" value="Vancouver"></div>
+        <div class="field"><label for="to">To</label><input id="to" list="cities" autocomplete="off" value="Tokyo"></div>
+        <div class="field"><label for="arrive">Arriving</label><input id="arrive" type="date"></div>
+        <div class="field"><label for="bed">You usually sleep</label><select id="bed"></select></div>
+        <div class="field"><label for="wake">and wake</label><select id="wake"></select></div>
+        <label class="check" id="pre-wrap"><input type="checkbox" id="pre"> Start 3 days before you fly</label>
+        <datalist id="cities"></datalist>
+      </section>
+
+      <section class="answer" aria-live="polite">
+        <p class="say" id="say"></p>
+        <div class="tiles" id="tiles"></div>
+      </section>
+
+      <section class="plan" aria-labelledby="plan-h">
+        <h2 id="plan-h" style="margin:0">Your days</h2>
+        <div class="chart" id="plan"></div>
+        <div class="legend"><span><i class="sw sleep"></i>Sleep</span><span><i class="sw seek"></i>Seek bright light</span><span><i class="sw avoid"></i>Keep it dim</span><span><i class="sw low"></i>Your body’s low point</span></div>
+        <p class="detail" id="detail"></p>
+      </section>
+
+      <section class="more" aria-label="More">
+        <details><summary>Why light, and why these hours</summary><div id="why"></div></details>
+        <details><summary>Melatonin</summary><div id="melatonin"></div></details>
+        <details><summary>How it works</summary><ul id="how"></ul></details>
+        <details class="sources" id="sources"><summary>Sources</summary><ol id="source-list"></ol></details>
+      </section>
+    </main>
+    <div class="tip" id="tip" role="status" aria-live="polite"></div>
+  </body>
+</html>

@@ -1,0 +1,345 @@
+<!doctype html>
+<!-- The Running Lab: what running costs, what fuels it, and how training pays for it, at the reader's own pace. Every
+     figure is quoted from its source (numbered, listed at the end) or computed by a published equation named beside
+     it; what the lab assumes is listed under How it works. Linked from Stadium → Running Track. Shares its look with
+     the Human Energy lab at the Energy Center. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Running Lab · roger_dsc</title>
+    <meta name="description" content="Pace, fuel, train, recover." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="/favicon.png" />
+    <style>:root{--ink:#101418;--muted:#5e666e;--plate:#fff;--land-2:#f4f4f6;--line-soft:#1014181f;--focus:#101418;--v0:#f5f8e8;--v1:#d5d9dc;--v2:#b2b9bf;--v3:#8b949b;--v4:#646d75;--v5:#3b434a;--v6:#101418;--volt:#c4f135;--volt-line:#84b300;--coral:#101418;--coral-0:#eef8c8;--f:"Helvetica Neue", Helvetica, Inter, sans-serif}*{box-sizing:border-box}button,select,input{font-family:inherit}body{font-family:var(--f);color:var(--ink);background:var(--plate);margin:0;line-height:1.5}.topbar{border-bottom:1px solid var(--line-soft);justify-content:space-between;align-items:center;gap:16px;height:60px;padding:0 20px;display:flex}.brand{color:inherit;align-items:center;gap:12px;text-decoration:none;display:flex}.brand img{background:var(--plate);border:1px solid #10141817;border-radius:5px;flex:none;width:28px;height:28px;padding:2px}.brand-text{flex-direction:column;line-height:1.1;display:flex}.brand-text strong{font:700 1.25rem/1 var(--f);letter-spacing:-.01em}.brand-text small{color:var(--muted);letter-spacing:.04em;font-size:.75rem}@media (width<=700px){.topbar{gap:8px;padding:0 12px}.brand-text small{display:none}.brand{margin:-8px;padding:8px}}@media (width<=480px){.brand-text{display:none}}.back{color:var(--ink);border:1px solid var(--ink);white-space:nowrap;border-radius:4px;padding:7px 12px;font-weight:500;text-decoration:none}.back:hover{background:var(--ink);color:var(--plate)}main{gap:24px;max-width:1180px;margin:0 auto;padding:32px 16px 72px;display:grid}h1{text-wrap:balance;margin:0 0 6px;font-size:1.75rem}h2{letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;font-size:.75rem;font-weight:700}h3{margin:0 0 8px;font-size:1rem}p{margin:0}.eyebrow{color:var(--muted);margin-bottom:4px;font-size:14px}.lede{color:var(--muted);max-width:66ch}a{color:var(--ink);text-underline-offset:3px}:focus-visible{outline:2px solid var(--focus);outline-offset:2px}sup a{color:var(--muted);padding-left:1px;font-size:11px;text-decoration:none}q{quotes:"“" "”"}.fine{color:var(--muted);max-width:80ch;font-size:13px}.fine b{color:var(--ink)}.you{border:1px solid var(--line-soft);border-top:6px solid var(--volt);border-radius:8px;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:18px 28px;padding:18px;display:grid}.you-controls{grid-template-columns:repeat(2,minmax(0,1fr));align-content:start;gap:12px 18px;display:grid}.you-controls .wide{grid-column:1/-1}.field{gap:4px;min-width:0;display:grid}.field label,.field .lbl{justify-content:space-between;gap:10px;font-size:14px;font-weight:500;display:flex}.field output{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:400}.field small{color:var(--muted);font-size:12px}input[type=range]{width:100%;accent-color:var(--ink)}.seg{border:1px solid var(--line-soft);border-radius:4px;flex-wrap:wrap;width:fit-content;max-width:100%;display:inline-flex;overflow:hidden}.seg button{font:500 14px var(--f);background:var(--plate);color:var(--ink);cursor:pointer;border:0;padding:6px 12px}.seg button+button{border-left:1px solid var(--line-soft)}.seg button[aria-pressed=true]{background:var(--ink);color:var(--volt)}.stack{align-content:start;gap:12px;display:grid}.time-in{align-items:center;gap:4px;display:flex}.time-in input{width:56px;font:400 16px var(--f);text-align:center;border:1px solid var(--line-soft);font-variant-numeric:tabular-nums;border-radius:4px;padding:6px}.time-in span{color:var(--muted)}.stepper{border:1px solid var(--line-soft);border-radius:4px;grid-template-columns:30px 44px 30px;align-items:center;width:fit-content;display:grid}.stepper button{background:var(--plate);height:30px;color:var(--ink);font:500 16px var(--f);cursor:pointer;border:0}.stepper button:disabled{color:#c9cdd1;cursor:default}.stepper button:not(:disabled):hover{background:var(--v0)}.stepper output{text-align:center;font-variant-numeric:tabular-nums;font-size:14px}.row{justify-content:space-between;align-items:center;gap:12px;font-size:14px;font-weight:500;display:flex}.lab-tabs{border-bottom:1px solid var(--line-soft);scrollbar-width:none;z-index:3;background:var(--plate);gap:4px;display:flex;position:sticky;top:0;overflow-x:auto}.lab-tabs::-webkit-scrollbar{display:none}.lab-tabs button{font:500 15px var(--f);color:var(--muted);cursor:pointer;background:0 0;border:0;border-bottom:3px solid #0000;flex:none;padding:12px 14px 10px}.lab-tabs button[aria-selected=true]{color:var(--ink);border-bottom:4px solid var(--volt);font-weight:700}.lab-tabs button:hover{color:var(--ink)}.tab-panel{gap:22px;padding-top:6px;display:grid}.tab-panel[hidden]{display:none}.split{grid-template-columns:minmax(0,360px) minmax(0,1fr);align-items:start;gap:24px 32px;display:grid}.side{border:1px solid var(--line-soft);background:var(--plate);border-radius:8px;align-content:start;gap:14px;padding:16px;display:grid}.side h3{margin:0}.results{gap:20px;min-width:0;display:grid}.two{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:24px 32px;display:grid}.tiles{grid-template-columns:repeat(auto-fit,minmax(170px,1fr));align-content:start;gap:12px;display:grid}.tile{background:var(--v0);border-radius:8px;align-content:start;gap:2px;padding:12px 14px;display:grid}.tile.is-key{background:var(--coral-0)}.tile .k{color:var(--muted);font-size:13px}.tile .v{letter-spacing:-.02em;font-variant-numeric:tabular-nums;font-size:clamp(1.5rem,2.6vw,2rem);font-weight:700;line-height:1.15}.tile .v.is-word{padding-top:4px;font-size:1.35rem;line-height:1.25}.tile .v small{color:var(--muted);letter-spacing:0;margin-left:4px;font-size:.9rem;font-weight:500}.tile .t{color:var(--muted);font-size:13px}.figure{align-content:start;gap:8px;min-width:0;display:grid}.chart{width:100%}.chart svg{width:100%;height:auto;display:block;overflow:visible}.chart text{font-family:var(--f);fill:var(--ink)}.chart .axis{fill:var(--muted);font-size:11px}.chart .grid{stroke:var(--line-soft);stroke-width:1px}.equation{background:var(--land-2);white-space:nowrap;border-radius:6px;padding:10px 12px;font:500 14px/1.6 ui-monospace,SF Mono,Menlo,monospace;overflow-x:auto}.equation b{font-weight:700}.legend{color:var(--muted);flex-wrap:wrap;gap:6px 16px;font-size:13px;display:flex}.legend span{align-items:center;gap:6px;display:inline-flex}.legend i{border-radius:2px;width:14px;height:3px;display:inline-block}.legend i.sq{border-radius:2px;width:10px;height:10px}.legend i.ring{background:var(--plate);border:2px solid;border-radius:50%;width:10px;height:10px}.tbl{border-collapse:collapse;font-variant-numeric:tabular-nums;width:100%;font-size:14px}.tbl th,.tbl td{text-align:right;border-bottom:1px solid var(--line-soft);white-space:nowrap;padding:6px 8px}.tbl th:first-child,.tbl td:first-child{text-align:left}.tbl th{color:var(--muted);font-size:12px;font-weight:500}.tbl tr.is-you td{font-weight:700}.tbl-wrap{overflow-x:auto}.badge{font:700 10px/1 var(--f);letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--ink);color:var(--ink);white-space:nowrap;vertical-align:1px;border-radius:3px;padding:4px 6px 3px;display:inline-block}.badge.b-guide{background:var(--ink);color:var(--volt)}.badge.b-trials{background:var(--v4);border-color:var(--v4);color:var(--plate)}.badge.b-large,.badge.b-lab{background:var(--v0)}.badge.b-early{color:var(--muted);border-style:dashed;border-color:var(--muted)}.badge.b-failed{color:var(--coral);border-color:var(--coral);text-decoration:line-through}.cards{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;display:grid}.card{border:1px solid var(--line-soft);border-radius:8px;align-content:start;gap:6px;padding:12px 14px;display:grid}.card h3{margin:0;font-size:15px}.card p{font-size:14px}.card.is-help{background:var(--coral-0);border-color:#0000}.btn{font:500 14px var(--f);cursor:pointer;border:1px solid var(--ink);background:var(--ink);color:#fff;border-radius:4px;width:fit-content;padding:8px 14px}.btn:hover{color:var(--volt)}.btn.quiet{background:var(--plate);color:var(--ink);border-color:var(--line-soft)}.btn.quiet:hover{border-color:var(--ink);color:var(--ink)}.share-row{flex-wrap:wrap;align-items:center;gap:8px 12px;margin-top:4px;display:flex}.share-row .live-note{overflow-wrap:anywhere}.live-note{color:var(--muted);font-size:13px}.live-note:empty{display:none}.tip{z-index:10;pointer-events:none;background:var(--ink);color:var(--plate);opacity:0;border-radius:4px;max-width:260px;padding:6px 9px;font-size:13px;line-height:1.35;transition:opacity .1s;position:fixed}.tip.on{opacity:1}.fold summary,.sources summary{cursor:pointer;align-items:center;gap:10px;width:fit-content;list-style:none;display:flex}.fold summary::-webkit-details-marker{display:none}.sources summary::-webkit-details-marker{display:none}.fold summary:before,.sources summary:before{content:"";border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);width:6px;height:6px;margin:0 2px;transition:transform .15s;transform:rotate(-45deg)}.fold[open] summary:before,.sources details[open] summary:before{transform:rotate(45deg)}.fold summary h2,.sources summary h2{margin:0}.fold summary:hover h2,.sources summary:hover h2,.sources summary:hover .n{color:var(--ink)}.fold[open] summary{margin-bottom:14px}.sources summary .n{color:var(--muted);font-size:13px}.sources ol{color:var(--muted);gap:8px;margin:12px 0 0;padding-left:1.6em;font-size:14px;display:grid}.sources li a,.sources li:target{color:var(--ink)}.sources li .cred{font-size:13px;display:block}.sources .further{color:var(--muted);margin-top:14px;font-size:14px}.how ul{gap:6px;max-width:80ch;margin:0;padding-left:1.2em;font-size:14px;display:grid}.reading{border-top:1px solid var(--line-soft);gap:18px;padding-top:18px;display:grid}@media (prefers-reduced-motion:reduce){.fold summary:before,.sources summary:before{transition:none}}.sure{--open-w:min(1148px, calc(100vw - 32px));height:calc(var(--tab-h,46px) + 24px)}.sure-drawer{z-index:6;width:var(--tab-w,360px);height:var(--tab-h,46px);background:var(--ink);color:#e9ecee;border-radius:8px 8px 0 0;transition:width .34s cubic-bezier(.45,0,.2,1) 60ms,height .34s cubic-bezier(.45,0,.2,1) 60ms;position:fixed;bottom:0;left:50%;overflow:hidden;transform:translate(-50%);box-shadow:0 -10px 34px -16px #1014188c}.sure.is-open .sure-drawer{width:var(--open-w);height:var(--open-h,320px);transition:width .52s cubic-bezier(.16,1,.3,1),height .52s cubic-bezier(.16,1,.3,1);box-shadow:0 -24px 60px -20px #00000073}.sure-tab{width:max-content;padding:12px 18px calc(12px + env(safe-area-inset-bottom));color:#fff;cursor:pointer;white-space:nowrap;background:0 0;border:0;align-items:center;gap:12px;transition:opacity .22s .24s,visibility 0s .24s;display:flex;position:absolute;top:0;left:0}.sure.is-open .sure-tab{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .1s linear,visibility 0s .1s}.sure-tab:hover .sure-cue{transform:translateY(-2px)}.sure-cue{fill:none;width:10px;height:10px;stroke:var(--volt);stroke-width:1.6px;stroke-linecap:round;stroke-linejoin:round;flex:none;transition:transform .2s}.sure-label{font:500 14px var(--f)}.sure-mini{gap:6px;display:flex}.sure-mini .badge{cursor:inherit}.sure-panel{width:var(--open-w);max-height:var(--open-h,320px);overscroll-behavior:contain;padding:4px 22px calc(16px + env(safe-area-inset-bottom));opacity:0;visibility:hidden;scrollbar-width:thin;scrollbar-color:#3a444b transparent;transition:opacity .12s linear,visibility 0s .12s;position:absolute;top:0;left:50%;overflow-y:auto;transform:translate(-50%)}.sure.is-open .sure-panel{opacity:1;visibility:visible;transition:opacity .3s .12s,visibility}.sure-head{z-index:1;background:var(--ink);align-items:center;gap:16px;padding:12px 0 10px;display:flex;position:sticky;top:0}.sure-head h2{font:500 14px var(--f);letter-spacing:0;text-transform:none;color:#fff;margin:0}.sure-intro{color:#9aa7af;flex:1;font-size:13px}.sure-close{color:#fff;cursor:pointer;background:0 0;border:1px solid #2a3138;border-radius:4px;flex:none;place-items:center;width:32px;height:32px;margin-right:-6px;padding:0;display:grid}.sure-close:hover{background:#1e252b}.sure-close svg{fill:none;stroke:currentColor;stroke-width:1.6px;stroke-linecap:round;stroke-linejoin:round;width:12px;height:12px;transition:transform .2s}.sure-close:hover svg{transform:translateY(2px)}.sure-levels{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:28px;display:grid}.sure-level{border-top:1px solid #2a3138;border-left:3px solid #0000;align-content:start;gap:6px;padding:12px 10px 12px 12px;transition:border-color .2s,background-color .2s;display:grid}.sure-level.is-on{border-left-color:var(--volt);background:#1a2026}.sure-level p{color:#c5ced3;font-size:13px}.sure .badge{color:#e9ecee;background:0 0;border-color:#e9ecee}.sure .badge.b-guide{background:var(--volt);color:var(--ink);border-color:var(--volt)}.sure .badge.b-trials{color:#fff;background:#3b434a;border-color:#3b434a}.sure .badge.b-early,.sure .badge.b-failed{color:#9aa7af;border-color:#9aa7af}.sure-tab:focus-visible{outline:2px solid var(--volt);outline-offset:-4px;border-radius:4px}.sure-close:focus-visible{outline:2px solid var(--volt);outline-offset:2px}main .badge{cursor:help}@media (prefers-reduced-motion:reduce){.sure-drawer,.sure.is-open .sure-drawer{transition:none}}@media (width<=900px){.you,.split,.two{grid-template-columns:minmax(0,1fr)}}@media (width<=1000px){.sure-mini{display:none}.sure-levels{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (width<=700px){.sure{--open-w:calc(100vw - 16px)}.sure-head{flex-wrap:wrap}.sure-intro{flex-basis:100%;order:3}.sure-close{margin-left:auto}}@media (width<=520px){.sure-panel{padding-inline:14px}.sure-levels{column-gap:12px}.sure-level{padding:10px 4px 10px 8px}.sure-level p{font-size:12.5px}.you-controls{grid-template-columns:minmax(0,1fr)}}</style>
+    <script type="module" crossorigin src="/assets/runningLab-U4LSvoFf.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/700-C5UiCGSs.js">
+    <link rel="stylesheet" crossorigin href="/assets/700-_IUOKiS0.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">
+        <img src="/logo.png" alt="" width="28" height="28" />
+        <span class="brand-text"><strong>roger_dsc</strong><small>together, onward</small></span>
+      </a>
+      <nav style="display:flex;gap:8px"><a class="back" href="/#/station/stadium" style="border-color:var(--line-soft)">Stadium</a><a class="back" href="/">← Map</a></nav>
+    </header>
+    <main>
+      <section>
+        <p class="eyebrow">Stadium · Running Track</p>
+        <h1>Running Lab</h1>
+        <p class="lede">Pace, fuel, train, recover.</p>
+      </section>
+
+      <section class="you" aria-labelledby="you-h">
+        <div class="stack">
+          <h2 id="you-h" style="margin:0">You and your race</h2>
+          <div class="you-controls" id="profile"></div>
+          <div class="share-row"><button type="button" class="btn" id="share">Copy a link to your setup</button><span class="live-note" id="share-note" aria-live="polite"></span></div>
+        </div>
+        <div class="tiles" id="you-tiles"></div>
+      </section>
+
+      <nav class="lab-tabs" role="tablist" aria-label="Running Lab">
+        <button type="button" role="tab" id="t-pace" aria-controls="p-pace" data-tab="pace">Pace</button>
+        <button type="button" role="tab" id="t-energy" aria-controls="p-energy" data-tab="energy">Energy</button>
+        <button type="button" role="tab" id="t-fuel" aria-controls="p-fuel" data-tab="fuel">Fuel</button>
+        <button type="button" role="tab" id="t-drink" aria-controls="p-drink" data-tab="drink">Drink</button>
+        <button type="button" role="tab" id="t-training" aria-controls="p-training" data-tab="training">Training</button>
+        <button type="button" role="tab" id="t-recovery" aria-controls="p-recovery" data-tab="recovery">Recovery</button>
+        <button type="button" role="tab" id="t-sprint" aria-controls="p-sprint" data-tab="sprint">Short races</button>
+      </nav>
+
+      <!-- Pace: from a race you ran to the race you want -->
+      <section class="tab-panel" id="p-pace" role="tabpanel" aria-labelledby="t-pace">
+        <div class="split">
+          <div class="side">
+            <h3>A race you ran</h3>
+            <div class="stack" id="recent"></div>
+            <button type="button" class="btn quiet" id="use-predicted">Race at the predicted pace</button>
+            <p class="live-note" id="use-note" aria-live="polite"></p>
+          </div>
+          <div class="results">
+            <div class="tiles" id="predict-tiles"></div>
+            <div class="figure">
+              <h3>Pace over distance, by Riegel’s formula <span class="badge b-large" data-level="large">Large study</span></h3>
+              <div class="chart" id="riegel-chart"></div>
+              <p class="equation" id="riegel-work"></p>
+              <p class="fine" id="riegel-note"></p>
+            </div>
+          </div>
+        </div>
+        <div class="two">
+          <div class="figure">
+            <h3>Your splits, at an even pace</h3>
+            <div class="tbl-wrap" id="splits"></div>
+            <p class="fine" id="splits-note"></p>
+          </div>
+          <div class="figure">
+            <h3>Heat and marathon times <span class="badge b-large" data-level="large">Large study</span></h3>
+            <div class="chart" id="heat-chart"></div>
+            <p class="fine" id="heat-note"></p>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card" id="age-card"></div>
+        </div>
+      </section>
+
+      <!-- Energy: what a kilometre costs -->
+      <section class="tab-panel" id="p-energy" role="tabpanel" aria-labelledby="t-energy" hidden>
+        <div class="tiles" id="energy-tiles"></div>
+        <div class="two">
+          <div class="figure">
+            <h3>Per kilometer: about the same at any pace <span class="badge b-lab" data-level="lab">Lab finding</span></h3>
+            <div class="chart" id="per-km"></div>
+          </div>
+          <div class="figure">
+            <h3>Per hour: more, the faster you run</h3>
+            <div class="chart" id="per-hour"></div>
+          </div>
+        </div>
+        <div class="figure">
+          <h3>But a different fuel: carbohydrate per kilometer <span class="badge b-early" data-level="early">Early evidence</span></h3>
+          <div class="chart" id="carb-km"></div>
+          <p class="fine" id="carb-km-note"></p>
+        </div>
+        <div class="split">
+          <div class="side">
+            <h3>Hills</h3>
+            <div class="stack" id="hill-controls"></div>
+            <div class="tiles" id="hill-tiles"></div>
+          </div>
+          <div class="results">
+            <div class="figure">
+              <h3>The cost of a slope, Minetti’s curve <span class="badge b-lab" data-level="lab">Lab finding</span></h3>
+              <div class="chart" id="hill-chart"></div>
+              <p class="equation" id="hill-work"></p>
+              <p class="fine" id="hill-note"></p>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <h3>Air and drafting <span class="badge b-lab" data-level="lab">Lab finding</span></h3>
+            <p>Pushing through still air may take 7.5% of the energy at middle-distance speed and 13% at sprint speed. Running 1 m behind another runner <q>virtually eliminated air resistance</q> and cut oxygen use by 6.5%<sup><a href="#s-pugh">?</a></sup>.</p>
+          </div>
+          <div class="card">
+            <h3>Shoes <span class="badge b-early" data-level="early">Early evidence</span></h3>
+            <p>In 18 high-calibre runners at 14, 16 and 18 km/h, prototype shoes with a stiff plate in a new foam cut the energy cost of running by about 4% against two established racing shoes of the same weight<sup><a href="#s-hoogkamer">?</a></sup>. One study, in fast runners; the saving may differ for you.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fuel: glycogen, the wall, gels, and food before and after -->
+      <section class="tab-panel" id="p-fuel" role="tabpanel" aria-labelledby="t-fuel" hidden>
+        <div class="split">
+          <div class="side">
+            <h3>Your engine</h3>
+            <div class="stack" id="engine"></div>
+            <h3 style="margin-top:6px">Don’t know your VO₂max?</h3>
+            <p class="fine">Estimate it from an easy run, as Rapoport does: your speed, and your heart rate as a share of its maximum (208 − 0.7 × age<sup><a href="#s-tanaka01">?</a></sup>).</p>
+            <div class="stack" id="hr-est"></div>
+          </div>
+          <div class="results">
+            <div class="tiles" id="wall-tiles"></div>
+            <div class="figure">
+              <h3>Carbohydrate left, kilometer by kilometer <span class="badge b-early" data-level="early">Early evidence</span></h3>
+              <div class="chart" id="tank-chart"></div>
+              <div class="legend" id="tank-legend"></div>
+              <p class="equation" id="wall-work"></p>
+              <p class="fine" id="wall-note"></p>
+            </div>
+          </div>
+        </div>
+        <div class="split">
+          <div class="side">
+            <h3>Gels on the way</h3>
+            <div class="stack" id="gel-controls"></div>
+          </div>
+          <div class="results">
+            <div class="figure">
+              <h3>Carbohydrate an hour <span class="badge b-guide" data-level="guide">Guideline</span></h3>
+              <div class="tiles" id="gel-tiles"></div>
+              <div class="chart" id="gel-chart"></div>
+              <p class="fine" id="gel-note"></p>
+            </div>
+          </div>
+        </div>
+        <div class="two">
+          <div class="figure">
+            <h3>Carbohydrate before, during and after <span class="badge b-guide" data-level="guide">Guideline</span></h3>
+            <div class="chart" id="food-chart"></div>
+            <p class="fine" id="food-note"></p>
+          </div>
+          <div class="figure">
+            <h3>Fuel mix by effort <span class="badge b-lab" data-level="lab">Lab finding</span></h3>
+            <div class="chart" id="mix-chart"></div>
+            <p class="fine" id="mix-note"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Drink: sweat, water and salt -->
+      <section class="tab-panel" id="p-drink" role="tabpanel" aria-labelledby="t-drink" hidden>
+        <div class="split">
+          <div class="side">
+            <h3>Sweat and drink</h3>
+            <div class="stack" id="fluid-controls"></div>
+            <p class="fine">To find your own sweat rate, weigh yourself before and after a run: every kilogram lost is about a liter of sweat, plus whatever you drank<sup><a href="#s-sawka">?</a></sup>.</p>
+          </div>
+          <div class="results">
+            <div class="tiles" id="fluid-tiles"></div>
+            <div class="figure">
+              <h3>Your weight by the finish <span class="badge b-guide" data-level="guide">Guideline</span></h3>
+              <div class="chart" id="fluid-chart"></div>
+              <p class="fine" id="fluid-note"></p>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <h3>Too little <span class="badge b-guide" data-level="guide">Guideline</span></h3>
+            <p>The American College of Sports Medicine’s goal for drinking during exercise is to prevent <q>excessive (&gt;2% body weight loss from water deficit) dehydration</q>. Sweat rates and the salt in sweat vary a lot between people, so it advises plans fitted to each person<sup><a href="#s-sawka">?</a></sup>.</p>
+          </div>
+          <div class="card is-help">
+            <h3>Too much <span class="badge b-large" data-level="large">Large study</span></h3>
+            <p>At the 2002 Boston Marathon, 13% of 488 runners finished with low blood sodium (hyponatremia), and 0.6% critically low. Gaining weight during the race was the strongest risk (odds ratio 4.2), then a time over 4 hours and a very low or high BMI<sup><a href="#s-almond">?</a></sup>. Don’t drink more than you sweat.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Training: building up, and the taper -->
+      <section class="tab-panel" id="p-training" role="tabpanel" aria-labelledby="t-training" hidden>
+        <div class="split">
+          <div class="side">
+            <h3>Your build-up</h3>
+            <div class="stack" id="plan-controls"></div>
+          </div>
+          <div class="results">
+            <div class="tiles" id="plan-tiles"></div>
+            <div class="figure">
+              <h3>Your weeks</h3>
+              <div class="chart" id="weeks-chart"></div>
+              <div class="legend" id="weeks-legend"></div>
+            </div>
+            <div class="figure">
+              <h3>Fitness, fatigue and form <span class="badge b-early" data-level="early">Early evidence</span></h3>
+              <div class="chart" id="ff-chart"></div>
+              <div class="legend" id="ff-legend"></div>
+              <p class="equation" id="ff-work"></p>
+              <p class="fine" id="ff-note"></p>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <h3>Mostly easy <span class="badge b-large" data-level="large">Large study</span></h3>
+            <p>Studies of national and international endurance athletes converge on about 80% of sessions at low intensity and about 20% hard, such as intervals at about 90% of VO₂max<sup><a href="#s-seiler">?</a></sup>. In a 9-week trial of 48 well-trained athletes, this “polarised” mix raised VO₂peak the most: by 11.7%<sup><a href="#s-stoggl">?</a></sup>.</p>
+          </div>
+          <div class="card">
+            <h3>The taper <span class="badge b-trials" data-level="trials">Trials pooled</span></h3>
+            <p>Across 27 studies, the best taper lasted two weeks, with training volume cut by 41–60%<sup><a href="#s-bosquet">?</a></sup>.</p>
+          </div>
+          <div class="card">
+            <h3>Strength work <span class="badge b-trials" data-level="trials">Trials pooled</span></h3>
+            <p>In 5 controlled trials of 93 high-level middle- and long-distance runners, strength and jump training 2–3 times a week for 8–12 weeks made running clearly more economical (standardized mean difference −1.42)<sup><a href="#s-balsalobre">?</a></sup>.</p>
+          </div>
+          <div class="card">
+            <h3>“Add no more than 10% a week” <span class="badge b-failed" data-level="failed">Did not hold up</span></h3>
+            <p>In a trial of 532 novice runners, a 13-week plan built on the 10% rule had as many injuries as a standard 8-week plan: 20.8% against 20.3%<sup><a href="#s-buist">?</a></sup>. In 874 novices with GPS watches, those who added more than 30% over two weeks had more overuse injuries of the kind that come from distance (hazard ratio 1.59, not statistically certain)<sup><a href="#s-nielsen">?</a></sup>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recovery: refuelling and letting fatigue fade -->
+      <section class="tab-panel" id="p-recovery" role="tabpanel" aria-labelledby="t-recovery" hidden>
+        <div class="tiles" id="recovery-tiles"></div>
+        <div class="two">
+          <div class="figure">
+            <h3>After the race: fatigue fades faster than fitness <span class="badge b-early" data-level="early">Early evidence</span></h3>
+            <div class="chart" id="fade-chart"></div>
+            <div class="legend" id="fade-legend"></div>
+            <p class="fine" id="fade-note"></p>
+          </div>
+          <div class="cards" style="grid-template-columns:minmax(0,1fr)">
+            <div class="card">
+              <h3>Refuel <span class="badge b-guide" data-level="guide">Guideline</span></h3>
+              <p id="refuel-text"></p>
+            </div>
+            <div class="card">
+              <h3>Protein <span class="badge b-guide" data-level="guide">Guideline</span></h3>
+              <p id="protein-text"></p>
+            </div>
+            <div class="card">
+              <h3>Water and salt</h3>
+              <p>After exercise, the goal is to replace any water and salt you are short of; how quickly depends on how soon you run again<sup><a href="#s-sawka">?</a></sup>. Your own deficit is on the Drink tab.</p>
+            </div>
+            <div class="card">
+              <h3>Sleep</h3>
+              <p>How sleep restores you, and what a fortnight of short nights costs, is in <a href="/human-energy-lab.html#sleep">Human Energy Lab → Sleep</a>, at the Energy Center.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Short races: where the energy comes from -->
+      <section class="tab-panel" id="p-sprint" role="tabpanel" aria-labelledby="t-sprint" hidden>
+        <div class="figure">
+          <h3>Where the energy comes from, 100 m to 3,000 m <span class="badge b-lab" data-level="lab">Lab finding</span></h3>
+          <div class="chart" id="systems-chart"></div>
+          <div class="legend" id="systems-legend"></div>
+          <p class="fine" id="systems-note"></p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <h3>Aerobic sooner than you’d think <span class="badge b-lab" data-level="lab">Lab finding</span></h3>
+            <p>In highly trained athletes running 400, 800 and 1,500 m on a treadmill, the aerobic system took over as the main supplier between 15 and 30 seconds in<sup><a href="#s-spencer">?</a></sup>.</p>
+          </div>
+          <div class="card">
+            <h3>Air at sprint speed <span class="badge b-lab" data-level="lab">Lab finding</span></h3>
+            <p>Air resistance may take 13% of the energy at sprint speed, against 7.5% at middle-distance speed<sup><a href="#s-pugh">?</a></sup>.</p>
+          </div>
+          <div class="card">
+            <h3>It depends how you measure</h3>
+            <p>Measured from blood lactate and phosphocreatine instead of oxygen deficit, the 100 m came out only 9–11% aerobic; for these short events the method matters<sup><a href="#s-duffield04">?</a></sup>.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="reading">
+        <section aria-labelledby="how-h" class="how">
+          <details class="fold">
+          <summary><h2 id="how-h">How it works</h2></summary>
+          <ul id="how"></ul>
+          </details>
+        </section>
+        <section class="sources" aria-labelledby="sources-h">
+          <details id="sources">
+          <summary><h2 id="sources-h">Sources</h2><span class="n" id="sources-n"></span></summary>
+          <ol id="source-list"></ol>
+          <p class="further" id="further"></p>
+          </details>
+        </section>
+      </div>
+    </main>
+    <aside class="sure" aria-label="How sure is this?">
+      <div class="sure-drawer">
+        <button class="sure-tab" type="button" aria-expanded="false" aria-controls="sure-panel">
+          <svg class="sure-cue" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 6.5 5 3.5l3 3"/></svg>
+          <span class="sure-label">How sure is this?</span>
+          <span class="sure-mini" id="sure-mini" aria-hidden="true"></span>
+        </button>
+        <section class="sure-panel" id="sure-panel" aria-labelledby="sure-h">
+          <header class="sure-head">
+            <h2 id="sure-h">How sure is this?</h2>
+            <p class="sure-intro">Every claim carries one of these; every source says why it can be trusted.</p>
+            <button class="sure-close" type="button" aria-label="Close"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5l3-3"/></svg></button>
+          </header>
+          <div class="sure-levels" id="levels"></div>
+        </section>
+      </div>
+    </aside>
+    <div class="tip" id="tip" role="status" aria-live="polite"></div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Announcement lab · roger_dsc</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="/favicon.png" />
+    <style>:root{--ink:#101418;--muted:#5e666e;--plate:#fff;--land-2:#f3f4f4;--line-soft:#1014181f;--focus:#101418;--led:#ffb000;--f:"Helvetica Neue", Helvetica, Inter, sans-serif}*{box-sizing:border-box}button,select,input,textarea,pre,code{font-family:inherit}body{font-family:var(--f);color:var(--ink);background:var(--plate);margin:0;line-height:1.5}.topbar{border-bottom:1px solid var(--line-soft);justify-content:space-between;align-items:center;gap:12px;height:60px;padding:0 16px;display:flex}.brand{color:inherit;align-items:center;gap:10px;text-decoration:none;display:flex}.brand-text{line-height:1.1;display:grid}.brand-text small{color:var(--muted);letter-spacing:.02em;font-size:13px}.nav{gap:8px;display:flex}.nav a{color:var(--ink);border:1px solid var(--line-soft);white-space:nowrap;border-radius:4px;padding:7px 12px;font-weight:500;text-decoration:none}.nav a.back{border-color:var(--ink)}.nav a:hover{background:var(--ink);color:var(--plate)}@media (width<=480px){.brand-text{display:none}}main{max-width:640px;margin:0 auto;padding:32px 16px 64px}h1{text-wrap:balance;margin:0 0 6px;font-size:1.75rem}h2{letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:28px 0 10px;font-size:.75rem}p{color:var(--muted);margin:0 0 12px}.note{font-size:.875rem}.led{background:var(--ink);color:#ffffff59;border-radius:6px;gap:4px;min-height:64px;margin-top:18px;padding:14px 16px;display:grid}.led div{transition:color .2s}.led .is-now{color:var(--led)}.led:empty:before{content:"Press Play"}.led.is-loading{opacity:.6}.caption{letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:18px 0 0;font-size:.75rem}.caption+.led{margin-top:6px}.actions .play.is-current{outline:2px solid var(--focus);outline-offset:2px}.group{margin-top:14px;font-weight:700}.say{grid-template-columns:1fr auto;align-items:center;gap:6px 10px;padding:2px 0;display:grid}.say label,label.say{align-items:center;gap:8px;min-width:0;display:flex}label.say{grid-template-columns:none}.say .order{gap:4px;display:flex}.say .order button{border:1px solid var(--line-soft);background:var(--plate);width:28px;height:28px;color:var(--ink);cursor:pointer;border-radius:4px}.say .order button:disabled{opacity:.3;cursor:default}.say--custom{border:1px dashed var(--line-soft);border-radius:6px;margin:4px 0;padding:8px 10px}.custom-fields{grid-column:1/-1;gap:6px;display:grid}.custom-fields textarea{field-sizing:content;resize:vertical;min-height:2.3em;line-height:1.4}.custom-fields input,.custom-fields textarea{width:100%;font:15px var(--f);border:1px solid var(--line-soft);color:var(--ink);background:var(--plate);border-radius:4px;padding:7px 9px}.add-say{font:500 14px var(--f);border:1px dashed var(--ink);background:var(--plate);color:var(--ink);cursor:pointer;border-radius:4px;justify-self:start;margin:4px 0 2px;padding:6px 10px}.specials{gap:10px;display:grid}.special{border:1px solid var(--line-soft);border-radius:6px;gap:6px;padding:10px 12px;display:grid}.special-head{align-items:center;gap:8px;display:flex}.special-title{min-width:0;font:700 16px var(--f);color:var(--ink);background:0 0;border:0;flex:1;padding:4px 0}.special-when{font:14px var(--f);color:var(--muted);background:0 0;border:0;padding:0}.special-play{font:700 14px var(--f);border:1px solid var(--ink);background:var(--ink);color:var(--plate);cursor:pointer;white-space:nowrap;border-radius:4px;padding:7px 12px}.special-del{border:1px solid var(--line-soft);background:var(--plate);width:32px;height:32px;color:var(--ink);cursor:pointer;border-radius:4px}code{background:var(--land-2);border-radius:3px;padding:0 4px;font-size:.9em}#sources{margin-top:4px}.row{flex-wrap:wrap;align-items:center;gap:10px;display:flex}select{font:500 15px var(--f);border:1px solid var(--line-soft);background:var(--plate);color:var(--ink);border-radius:4px;max-width:100%;padding:8px 10px}.chips{flex-wrap:wrap;gap:8px;display:flex}.chips button{font:500 15px var(--f);border:1px solid var(--line-soft);background:var(--plate);color:var(--ink);cursor:pointer;border-radius:4px;padding:7px 12px}.chips button[aria-pressed=true]{background:var(--ink);color:var(--plate);border-color:var(--ink)}.langs{gap:8px;display:grid}.lang{border:1px solid var(--line-soft);border-radius:6px;grid-template-columns:auto 1fr auto;align-items:center;gap:8px 12px;padding:10px 12px;display:grid}.lang label{align-items:center;gap:8px;min-width:0;font-weight:500;display:flex}.lang input[type=checkbox]{width:18px;height:18px;accent-color:var(--ink)}.lang .order{gap:4px;display:flex}.lang .order button{border:1px solid var(--line-soft);background:var(--plate);width:32px;height:32px;color:var(--ink);cursor:pointer;border-radius:4px}.lang .order button:disabled{opacity:.3;cursor:default}.lang select{grid-column:1/-1;width:100%;font-weight:400}.lang.is-off{opacity:.55}.lang.is-off select{display:none}.checks{gap:6px;display:grid}.checks label{align-items:center;gap:8px;display:flex}.checks input[type=checkbox]{width:18px;height:18px;accent-color:var(--ink);flex:none}.knob{grid-template-columns:110px 1fr 64px;align-items:center;gap:12px;margin:10px 0;display:grid}.knob label{font-weight:500}.knob output{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}input[type=range]{width:100%;accent-color:var(--ink)}.actions{flex-wrap:wrap;gap:10px;margin-top:16px;display:flex}.actions button{font:700 16px var(--f);cursor:pointer;border:1px solid var(--ink);background:var(--plate);color:var(--ink);border-radius:4px;flex:120px;padding:13px}.actions .play{background:var(--ink);color:var(--plate)}details{margin-top:28px}summary{cursor:pointer;color:var(--muted);font-weight:500}pre{background:var(--land-2);white-space:pre-wrap;word-break:break-all;border-radius:6px;padding:12px;font-size:13px}</style>
+    <script type="module" crossorigin src="/assets/announceLab-CEgg5OIl.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/700-C5UiCGSs.js">
+    <link rel="modulepreload" crossorigin href="/assets/data-HZXJ6QWh.js">
+    <link rel="modulepreload" crossorigin href="/assets/script-Ed0XbTkk.js">
+    <link rel="modulepreload" crossorigin href="/assets/map-CjinCyxg.js">
+    <link rel="modulepreload" crossorigin href="/assets/chime-D_qcpDa9.js">
+    <link rel="stylesheet" crossorigin href="/assets/700-_IUOKiS0.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">
+        <img src="/logo.png" alt="" width="28" height="28" />
+        <span class="brand-text"><strong>roger_dsc</strong><small>together, onward</small></span>
+      </a>
+      <nav class="nav"><a class="back" href="/transit-lab.html" style="border-color:var(--line-soft)">Transit Lab</a><a class="back" href="/">← Map</a></nav>
+    </header>
+    <main>
+      <h1>Announcement lab</h1>
+      <p>Hear a train announce your station.</p>
+      <p class="note" id="source-note"></p>
+      <div class="chips" id="sources"></div>
+
+      <p class="caption" id="caption"></p>
+      <div class="led" id="led" aria-live="polite"></div>
+      <div class="actions">
+        <button class="play" id="closing">Door closing</button>
+        <button class="play" id="departure">Departure</button>
+        <button class="play" id="arrival">Arrival</button>
+        <button id="stop">Stop</button>
+        <button id="random">Random station</button>
+      </div>
+
+      <h2>Station</h2>
+      <div class="row">
+        <select id="station" aria-label="Station"></select>
+        <select id="riding" aria-label="Riding line"></select>
+        <select id="towards" aria-label="Direction"></select>
+      </div>
+
+      <h2>Languages</h2>
+      <p class="note">Tick the languages to include, and use ↑ ↓ to set the order.</p>
+      <div class="langs" id="langs"></div>
+
+
+      <h2>Announcements</h2>
+      <p class="note">Each one plays only where it applies. Use ↑ ↓ to set the order. In custom text, <code>{station}</code> and <code>{next}</code> become station names in each language; leave a language blank to skip it there.</p>
+      <div class="checks" id="says"></div>
+      </div>
+
+      <h2>Special announcements</h2>
+      <p class="note">Not tied to a stop: they play now and then, at the moment listed. Edit the text, or add your own. <code>{station}</code> becomes the station picked above.</p>
+      <div class="checks"><label><input type="checkbox" id="special-tone"> Attention tone first (a two-note “ding-dong”, different from the arrival chime)</label></div>
+      <div id="specials" class="specials"></div>
+
+      <h2>Knobs</h2>
+      <div id="knobs"></div>
+
+      <details>
+        <summary>Settings</summary>
+        <pre id="out"></pre>
+        <div class="actions"><button id="copy">Copy settings</button></div>
+      </details>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+<!doctype html>
+<!-- The City Energy Lab, in two tabs. Our city: build its electricity from any mix of the major sources (wind at sea
+     and on land, sun, water, nuclear, bioenergy, gas, coal) and see what the whole system takes: stations, land and sea,
+     greenhouse gases, lives, and how much rises and falls with the weather. Around the world, the first tab: why energy
+     matters, the world's energy broken down, a map of every country with its mix, capacity and trend, energy
+     independence and security, and energy and the economy. Every figure is numbered to its source and wears a
+     data-integrity label, explained in the drawer at the bottom edge (as in the Human Energy Lab). Simple first; more
+     on request. Its own palette, charcoal and electric violet (the colour of an electric arc): not a line colour, and not the body
+     labs' volt. Our city is the second tab (#city). Energy Center → City Energy. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City Energy Lab · roger_dsc</title>
+    <meta name="description" content="See the world’s energy, power our city." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="/favicon.png" />
+    <style>:root{--ink:#101418;--muted:#5e666e;--plate:#fff;--land-2:#f4f4f6;--line-soft:#1014181f;--focus:#101418;--v0:#f6f6f4;--v1:#d5d9dc;--v2:#b2b9bf;--v3:#8b949b;--v4:#646d75;--v5:#3b434a;--v6:#22282d;--spark:#7c5cff;--spark-line:#5236d6;--spark-0:#f0ecff;--spark-text:#c4b5ff;--f:"Helvetica Neue", Helvetica, Inter, sans-serif}*{box-sizing:border-box}button,select,input{font-family:inherit}body{font-family:var(--f);color:var(--ink);background:var(--plate);margin:0;line-height:1.5}.topbar{border-bottom:1px solid var(--line-soft);justify-content:space-between;align-items:center;gap:16px;height:60px;padding:0 20px;display:flex}.brand{color:inherit;align-items:center;gap:12px;text-decoration:none;display:flex}.brand img{background:var(--plate);border:1px solid #10141817;border-radius:5px;flex:none;width:28px;height:28px;padding:2px}.brand-text{flex-direction:column;line-height:1.1;display:flex}.brand-text strong{font:700 1.25rem/1 var(--f);letter-spacing:-.01em}.brand-text small{color:var(--muted);letter-spacing:.04em;font-size:.75rem}@media (width<=700px){.topbar{gap:8px;padding:0 12px}.brand-text small{display:none}.brand{margin:-8px;padding:8px}}@media (width<=480px){.brand-text{display:none}}.back{color:var(--ink);border:1px solid var(--ink);white-space:nowrap;border-radius:4px;padding:7px 12px;font-weight:500;text-decoration:none}.back:hover{background:var(--ink);color:var(--plate)}main{gap:26px;max-width:1180px;margin:0 auto;padding:32px 16px 72px;display:grid}h1{text-wrap:balance;margin:0 0 6px;font-size:1.75rem}h2{letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0;font-size:.75rem;font-weight:700}p{margin:0}.eyebrow{color:var(--muted);margin-bottom:4px;font-size:14px}.lede{color:var(--muted);max-width:64ch}a{color:var(--ink);text-underline-offset:3px}:focus-visible{outline:2px solid var(--focus);outline-offset:2px}sup a{color:var(--muted);padding-left:1px;font-size:11px;text-decoration:none}sup.next:before{content:",";color:var(--muted);font-size:11px}.fine{color:var(--muted);max-width:80ch;font-size:13px}.btn{font:500 14px var(--f);border:1px solid var(--line-soft);background:var(--plate);color:var(--ink);cursor:pointer;border-radius:4px;padding:7px 12px}.btn:hover{border-color:var(--ink)}.build{border:1px solid var(--line-soft);border-top:6px solid var(--spark);border-radius:8px;gap:16px;padding:18px;display:grid}.need{flex-wrap:wrap;align-items:end;gap:10px 14px;display:flex}.need .field{gap:4px;min-width:min(100%,280px);display:grid}.need label{font-size:14px;font-weight:500}.need select{width:100%;font:400 16px var(--f);color:var(--ink);background:var(--plate);border:1px solid var(--line-soft);border-radius:4px;padding:8px 10px}.need small{color:var(--muted);font-size:12px}.rows{gap:2px;display:grid}.row{border-radius:6px;grid-template-columns:minmax(150px,220px) minmax(120px,1fr) 52px minmax(150px,230px);align-items:center;gap:6px 16px;padding:8px 10px;display:grid}.row:hover,.row.is-on{background:var(--v0)}.row .nm{line-height:1.25;display:grid}.row .nm b{font-size:15px}.row .nm small{color:var(--muted);font-size:12px}.row input[type=range]{width:100%;accent-color:var(--ink)}.row output{font:700 16px var(--f);font-variant-numeric:tabular-nums;text-align:right}.row .need-n{color:var(--muted);font-size:13px}.row .need-n b{color:var(--ink);font-weight:700}@media (width<=720px){.row{grid-template-columns:1fr auto;padding:8px 6px}.row input[type=range]{grid-area:2/1/auto/-1}.row .need-n{grid-column:1/-1}}.free{flex-wrap:wrap;align-items:center;gap:6px 14px;font-size:14px;display:flex}.free b{font-variant-numeric:tabular-nums}.detail{background:var(--land-2);border-radius:6px;max-width:90ch;min-height:3em;padding:10px 12px;font-size:14px}.answer{gap:14px;display:grid}.say{text-wrap:pretty;max-width:50ch;font-size:clamp(1.15rem,2.2vw,1.45rem);font-weight:500;line-height:1.35}.say b{font-weight:700}.tiles{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;display:grid}.tile{background:var(--v0);border-radius:8px;align-content:start;gap:2px;padding:12px 14px;display:grid}.tile.is-key{background:var(--spark-0)}.tile .k{color:var(--muted);font-size:13px}.tile .v{letter-spacing:-.02em;font-variant-numeric:tabular-nums;font-size:clamp(1.4rem,2.6vw,1.9rem);font-weight:700;line-height:1.15}.tile .v small{color:var(--muted);letter-spacing:0;margin-left:4px;font-size:.9rem;font-weight:500}.tile .t{color:var(--muted);font-size:13px}.block{gap:10px;display:grid}details .chart{max-width:760px}.seg{border:1px solid var(--line-soft);border-radius:4px;flex-wrap:wrap;width:fit-content;max-width:100%;display:inline-flex;overflow:hidden}.seg button{font:500 14px var(--f);background:var(--plate);color:var(--ink);cursor:pointer;border:0;padding:6px 12px}.seg button+button{border-left:1px solid var(--line-soft)}.seg button[aria-pressed=true]{background:var(--ink);color:var(--spark-text)}table.units{border-collapse:collapse;width:100%;max-width:760px;font-size:14px}table.units th,table.units td{text-align:left;border-bottom:1px solid var(--line-soft);vertical-align:top;padding:6px 8px}table.units th{color:var(--muted);font-size:12px;font-weight:500}table.units td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}.scroll{overflow-x:auto}.more{border-top:1px solid var(--line-soft);gap:10px;padding-top:16px;display:grid}details summary{cursor:pointer;align-items:center;gap:10px;width:fit-content;font-size:15px;font-weight:700;list-style:none;display:flex}details summary::-webkit-details-marker{display:none}details summary:before{content:"";border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);width:6px;height:6px;margin:0 2px;transition:transform .15s;transform:rotate(-45deg)}details[open] summary:before{transform:rotate(45deg)}details>div,details>ol,details>ul{gap:10px;margin:10px 0 4px 20px;font-size:14px;display:grid}details p,details li{max-width:80ch}details ol,details ul{padding-left:1.4em}@media (width<=560px){details>div,details>ol,details>ul{margin-left:0}}.sources li{color:var(--muted)}.sources li a{color:var(--ink)}.sources .cred{font-size:13px;display:block}@media (prefers-reduced-motion:reduce){details summary:before{transition:none}}.tip{z-index:10;pointer-events:none;background:var(--ink);color:var(--plate);opacity:0;border-radius:4px;max-width:290px;padding:6px 9px;font-size:13px;line-height:1.35;transition:opacity .1s;position:fixed}.tip.on{opacity:1}.lab-tabs{border-bottom:1px solid var(--line-soft);scrollbar-width:none;z-index:3;background:var(--plate);gap:4px;display:flex;position:sticky;top:0;overflow-x:auto}.lab-tabs::-webkit-scrollbar{display:none}.lab-tabs button{font:500 15px var(--f);color:var(--muted);cursor:pointer;background:0 0;border:0;border-bottom:3px solid #0000;flex:none;padding:12px 14px 10px}.lab-tabs button[aria-selected=true]{color:var(--ink);border-bottom:4px solid var(--spark);font-weight:700}.lab-tabs button:hover{color:var(--ink)}.tab{gap:26px;display:grid}.tab[hidden]{display:none}.tab [hidden]{display:none!important}#tab-world{gap:34px}#tab-world h2{letter-spacing:0;text-transform:none;color:var(--ink);text-wrap:balance;font-size:1.25rem}.kicker{letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-size:.75rem;font-weight:700}section.part{gap:14px;display:grid}.head{flex-wrap:wrap;align-items:baseline;gap:6px 12px;display:flex}.row-ctl{flex-wrap:wrap;align-items:center;gap:8px 14px;display:flex}.row-ctl label{font-size:14px;font-weight:500}.row-ctl select{font:400 15px var(--f);color:var(--ink);background:var(--plate);border:1px solid var(--line-soft);border-radius:4px;max-width:100%;padding:7px 10px}.tile .k .badge{margin-left:4px}.find{flex-wrap:wrap;align-items:center;gap:8px;display:flex}.find label{font-size:14px;font-weight:500}.find input{max-width:360px;font:400 16px var(--f);color:var(--ink);border:1px solid var(--line-soft);border-radius:4px;flex:220px;padding:8px 10px}.find .btn{background:var(--ink);color:var(--plate);border-color:var(--ink)}.near-list{gap:2px;margin:0;padding:0;font-size:13.5px;list-style:none;display:grid}.near-list li{border-bottom:1px solid var(--line-soft);grid-template-columns:12px minmax(0,1fr) auto;align-items:baseline;gap:8px;padding:4px 0;display:grid}.near-list i{border-radius:50%;outline:1px solid #10141833;width:10px;height:10px;display:inline-block}.near-list small{color:var(--muted)}.share{border:1px solid var(--line-soft);border-left:4px solid var(--spark);border-radius:8px;gap:10px;padding:14px 16px;display:grid}.share .cols2{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 28px;display:grid}@media (width<=640px){.share .cols2{grid-template-columns:minmax(0,1fr)}}#w-year{width:180px;accent-color:var(--ink)}#w-year-out{font-variant-numeric:tabular-nums;min-width:52px;font-weight:700}.cmp{color:var(--muted);align-items:center;gap:6px;margin-left:auto;font-size:13px;display:inline-flex}.cmp select{font:400 14px var(--f);color:var(--ink);border:1px solid var(--line-soft);border-radius:4px;max-width:200px;padding:5px 8px}.cmp-block{border-top:1px solid var(--line-soft);padding-top:12px}.cmp-table td.n{font-weight:500}.badge{font:700 10px/1 var(--f);letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--ink);color:var(--ink);white-space:nowrap;vertical-align:2px;background:var(--plate);border-radius:3px;padding:4px 6px 3px;display:inline-block}.badge.b-official{background:var(--ink);color:var(--spark-text)}.badge.b-compiled{background:var(--v0)}.badge.b-estimate{border-style:dashed}.badge.b-expert{background:var(--spark-0);border-color:var(--spark-line)}.badge.b-ours{color:var(--muted);border-color:var(--muted)}main .badge{cursor:help}.badges{flex-wrap:wrap;gap:4px;display:inline-flex}.why{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;display:grid}.card{border:1px solid var(--line-soft);border-radius:8px;align-content:start;gap:8px;padding:14px;display:grid}.card .big{letter-spacing:-.02em;font-variant-numeric:tabular-nums;font-size:clamp(1.5rem,2.6vw,2rem);font-weight:700;line-height:1.1}.card .big small{color:var(--muted);letter-spacing:0;font-size:.9rem;font-weight:500}blockquote{border-left:3px solid var(--spark);margin:0;padding:2px 0 2px 12px;font-size:15px;line-height:1.45}blockquote footer{color:var(--muted);margin-top:4px;font-size:12px}.card p{font-size:14px}.waffle-wrap{grid-template-columns:minmax(220px,340px) minmax(0,1fr);align-items:start;gap:20px 32px;display:grid}@media (width<=760px){.waffle-wrap{grid-template-columns:minmax(0,1fr)}}.legend-list{gap:2px;margin:0;padding:0;list-style:none;display:grid}.legend-list li{cursor:pointer;border-radius:4px;grid-template-columns:14px minmax(0,1fr) auto auto;align-items:center;gap:10px;padding:5px 8px;font-size:14px;display:grid}.legend-list li:hover,.legend-list li.is-on{background:var(--v0)}.legend-list .sw{border:1px solid #10141826;border-radius:3px;width:14px;height:14px}.legend-list .p{font-variant-numeric:tabular-nums;text-align:right;font-weight:700}.legend-list .t{color:var(--muted);font-variant-numeric:tabular-nums;text-align:right;min-width:72px;font-size:13px}.who{border-top:1px solid var(--line-soft);gap:8px;padding-top:10px;display:grid}.chart svg{width:100%;height:auto;display:block;overflow:visible}.chart text{font-family:var(--f)}.chart .grid{stroke:var(--line-soft)}.chart [data-tip],.chart [data-k],.chart [data-c]{cursor:pointer}.map-wrap{border:1px solid var(--line-soft);border-radius:8px;padding:8px;position:relative}.ramp{color:var(--muted);flex-wrap:wrap;align-items:center;gap:6px 12px;font-size:12px;display:flex}.ramp .bar{border-radius:2px;width:180px;height:10px}.ramp .nd{background:repeating-linear-gradient(135deg, var(--v1) 0 2px, var(--plate) 2px 5px);outline:1px solid var(--v1);border-radius:2px;width:14px;height:10px}.panel{border:1px solid var(--line-soft);border-top:6px solid var(--spark);border-radius:8px;gap:18px;padding:18px;display:grid}.panel-head{flex-wrap:wrap;align-items:baseline;gap:6px 14px;display:flex}.panel-head h3{font-size:1.35rem}.stats{grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;display:grid}.stat{background:var(--v0);border-radius:8px;gap:2px;padding:10px 12px;display:grid}.stat .k{color:var(--muted);font-size:12px}.stat .v{letter-spacing:-.01em;font-variant-numeric:tabular-nums;font-size:1.35rem;font-weight:700}.stat .v small{color:var(--muted);letter-spacing:0;margin-left:3px;font-size:.8rem;font-weight:500}.two{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 28px;display:grid}@media (width<=860px){.two{grid-template-columns:minmax(0,1fr)}}.sub{align-content:start;gap:8px;display:grid}.sub h4{margin:0;font-size:14px}.key{color:var(--muted);flex-wrap:wrap;gap:4px 14px;font-size:12px;display:flex}.key i{vertical-align:0;border-radius:2px;width:14px;height:9px;margin-right:5px;display:inline-block}.sources .badge{margin-left:6px}.sure{--open-w:min(1148px, calc(100vw - 32px));height:calc(var(--tab-h,46px) + 24px)}.sure-drawer{z-index:6;width:var(--tab-w,360px);height:var(--tab-h,46px);background:var(--ink);color:#e9ecee;border-radius:8px 8px 0 0;transition:width .34s cubic-bezier(.45,0,.2,1) 60ms,height .34s cubic-bezier(.45,0,.2,1) 60ms;position:fixed;bottom:0;left:50%;overflow:hidden;transform:translate(-50%);box-shadow:0 -10px 34px -16px #1014188c}.sure.is-open .sure-drawer{width:var(--open-w);height:var(--open-h,320px);transition:width .52s cubic-bezier(.16,1,.3,1),height .52s cubic-bezier(.16,1,.3,1);box-shadow:0 -24px 60px -20px #00000073}.sure-tab{width:max-content;padding:12px 18px calc(12px + env(safe-area-inset-bottom));color:#fff;cursor:pointer;white-space:nowrap;background:0 0;border:0;align-items:center;gap:12px;transition:opacity .22s .24s,visibility 0s .24s;display:flex;position:absolute;top:0;left:0}.sure.is-open .sure-tab{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .1s linear,visibility 0s .1s}.sure-tab:hover .sure-cue{transform:translateY(-2px)}.sure-cue{fill:none;width:10px;height:10px;stroke:var(--spark-text);stroke-width:1.6px;stroke-linecap:round;stroke-linejoin:round;flex:none;transition:transform .2s}.sure-label{font:500 14px var(--f)}.sure-mini{gap:6px;display:flex}.sure-panel{width:var(--open-w);max-height:var(--open-h,320px);overscroll-behavior:contain;padding:4px 22px calc(16px + env(safe-area-inset-bottom));opacity:0;visibility:hidden;scrollbar-width:thin;scrollbar-color:#3a444b transparent;transition:opacity .12s linear,visibility 0s .12s;position:absolute;top:0;left:50%;overflow-y:auto;transform:translate(-50%)}.sure.is-open .sure-panel{opacity:1;visibility:visible;transition:opacity .3s .12s,visibility}.sure-head{z-index:1;background:var(--ink);align-items:center;gap:16px;padding:12px 0 10px;display:flex;position:sticky;top:0}.sure-head h2{font:500 14px var(--f);color:#fff;margin:0}.sure-intro{color:#9aa7af;flex:1;font-size:13px}.sure-close{color:#fff;cursor:pointer;background:0 0;border:1px solid #2a3138;border-radius:4px;flex:none;place-items:center;width:32px;height:32px;margin-right:-6px;padding:0;display:grid}.sure-close:hover{background:#1e252b}.sure-close svg{fill:none;stroke:currentColor;stroke-width:1.6px;stroke-linecap:round;stroke-linejoin:round;width:12px;height:12px}.sure-levels{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:28px;display:grid}.sure-level{border-top:1px solid #2a3138;border-left:3px solid #0000;align-content:start;gap:6px;padding:12px 10px 12px 12px;transition:border-color .2s,background-color .2s;display:grid}.sure-level.is-on{border-left-color:var(--spark-text);background:#1a2026}.sure-level p{color:#c5ced3;font-size:13px}.sure .badge{color:#e9ecee;background:0 0;border-color:#e9ecee}.sure .badge.b-official{background:var(--spark-line);color:#fff;border-color:var(--spark-line)}.sure .badge.b-expert{border-color:var(--spark-text);color:var(--spark-text)}.sure .badge.b-ours{color:#9aa7af;border-color:#9aa7af}.sure-tab:focus-visible{outline:2px solid var(--spark-text);outline-offset:-4px;border-radius:4px}.sure-close:focus-visible{outline:2px solid var(--spark-text);outline-offset:2px}@media (prefers-reduced-motion:reduce){.sure-drawer,.sure.is-open .sure-drawer{transition:none}}@media (width<=1000px){.sure-mini{display:none}.sure-levels{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (width<=700px){.sure{--open-w:calc(100vw - 16px)}.sure-head{flex-wrap:wrap}.sure-intro{flex-basis:100%;order:3}.sure-close{margin-left:auto}}@media (width<=520px){.sure-panel{padding-inline:14px}.sure-levels{column-gap:12px}.sure-level{padding:10px 4px 10px 8px}.sure-level p{font-size:12.5px}}</style>
+    <script type="module" crossorigin src="/assets/cityEnergyLab-mVqPH3mt.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/700-C5UiCGSs.js">
+    <link rel="modulepreload" crossorigin href="/assets/data-HZXJ6QWh.js">
+    <link rel="modulepreload" crossorigin href="/assets/city-drawing-CWt_FrTL.js">
+    <link rel="modulepreload" crossorigin href="/assets/preload-helper-BLdHbfdN.js">
+    <link rel="stylesheet" crossorigin href="/assets/700-_IUOKiS0.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">
+        <img src="/logo.png" alt="" width="28" height="28" />
+        <span class="brand-text"><strong>roger_dsc</strong><small>together, onward</small></span>
+      </a>
+      <nav style="display:flex;gap:8px"><a class="back" href="/#/station/powerstation" style="border-color:var(--line-soft)">Energy Center</a><a class="back" href="/">← Map</a></nav>
+    </header>
+    <main>
+      <section>
+        <p class="eyebrow">Energy Center · City Energy</p>
+        <h1>City Energy Lab</h1>
+        <p class="lede">See the world’s energy, power our city.</p>
+      </section>
+
+      <nav class="lab-tabs" role="tablist" aria-label="City Energy Lab">
+        <button type="button" role="tab" id="t-world" aria-controls="tab-world" data-tab="world">Around the world</button>
+        <button type="button" role="tab" id="t-city" aria-controls="tab-city" data-tab="city">Our city</button>
+      </nav>
+
+      <div class="tab" id="tab-world" role="tabpanel" aria-labelledby="t-world">
+      <section class="part" aria-labelledby="w-why-h">
+        <div class="head"><h2 id="w-why-h">Why energy matters</h2></div>
+        <div class="why" id="w-why"></div>
+      </section>
+
+      <section class="part" aria-labelledby="w-mix-h">
+        <div class="head"><h2 id="w-mix-h">The world’s energy, broken down</h2><span class="badges" id="w-mix-badges"></span></div>
+        <div class="row-ctl"><div class="seg" id="w-mix-kind" role="group" aria-label="Show"></div></div>
+        <p class="say" id="w-mix-say"></p>
+        <div class="waffle-wrap">
+          <div class="chart" id="w-waffle"></div>
+          <div class="sub"><ul class="legend-list" id="w-mix-list"></ul><p class="fine" id="w-mix-note"></p></div>
+        </div>
+        <div class="who" id="w-who" hidden></div>
+        <div class="sub" id="w-since-wrap"><h4 id="w-since-h"></h4><div class="chart" id="w-since"></div><p class="fine">Hover or tap the chart for a year.</p></div>
+      </section>
+
+      <section class="part" aria-labelledby="w-map-h">
+        <div class="head"><h2 id="w-map-h">Every country</h2><span class="badges" id="w-map-badges"></span></div>
+        <div class="row-ctl">
+          <label for="w-measure">Show</label><select id="w-measure"></select>
+          <label for="w-pick">Country</label><select id="w-pick"></select>
+          <label for="w-year">Year</label><input type="range" id="w-year" min="2000" max="2025" step="1" value="2025" aria-describedby="w-year-out"><output id="w-year-out" for="w-year">Latest</output>
+        </div>
+        <div class="seg" id="w-regions" role="group" aria-label="Zoom to a region"></div>
+        <div class="map-wrap"><div class="chart" id="w-map"><p class="fine">Drawing the map…</p></div></div>
+        <div class="ramp" id="w-ramp"></div>
+        <p class="fine">Hover a country for its figure; tap or click it, or pick one above, for how it makes its electricity. Move the year back to 2000 to see how it changed, and compare it with another place in its panel. Small countries and islands aren’t drawn at this scale: pick them from the list.</p>
+        <div class="panel" id="w-panel" aria-live="polite"></div>
+      </section>
+
+      <section class="part" aria-labelledby="w-near-h">
+        <div class="head"><h2 id="w-near-h">Near a city</h2><span class="badges" id="w-near-badges"></span></div>
+        <p class="fine" id="w-near-intro"></p>
+        <form class="find" id="w-near-form" role="search"><label for="w-near-q">City</label><input id="w-near-q" type="search" autocomplete="off" placeholder="Vancouver, Tokyo, Nairobi…"><button type="submit" class="btn">Find</button></form>
+        <div class="seg" id="w-near-places" role="group" aria-label="Pick the city you meant"></div>
+        <div class="row-ctl"><span style="font-size:14px;font-weight:500">Within</span><div class="seg" id="w-near-r" role="group" aria-label="Distance"></div></div>
+        <p class="say" id="w-near-say" aria-live="polite"></p>
+        <div class="two" id="w-near-out"><div class="chart" id="w-near-map"></div><div class="sub" id="w-near-side"></div></div>
+        <p class="fine" id="w-near-note"></p>
+      </section>
+
+      <section class="part" aria-labelledby="w-sec-h">
+        <div class="head"><h2 id="w-sec-h">Made at home: energy independence and security</h2><span class="badges" id="w-sec-badges"></span></div>
+        <div class="why" id="w-sec-quotes"></div>
+        <div class="row-ctl"><div class="seg" id="w-fuel" role="group" aria-label="Fuel"></div></div>
+        <p class="say" id="w-sec-say"></p>
+        <div class="key"><span><i style="background:var(--v4)"></i>Makes at least what it uses, and sells the rest</span><span><i style="background:var(--spark)"></i>Makes less than it uses, and buys the rest</span></div>
+        <div class="chart" id="w-sec-chart"></div>
+        <p class="fine">The 20 largest users of each fuel, ranked by how much of what they use they produce at home. Past the line, a country makes more than it uses and sells the rest. Tap a bar for that country above.</p>
+        <div class="share" id="w-share"></div>
+      </section>
+
+      <section class="part" aria-labelledby="w-eco-h">
+        <div class="head"><h2 id="w-eco-h">Energy and the economy</h2><span class="badges" id="w-eco-badges"></span></div>
+        <div class="why" id="w-eco-quotes"></div>
+        <p class="say" id="w-eco-say"></p>
+        <div class="chart" id="w-eco"></div>
+        <p class="fine" id="w-eco-note"></p>
+      </section>
+
+      <section class="more" aria-label="More">
+        <details><summary>How it works</summary><ul id="w-how"></ul></details>
+        <details class="sources" id="w-sources"><summary>Sources</summary><ol id="w-source-list"></ol></details>
+      </section>
+      </div>
+
+      <div class="tab" id="tab-city" role="tabpanel" aria-labelledby="t-city" hidden>
+
+      <section class="build" aria-label="Build the city’s electricity">
+        <div class="need">
+          <div class="field"><label for="place">Our city uses electricity like</label><select id="place"></select><small id="place-note"></small></div>
+          <button class="btn" id="reset" type="button">Start from its mix</button>
+          <button class="btn" id="clear" type="button">Clear</button>
+        </div>
+        <div class="rows" id="rows" role="group" aria-label="Each source’s share of the city’s electricity"></div>
+        <p class="free" id="free" aria-live="polite"></p>
+        <p class="detail" id="src-detail"></p>
+      </section>
+
+      <section class="answer" aria-live="polite">
+        <p class="say" id="say"></p>
+        <div class="tiles" id="tiles"></div>
+      </section>
+
+      <section class="block" aria-labelledby="mix-h">
+        <h2 id="mix-h">Where the year’s electricity comes from</h2>
+        <div class="chart" id="mix"></div>
+        <p class="fine" id="mix-rest"></p>
+        <p class="fine">Darker means more greenhouse gas for each kilowatt-hour, over a station’s whole life. Hover or tap a part.</p>
+      </section>
+
+      <section class="more" aria-label="More">
+        <details id="d-season"><summary>When each makes power</summary><div id="season"></div></details>
+        <details id="d-compare"><summary>Each source, side by side</summary><div id="compare"></div></details>
+        <details><summary>What one station makes</summary><div id="units"></div></details>
+        <details><summary>How it works</summary><ul id="how"></ul></details>
+        <details class="sources" id="sources"><summary>Sources</summary><ol id="source-list"></ol></details>
+      </section>
+      </div>
+    </main>
+    <!-- How sure is this data? The legend for the data-integrity labels, as a drawer at the bottom edge (as in the Human
+         Energy Lab): closed, a tab with the labels; open, what each one means. Any label on the page opens it there. -->
+    <aside class="sure" aria-label="How sure is this data?">
+      <div class="sure-drawer">
+        <button class="sure-tab" type="button" aria-expanded="false" aria-controls="sure-panel">
+          <svg class="sure-cue" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 6.5 5 3.5l3 3"/></svg>
+          <span class="sure-label">How sure is this data?</span>
+          <span class="sure-mini" id="sure-mini" aria-hidden="true"></span>
+        </button>
+        <section class="sure-panel" id="sure-panel" aria-labelledby="sure-h">
+          <header class="sure-head">
+            <h2 id="sure-h">How sure is this data?</h2>
+            <p class="sure-intro">Every figure carries one of these labels; every source says why it can be trusted.</p>
+            <button class="sure-close" type="button" aria-label="Close"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5l3-3"/></svg></button>
+          </header>
+          <div class="sure-levels" id="levels"></div>
+        </section>
+      </div>
+    </aside>
+    <div class="tip" id="tip" role="status" aria-live="polite"></div>
+  </body>
+</html>

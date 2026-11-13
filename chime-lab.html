@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chime lab · roger_dsc</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="/favicon.png" />
+    <style>:root{--ink:#101418;--muted:#5e666e;--plate:#fff;--land-2:#f3f4f4;--line-soft:#1014181f;--focus:#101418;--f:"Helvetica Neue", Helvetica, Inter, sans-serif}*{box-sizing:border-box}button,select,input,textarea,pre,code{font-family:inherit}body{font-family:var(--f);color:var(--ink);background:var(--plate);margin:0;line-height:1.5}.topbar{border-bottom:1px solid var(--line-soft);justify-content:space-between;align-items:center;gap:12px;height:60px;padding:0 16px;display:flex}.brand{color:inherit;align-items:center;gap:10px;text-decoration:none;display:flex}.brand-text{line-height:1.1;display:grid}.brand-text small{color:var(--muted);letter-spacing:.02em;font-size:13px}.back{color:var(--ink);border:1px solid var(--ink);white-space:nowrap;border-radius:4px;padding:7px 12px;font-weight:500;text-decoration:none}.back:hover{background:var(--ink);color:var(--plate)}main{max-width:600px;margin:0 auto;padding:32px 16px 64px}h1{text-wrap:balance;margin:0 0 6px;font-size:1.75rem}h2{letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:28px 0 10px;font-size:.75rem}p{color:var(--muted);margin:0 0 12px}.status{border:1px solid var(--line-soft);color:var(--muted);border-radius:6px;margin-top:18px;padding:12px 14px}.status b{color:var(--ink)}.chips{flex-wrap:wrap;gap:8px;display:flex}.chips button{font:500 15px var(--f);border:1px solid var(--line-soft);background:var(--plate);color:var(--ink);cursor:pointer;border-radius:4px;padding:7px 12px}.chips button[aria-pressed=true]{background:var(--ink);color:var(--plate);border-color:var(--ink)}.knob{grid-template-columns:92px 1fr 72px;align-items:center;gap:12px;margin:10px 0;display:grid}.knob label{font-weight:500}.knob output{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}input[type=range]{width:100%;accent-color:var(--ink)}.actions{flex-wrap:wrap;gap:10px;margin-top:16px;display:flex}.actions button{font:700 16px var(--f);cursor:pointer;border:1px solid var(--ink);background:var(--plate);color:var(--ink);border-radius:4px;flex:140px;padding:13px}.actions button:disabled{opacity:.4;cursor:default}.actions .play{background:var(--ink);color:var(--plate)}.actions .use{background:var(--focus);border-color:var(--focus);color:#fff}details{margin-top:28px}summary{cursor:pointer;color:var(--muted);font-weight:500}pre{background:var(--land-2);white-space:pre-wrap;word-break:break-all;border-radius:6px;padding:12px;font-size:13px}</style>
+    <script type="module" crossorigin src="/assets/chimeLab-BSkp7dE0.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/700-C5UiCGSs.js">
+    <link rel="modulepreload" crossorigin href="/assets/chime-D_qcpDa9.js">
+    <link rel="stylesheet" crossorigin href="/assets/700-_IUOKiS0.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">
+        <img src="/logo.png" alt="" width="28" height="28" />
+        <span class="brand-text"><strong>roger_dsc</strong><small>together, onward</small></span>
+      </a>
+      <nav style="display:flex;gap:8px"><a class="back" href="/transit-lab.html" style="border-color:var(--line-soft)">Transit Lab</a><a class="back" href="/">← Map</a></nav>
+    </header>
+    <main>
+      <h1>Chime lab</h1>
+      <p>Tune the chime before each announcement.</p>
+      <p>With its sound on (it’s off by default), the site plays the Held chord. Comfort limits are always on: no harsh highs, clicks, fast wobble or loud peaks.</p>
+
+      <h2>Pattern</h2><div id="patterns" class="chips"></div>
+      <h2>Tone</h2><div id="voices" class="chips"></div>
+      <h2>Knobs</h2><div id="knobs"></div>
+      <div class="actions">
+        <button class="play" id="play">Play</button>
+        <button id="reset">Reset knobs</button>
+        <button id="preset">Held chord preset</button>
+      </div>
+
+      <details>
+        <summary>Settings</summary>
+        <pre id="out"></pre>
+        <div class="actions"><button id="copy">Copy settings</button></div>
+      </details>
+    </main>
+  </body>
+</html>

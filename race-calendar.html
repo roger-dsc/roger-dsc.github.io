@@ -1,0 +1,99 @@
+<!doctype html>
+<!-- The Race Calendar: the Marathon Majors' next dates, each checked on the race's own website, and marathons in any
+     city, looked up live from Wikipedia's lists in the reader's browser (as the City Lab looks up cities). Linked from
+     Stadium → Race Office. Shares its look with the Running Lab. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Race Calendar · roger_dsc</title>
+    <meta name="description" content="Marathons around the world." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="/favicon.png" />
+    <style>:root{--ink:#101418;--muted:#5e666e;--plate:#fff;--land-2:#f4f4f6;--line-soft:#1014181f;--focus:#101418;--v0:#f5f8e8;--v1:#d5d9dc;--v2:#b2b9bf;--v3:#8b949b;--v4:#646d75;--v5:#3b434a;--v6:#101418;--volt:#c4f135;--volt-line:#84b300;--volt-0:#eef8c8;--f:"Helvetica Neue", Helvetica, Inter, sans-serif}*{box-sizing:border-box}button,input{font-family:inherit}body{font-family:var(--f);color:var(--ink);background:var(--plate);margin:0;line-height:1.5}.topbar{border-bottom:1px solid var(--line-soft);justify-content:space-between;align-items:center;gap:16px;height:60px;padding:0 20px;display:flex}.brand{color:inherit;align-items:center;gap:12px;text-decoration:none;display:flex}.brand img{background:var(--plate);border:1px solid #10141817;border-radius:5px;flex:none;width:28px;height:28px;padding:2px}.brand-text{flex-direction:column;line-height:1.1;display:flex}.brand-text strong{font:700 1.25rem/1 var(--f);letter-spacing:-.01em}.brand-text small{color:var(--muted);letter-spacing:.04em;font-size:.75rem}@media (width<=700px){.topbar{gap:8px;padding:0 12px}.brand-text small{display:none}.brand{margin:-8px;padding:8px}}@media (width<=480px){.brand-text{display:none}}.back{color:var(--ink);border:1px solid var(--ink);white-space:nowrap;border-radius:4px;padding:7px 12px;font-weight:500;text-decoration:none}.back:hover{background:var(--ink);color:var(--plate)}main{gap:28px;max-width:1180px;margin:0 auto;padding:32px 16px 72px;display:grid}h1{text-wrap:balance;margin:0 0 6px;font-size:1.75rem}h2{letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;font-size:.75rem;font-weight:700}h3{margin:0 0 8px;font-size:1rem}p{margin:0}.eyebrow{color:var(--muted);margin-bottom:4px;font-size:14px}.lede{color:var(--muted);max-width:66ch}a{color:var(--ink);text-underline-offset:3px}:focus-visible{outline:2px solid var(--focus);outline-offset:2px}sup a{color:var(--muted);padding-left:1px;font-size:11px;text-decoration:none}.fine{color:var(--muted);max-width:80ch;font-size:13px}.block{gap:14px;display:grid}.chart{width:100%}.chart svg{width:100%;height:auto;display:block;overflow:visible}.chart text{font-family:var(--f);fill:var(--ink)}.chart .axis{fill:var(--muted);font-size:11px}.chart .grid{stroke:var(--line-soft);stroke-width:1px}.majors{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;display:grid}.major{border:1px solid var(--line-soft);border-radius:8px;align-content:start;gap:4px;padding:12px 14px;display:grid}.major.is-next{border-top:6px solid var(--volt)}.major .city{color:var(--muted);font-size:13px}.major .name{font-size:15px;font-weight:700}.major .date{letter-spacing:-.01em;font-variant-numeric:tabular-nums;font-size:1.35rem;font-weight:700}.major .date.is-unsure{color:var(--muted);font-size:1rem;font-weight:500}.major .left{color:var(--muted);font-size:13px}.major .acts{flex-wrap:wrap;align-items:center;gap:6px 12px;margin-top:6px;font-size:13px;display:flex}.btn{font:500 13px var(--f);cursor:pointer;border:1px solid var(--line-soft);background:var(--plate);color:var(--ink);border-radius:4px;padding:6px 11px}.btn:hover{border-color:var(--ink)}.find{gap:8px;max-width:560px;display:flex}.find input{min-width:0;font:400 16px var(--f);color:var(--ink);background:var(--plate);border:1px solid var(--line-soft);border-radius:4px;flex:1;padding:8px 12px}.find button{font:700 15px var(--f);cursor:pointer;border:1px solid var(--ink);background:var(--ink);color:var(--volt);border-radius:4px;padding:8px 14px}.find button:disabled{opacity:.6;cursor:default}.live-note{color:var(--muted);font-size:13px}.live-note:empty{display:none}.months{gap:18px;display:grid}.month h3{border-bottom:1px solid var(--line-soft);align-items:baseline;gap:8px;margin:0 0 6px;padding-bottom:6px;font-size:15px;display:flex}.month h3 small{color:var(--muted);font-size:13px;font-weight:400}.races{grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:4px 20px;margin:0;padding:0;list-style:none;display:grid}.races li{padding:4px 0;font-size:14px}.races li small{color:var(--muted);font-size:12px;display:block}.tag{font:700 10px/1 var(--f);letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:var(--volt);vertical-align:2px;border-radius:3px;margin-left:4px;padding:3px 5px 2px;display:inline-block}.major .about{font-size:14px}.major-detail{max-width:640px}.major-detail .major.is-next{border-top:1px solid var(--line-soft)}#year-strip .mj{cursor:pointer;outline:none}#year-strip .mj:focus-visible circle{stroke-width:3px}#year-strip .mj:focus-visible text{text-decoration:underline}.rows.odd li{grid-template-columns:96px minmax(0,1fr) auto}.rows.odd .where{color:var(--muted);font-size:13px}.rows.odd small{margin-top:2px}.major .entry{background:var(--land-2);border-radius:4px;padding:6px 8px;font-size:13px}.major .entry.has-dates{background:var(--volt-0)}.major .entry .bell{color:var(--ink);font-weight:500}.major .entry .usual{color:var(--muted);margin-top:4px;display:block}.major .entry .usual b{color:var(--ink);font-weight:500}.seg{border:1px solid var(--line-soft);border-radius:4px;width:fit-content;display:inline-flex;overflow:hidden}.seg button{font:500 14px var(--f);background:var(--plate);color:var(--ink);cursor:pointer;border:0;padding:6px 12px}.seg button+button{border-left:1px solid var(--line-soft)}.seg button[aria-pressed=true]{background:var(--ink);color:var(--volt)}.view[hidden]{display:none}.cal-wrap{grid-template-columns:minmax(0,380px) minmax(0,1fr);align-items:start;gap:20px 32px;display:grid}.cal-head{justify-content:space-between;align-items:center;margin-bottom:8px;display:flex}.cal-head h3{margin:0;font-size:16px}.cal-nav{border:1px solid var(--line-soft);background:var(--plate);width:34px;height:34px;font:500 18px var(--f);color:var(--ink);cursor:pointer;border-radius:4px}.cal-nav:hover:not(:disabled){border-color:var(--ink)}.cal-nav:disabled{color:#c9cdd1;cursor:default}.cal{grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;display:grid}.cal .dow{color:var(--muted);text-align:center;padding-bottom:2px;font-size:11px}.cal .day{aspect-ratio:1;font-variant-numeric:tabular-nums;background:var(--land-2);color:var(--ink);border:0;border-radius:6px;place-items:center;padding:0;font-family:inherit;font-size:14px;display:grid}.cal .day.is-blank{background:0 0}.cal .day.has{background:var(--volt);cursor:pointer;font-weight:700}.cal .day.has.is-major{background:var(--ink);color:var(--volt)}.cal .day.is-today{box-shadow:inset 0 0 0 2px var(--volt-line)}.cal .day.is-past{color:var(--v2)}.cal .day.has:hover,.cal .day.is-picked{outline:2px solid var(--ink);outline-offset:1px}.legend{color:var(--muted);flex-wrap:wrap;gap:6px 16px;margin-top:10px;font-size:13px;display:flex}.legend span{align-items:center;gap:6px;display:inline-flex}.sw{border-radius:3px;width:12px;height:12px;display:inline-block}.sw-race{background:var(--volt)}.sw-major{background:var(--ink)}.sw-today{box-shadow:inset 0 0 0 2px var(--volt-line);background:var(--land-2)}.rows{border-top:1px solid var(--line-soft);margin:0;padding:0;list-style:none}.rows li{border-bottom:1px solid var(--line-soft);grid-template-columns:64px minmax(0,1fr) auto;align-items:center;gap:4px 12px;padding:8px 0;scroll-margin-top:80px;font-size:14px;display:grid}.rows li.is-picked{background:var(--volt-0)}.rows .d{font-variant-numeric:tabular-nums;font-weight:700}.rows .n small{color:var(--muted);font-size:12px;display:block}.rows .muted .d{color:var(--muted);font-weight:500}.by-month{gap:18px;display:grid}.by-month h3,.cal-list h3{margin:0 0 6px;font-size:15px}.cal-list .fine{margin-top:10px}.map-bar{flex-wrap:wrap;align-items:center;gap:8px 12px;margin-bottom:8px;display:flex}.map svg{touch-action:manipulation;width:100%;height:auto;display:block}.map .land{fill:#e2e5e8;stroke:var(--plate);stroke-width:.6px}.map .land.is-lit{fill:#dcef9c}.map .sea{fill:var(--plate);stroke:var(--line-soft)}.map .grat{fill:none;stroke:#1014180d}.map .hit{cursor:pointer;outline:none}.map .hit:focus-visible .ring{stroke:var(--ink);stroke-width:3px}.map .count{font:700 12px var(--f);fill:var(--volt);text-anchor:middle;pointer-events:none}.map .place{font:500 12px var(--f);fill:var(--ink);pointer-events:none;paint-order:stroke;stroke:var(--plate);stroke-width:3px;stroke-linejoin:round}#map-list h3{margin:12px 0 6px;font-size:15px}.glance{grid-template-columns:repeat(auto-fill,minmax(74px,1fr));gap:8px;margin:4px 0 18px;display:grid}.mini{border:1px solid var(--line-soft);background:var(--plate);cursor:pointer;font:500 12px var(--f);color:var(--ink);text-align:left;border-radius:6px;gap:4px;padding:6px;display:grid}.mini:hover{border-color:var(--ink)}.mini.is-on{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}.mini .dots{grid-template-columns:repeat(7,1fr);gap:2px;display:grid}.mini .dots i{aspect-ratio:1;background:var(--land-2);border-radius:1.5px}.mini .dots i:empty:first-child,.mini .dots i.p{background:#f8f8f9}.mini .dots i.r{background:var(--volt)}.mini .dots i.m{background:var(--ink)}.tag-half{background:var(--v4);color:var(--plate)}.tag-odd{background:var(--v0);color:var(--ink);border:1px solid var(--ink)}.cal .dow .wide{display:inline}@media (width<=860px){.cal-wrap{grid-template-columns:minmax(0,1fr)}}@media (width<=420px){.cal .dow .wide{display:none}}@media (width<=480px){.rows li{grid-template-columns:52px minmax(0,1fr)}.rows li .btn{grid-column:2;justify-self:start}}.tip{z-index:10;pointer-events:none;background:var(--ink);color:var(--plate);opacity:0;border-radius:4px;max-width:260px;padding:6px 9px;font-size:13px;line-height:1.35;transition:opacity .1s;position:fixed}.tip.on{opacity:1}.sources summary{cursor:pointer;align-items:center;gap:10px;width:fit-content;list-style:none;display:flex}.sources summary::-webkit-details-marker{display:none}.sources summary:before{content:"";border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);width:6px;height:6px;margin:0 2px;transition:transform .15s;transform:rotate(-45deg)}.sources details[open] summary:before{transform:rotate(45deg)}.sources summary h2{margin:0}.sources summary:hover h2,.sources summary:hover .n{color:var(--ink)}.sources summary .n{color:var(--muted);font-size:13px}.sources ol{color:var(--muted);gap:8px;margin:12px 0 0;padding-left:1.6em;font-size:14px;display:grid}.sources li a{color:var(--ink)}.sources li .cred{font-size:13px;display:block}.reading{border-top:1px solid var(--line-soft);padding-top:18px}@media (prefers-reduced-motion:reduce){.sources summary:before{transition:none}}</style>
+    <script type="module" crossorigin src="/assets/raceCalendar-BhTLUkXc.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/700-C5UiCGSs.js">
+    <link rel="modulepreload" crossorigin href="/assets/preload-helper-BLdHbfdN.js">
+    <link rel="stylesheet" crossorigin href="/assets/700-_IUOKiS0.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">
+        <img src="/logo.png" alt="" width="28" height="28" />
+        <span class="brand-text"><strong>roger_dsc</strong><small>together, onward</small></span>
+      </a>
+      <nav style="display:flex;gap:8px"><a class="back" href="/#/station/stadium" style="border-color:var(--line-soft)">Stadium</a><a class="back" href="/">← Map</a></nav>
+    </header>
+    <main>
+      <section>
+        <p class="eyebrow">Stadium · Race Office</p>
+        <h1>Race Calendar</h1>
+        <p class="lede">Marathons around the world.</p>
+      </section>
+
+      <section class="block" aria-labelledby="majors-h">
+        <h2 id="majors-h" style="margin:0">The Marathon Majors</h2>
+        <div class="chart" id="year-strip"></div>
+        <div class="major-detail" id="majors" aria-live="polite"></div>
+        <p class="fine" id="majors-note"></p>
+      </section>
+
+      <section class="block" aria-labelledby="world-h">
+        <h2 id="world-h" style="margin:0">Races around the world</h2>
+        <p class="fine">The Majors, our pick of other big-city marathons and half marathons on every continent, and the unusual ones below. Dates as each race’s own website gave them on November 10, 2026; where a website had no date yet, the month it is usually held.</p>
+        <div class="seg" role="group" aria-label="Distance"><button type="button" data-distance="all">All</button><button type="button" data-distance="full">Marathons</button><button type="button" data-distance="half">Half marathons</button></div>
+        <div class="seg" role="group" aria-label="Show races" id="view-seg"><button type="button" data-view="calendar">Calendar</button><button type="button" data-view="date">By date</button><button type="button" data-view="map">Map</button></div>
+        <div class="view" id="view-calendar">
+          <div class="glance" id="glance" aria-label="The year at a glance"></div>
+          <div class="cal-wrap">
+            <div class="cal-side">
+              <div class="cal-head"><button type="button" class="cal-nav" id="cal-prev" aria-label="Previous month">‹</button><h3 id="cal-title" aria-live="polite"></h3><button type="button" class="cal-nav" id="cal-next" aria-label="Next month">›</button></div>
+              <div class="cal" id="cal" role="grid" aria-labelledby="cal-title"></div>
+              <div class="legend"><span><i class="sw sw-race"></i>Race day</span><span><i class="sw sw-major"></i>A Major</span><span><i class="sw sw-today"></i>Today</span></div>
+            </div>
+            <div class="cal-list" id="cal-list"></div>
+          </div>
+        </div>
+        <div class="view" id="view-date" hidden></div>
+        <div class="view" id="view-map" hidden>
+          <div class="map-bar">
+            <div class="seg" role="group" aria-label="Group races by" id="level-seg"><button type="button" data-level="continent">Continent</button><button type="button" data-level="country">Country</button><button type="button" data-level="city">City</button></div>
+            <button type="button" class="btn" id="map-world" hidden>World</button>
+            <span class="live-note" id="map-crumb"></span>
+          </div>
+          <div class="map" id="map"></div>
+          <div id="map-list"></div>
+          <p class="fine">Tap a bubble to zoom in, a dot to see its race. Places from the coordinates of each city or area on Wikipedia; borders from Natural Earth.</p>
+        </div>
+      </section>
+
+      <section class="block" aria-labelledby="odd-h">
+        <h2 id="odd-h" style="margin:0">Something different</h2>
+        <p class="fine">Ultras, mountains, ice, wine and wildlife: marathons that are not about the clock.</p>
+        <div id="unusual"></div>
+      </section>
+
+      <section class="block" aria-labelledby="find-h">
+        <h2 id="find-h" style="margin:0">Marathons in a city</h2>
+        <form class="find" id="find" role="search">
+          <input id="find-q" type="search" placeholder="A city or country, such as Vancouver or Japan" aria-label="City or country" autocomplete="off" enterkeyhint="search">
+          <button type="submit">Find</button>
+        </form>
+        <p class="live-note" id="find-note" aria-live="polite"></p>
+        <div class="chart" id="month-bars"></div>
+        <div class="months" id="results"></div>
+        <p class="fine">From Wikipedia’s lists of marathon races<sup><a href="#s-wiki-lists">?</a></sup>, looked up live in your browser when you search: your search goes to Wikipedia, and nothing is sent otherwise. Months are as Wikipedia lists them (the month each race is held, or was last held) and are not checked by us; check each race’s own website for this year’s date.</p>
+      </section>
+
+      <div class="reading">
+        <section class="sources" aria-labelledby="sources-h">
+          <details id="sources">
+          <summary><h2 id="sources-h">Sources</h2><span class="n" id="sources-n"></span></summary>
+          <ol id="source-list"></ol>
+          </details>
+        </section>
+      </div>
+    </main>
+    <div class="tip" id="tip" role="status" aria-live="polite"></div>
+  </body>
+</html>

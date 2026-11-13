@@ -1,0 +1,1304 @@
+<!doctype html>
+<!-- The city's metro design system, shown rather than described: type, colour, layout, signs, motion and the
+     systems it borrows from. Linked from Cultural Center → Design Studio. English only, like the labs:
+     a reference sheet, not a translated story. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metro design system · roger_dsc</title>
+    <meta name="description" content="The rules behind the map, and where they came from." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="/favicon.png" />
+    <style>:root{--ink:#101418;--ink-2:#5e666e;--land:#fff;--land-2:#f3f4f4;--plate:#fff;--water:#dce5ea;--water-ink:#7d97a6;--mountain:#e9ecea;--sand:#f1eee6;--park:#edf1ec;--line-soft:#10141817;--f:"Helvetica Neue", Helvetica, Inter, sans-serif;--col:1180px;--gutter:16px}*{box-sizing:border-box}html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}body{background:var(--land);color:var(--ink);font:400 1rem/1.55 var(--f);-webkit-font-smoothing:antialiased;margin:0}h1,h2,h3,p,dl,dd,ul,ol,figure{margin:0}ul,ol{padding:0;list-style:none}a{color:inherit}button{font:inherit;color:inherit}:focus-visible{outline:2px solid var(--ink);outline-offset:2px}:lang(zh-Hans){font-family:PingFang SC,Noto Sans SC,sans-serif}:lang(zh-Hant){font-family:PingFang TC,Noto Sans TC,sans-serif}:lang(ja){font-family:Hiragino Sans,Noto Sans JP,sans-serif}.topbar{border-bottom:1px solid var(--line-soft);justify-content:space-between;align-items:center;gap:16px;height:60px;padding:0 20px;display:flex}.brand{color:inherit;align-items:center;gap:12px;text-decoration:none;display:flex}.brand img{border:1px solid var(--line-soft);background:var(--plate);border-radius:5px;flex:none;width:28px;height:28px;padding:2px}.brand-text{flex-direction:column;line-height:1.1;display:flex}.brand-text strong{font:700 1.25rem/1 var(--f);letter-spacing:-.01em}.brand-text small{color:var(--ink-2);letter-spacing:.04em;font-size:.75rem}.nav{gap:8px;display:flex}.back{color:var(--ink);border:1px solid var(--ink);white-space:nowrap;border-radius:4px;padding:7px 12px;font-weight:500;text-decoration:none}.back--quiet{border-color:var(--line-soft)}.back:hover{background:var(--ink);color:var(--plate)}@media (width<=700px){.topbar{gap:8px;padding:0 12px}.brand{margin:-8px;padding:8px}.brand-text small{display:none}}@media (width<=480px){.brand-text{display:none}}main{max-width:var(--col);padding:0 var(--gutter) 80px;margin:0 auto}.skip{z-index:10;background:var(--ink);color:var(--plate);padding:10px 14px;text-decoration:none;position:fixed;top:-60px;left:16px}.skip:focus{top:12px}.hero{padding:72px 0 0}.place{color:var(--ink-2);font-size:.8125rem;font-weight:500}.hero h1{max-width:18ch;font:700 clamp(2.75rem, 7vw, 5.4rem)/.95 var(--f);letter-spacing:-.045em;text-wrap:balance;margin-top:18px}.lede{max-width:64ch;color:var(--ink-2);margin-top:26px;font-size:1.125rem;line-height:1.55}.lede b{color:var(--ink);font-weight:500}.index{z-index:6;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);background:var(--land);scrollbar-width:none;gap:0 22px;margin-top:40px;display:flex;position:sticky;top:0;overflow-x:auto}.index::-webkit-scrollbar{display:none}.index a{color:var(--ink-2);border-bottom:2px solid #0000;flex:none;margin-bottom:-1px;padding:12px 0;font-size:.8125rem;font-weight:500;text-decoration:none;display:block}.index a:hover{color:var(--ink)}.index a[aria-current=true]{color:var(--ink);border-bottom-color:var(--ink)}.part{border-top:1px solid var(--line-soft);grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:24px;padding:64px 0;scroll-margin-top:56px;display:grid}.rail h2{font:500 1.375rem/1.15 var(--f);letter-spacing:-.02em}.rail p{max-width:27ch;color:var(--ink-2);margin-top:10px;font-size:.875rem;line-height:1.55}.field>*+*{margin-top:28px}.statement{max-width:26ch;font:500 clamp(1.5rem, 2.8vw, 2.1rem)/1.22 var(--f);letter-spacing:-.025em}.note{max-width:62ch;color:var(--ink-2);font-size:.9375rem}.note b{color:var(--ink);font-weight:500}.rows{display:grid}.rows>div{border-top:1px solid var(--line-soft);grid-template-columns:minmax(0,13rem) minmax(0,1fr);gap:24px;padding:15px 0;display:grid}.rows>div:last-child{border-bottom:1px solid var(--line-soft)}.rows dt{font-weight:500}.rows dd{color:var(--ink-2);font-size:.9375rem}.rows dd b{color:var(--ink);font-weight:500}.motion-demos{margin-top:30px}.demo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 28px;display:grid}.demo{flex-direction:column;gap:10px;display:flex}.demo-stage{aspect-ratio:2;background:var(--land-2);place-items:center;display:grid;position:relative;overflow:hidden}.demo-stage>svg{width:100%;height:100%;display:block;position:absolute;inset:0}.demo figcaption{color:var(--ink-2);justify-content:space-between;align-items:baseline;gap:12px;font-size:.8125rem;line-height:1.4;display:flex}.demo figcaption b{color:var(--ink);font-weight:500}.demo-hint{text-align:right}.demo-note{margin-top:16px;font-size:.8125rem}.demo-btn{border:1px solid var(--ink);font:500 .75rem/1 var(--f);color:var(--ink);cursor:pointer;background:0 0;border-radius:4px;flex:none;padding:5px 11px}.demo-btn:hover{background:var(--ink);color:var(--plate)}.demo-stage--keys{padding:20px 46px}.demo-stage--keys:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}.keys-plate{border-top:6px solid var(--c,#e8890c);background:var(--plate);text-align:left;width:100%;padding:11px 16px 14px}.keys-line{color:var(--ink-2);align-items:center;gap:8px;font-size:.6875rem;font-weight:500;display:flex}.keys-code{background:var(--c,#e8890c);color:#fff;border-radius:50%;place-items:center;width:18px;height:18px;font-size:.625rem;font-weight:700;display:inline-grid}.keys-name{letter-spacing:-.02em;margin-top:8px;font-size:1.375rem;font-weight:700;line-height:1.1}.keys-text{color:var(--ink-2);margin-top:4px;font-size:.8125rem;line-height:1.45}.keys-step{border:1px solid var(--line-soft);background:var(--plate);width:28px;height:28px;color:var(--ink-2);cursor:pointer;margin-top:-14px;font-size:.6875rem;line-height:1;position:absolute;top:50%}.keys-step:hover{border-color:var(--ink);color:var(--ink)}.keys-step--prev{left:8px}.keys-step--next{right:8px}.demo-stage--map{background:var(--land)}.demo-line{transition:stroke-dashoffset 1.4s cubic-bezier(.6,0,.2,1)}.demo-stn{transition:opacity .45s ease-out}.demo-wall{background:var(--plate);border-top:8px solid #e8890c;justify-items:center;gap:4px;padding:6px 18px 12px;display:grid}.demo-wall-line{color:var(--ink-2);font-size:.6875rem;font-weight:500}.demo-wall-name{letter-spacing:-.02em;font-size:1.5rem;font-weight:700}.demo-door{background:linear-gradient(90deg,#dce5eadb,#f6f8f8e6 46%,#dce5eadb);border-right:1px solid #10141824;width:50.5%;transition:transform .62s cubic-bezier(.3,.8,.2,1);position:absolute;top:0;bottom:0}.demo-door:before{content:"";background:#1014181a;width:1px;position:absolute;top:0;bottom:0;left:8%}.demo-door--l{left:0}.demo-door--r{left:50%;transform:scaleX(-1)}.demo-doors.is-open .demo-door--l{transform:translate(-100%)}.demo-doors.is-open .demo-door--r{transform:translate(100%)scaleX(-1)}.demo-stage--strip{padding:16px}.demo-stage--strip .strip{width:100%}.demo-stage--strip .strip-stop{cursor:pointer}.demo-stage--strip .strip-stop:focus-visible{outline:2px solid var(--ink);outline-offset:3px}.demo-stage--nt{padding:0;display:block;overflow:hidden;container-type:inline-size}.ntd-page{gap:7px;padding:24px 26px 0;display:grid}.ntd-kicker{color:var(--ink-2);font-size:.6875rem;font-weight:500}.ntd-title{letter-spacing:-.02em;font-size:1.125rem;font-weight:700}.ntd-bar{background:var(--line-soft);height:6px}.ntd-bar--short{width:62%}.ntd-drawer{background:var(--ink);color:#e9ecee;border-radius:8px 8px 0 0;width:56%;height:36px;transition:width .34s cubic-bezier(.45,0,.2,1),height .34s cubic-bezier(.45,0,.2,1);position:absolute;bottom:0;left:50%;overflow:hidden;transform:translate(-50%)}.demo-stage--nt.is-open .ntd-drawer{border-radius:0;width:100%;height:100%;transition:width .52s cubic-bezier(.16,1,.3,1),height .52s cubic-bezier(.16,1,.3,1)}.ntd-tab{color:#fff;width:100%;height:36px;font:500 .75rem var(--f);cursor:pointer;background:0 0;border:0;align-items:center;gap:8px;padding:0 14px;transition:opacity .22s .24s,visibility 0s .24s;display:flex}.demo-stage--nt.is-open .ntd-tab{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .1s linear,visibility 0s .1s}.ntd-cue{fill:none;stroke:#9aa7af;stroke-width:1.6px;stroke-linecap:round;stroke-linejoin:round;width:10px;height:10px;margin-left:auto;transition:transform .2s}.ntd-tab:hover .ntd-cue{transform:translateY(-2px)}.ntd-badge{background:var(--c);color:#fff;border-radius:50%;place-items:center;width:18px;height:18px;font-size:.5625rem;font-weight:700;display:inline-grid}.ntd-tab:focus-visible{outline-offset:-4px;outline:2px solid #fff}.ntd-panel{opacity:0;visibility:hidden;width:100cqw;height:100%;padding:2px 16px 10px;transition:opacity .12s linear,visibility 0s .12s;position:absolute;top:0;left:0}.demo-stage--nt.is-open .ntd-panel{opacity:1;visibility:visible;transition:opacity .3s .12s,visibility}.ntd-head{justify-content:space-between;align-items:center;gap:12px;padding:6px 0;display:flex}.ntd-head h3{font:500 .6875rem var(--f);color:#9aa7af;margin:0}.ntd-close{color:#fff;cursor:pointer;background:0 0;border:1px solid #2a3138;border-radius:4px;place-items:center;width:26px;height:26px;padding:0;display:grid}.ntd-close svg{fill:none;stroke:currentColor;stroke-width:1.6px;stroke-linecap:round;stroke-linejoin:round;width:10px;height:10px;transition:transform .2s}.ntd-close:hover svg{transform:translateY(2px)}.ntd-board{color:#fff;align-items:center;gap:8px;padding:6px 0 4px;font-size:.75rem;font-weight:500;display:flex}.ntd-rows{gap:4px;margin:0;padding:0;list-style:none;display:grid}.ntd-rows li{color:#c5ced3;font-variant-numeric:tabular-nums;border-top:1px solid #2a3138;justify-content:space-between;padding:4px 0;font-size:.75rem;display:flex}.ntd-rows li span:last-child{color:#fff;font-weight:500}.demo-stage--next{padding:22px 26px}.next{background:var(--plate);border:1px solid var(--line-soft);width:100%;max-width:340px;padding:10px 12px}.next-head{border-bottom:1px solid var(--line-soft);letter-spacing:.04em;color:var(--ink-2);justify-content:space-between;padding:0 2px 8px;font-size:.625rem;font-weight:500;display:flex}.next-rows{display:grid}.next-row{border-bottom:1px solid var(--line-soft);grid-template-columns:18px minmax(0,1fr) auto;align-items:center;gap:10px;padding:9px 2px;display:grid}.next-row:last-child{border-bottom:0}.next-code{background:var(--c);color:#fff;border-radius:50%;place-items:center;width:18px;height:18px;font-size:.5625rem;font-weight:700;display:inline-grid}.next-dest{white-space:nowrap;text-overflow:ellipsis;font-size:.8125rem;font-weight:500;overflow:hidden}.next-in{color:var(--ink-2);font-variant-numeric:tabular-nums;font-size:.75rem}.next-in.is-due{color:var(--ink);font-weight:500}@media (prefers-reduced-motion:reduce){.demo-line,.demo-stn,.demo-door,.ntd-drawer,.ntd-panel,.ntd-cue,.ntd-tab,.keys-name,.keys-text,.next-in{transition:none!important}}.motion-demos.is-reduced .demo-line,.motion-demos.is-reduced .demo-stn,.motion-demos.is-reduced .demo-door,.motion-demos.is-reduced .ntd-drawer,.motion-demos.is-reduced .ntd-panel,.motion-demos.is-reduced .ntd-cue,.motion-demos.is-reduced .ntd-tab,.motion-demos.is-reduced .keys-name,.motion-demos.is-reduced .keys-text,.motion-demos.is-reduced .next-in{transition:none!important}.motion-demos.is-reduced .strip-stop.is-here .strip-dot{animation:none}.specimen{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);gap:24px;padding:24px 0 26px;display:grid}.specimen p{letter-spacing:-.035em;max-width:22ch;font-size:clamp(1.75rem,3.6vw,2.75rem);font-weight:500;line-height:1.12}.weights{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;display:grid}.weights>div{align-content:start;gap:6px;display:grid}.weights .aa{letter-spacing:-.04em;font-size:clamp(2.5rem,5vw,4rem);line-height:1}.weights small{color:var(--ink-2);font-size:.75rem}.w400{font-weight:400}.w500{font-weight:500}.w700{font-weight:700}.langs{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;display:grid}.langs>div{border:1px solid var(--line-soft);align-content:start;gap:10px;padding:18px 20px;display:grid}.langs .tag{letter-spacing:.08em;color:var(--ink-2);font-size:.6875rem;font-weight:500}.langs p{font-size:1.0625rem;line-height:1.6}.langs .night-sample{color:#f3f4f4;background:#0b0f13;border-color:#0b0f13;grid-column:1/-1}.langs .night-sample .tag{color:#9aa1a8}.langs .night-sample p{font-family:"Archivo Variable", var(--f);letter-spacing:-.025em;font-weight:500;font-stretch:112%}.scale{display:grid}.scale li{border-top:1px solid var(--line-soft);flex-wrap:wrap;align-items:baseline;gap:8px 18px;padding:10px 0;display:flex}.scale li:last-child{border-bottom:1px solid var(--line-soft)}.scale .sample{letter-spacing:-.02em;flex:none;min-width:15rem;line-height:1.1}.scale small{color:var(--ink-2);font-size:.75rem}.lines{gap:14px;display:grid}.lines li{grid-template-columns:minmax(0,1fr) minmax(0,17rem);align-items:center;gap:20px;display:grid}.line-block{background:var(--c);align-items:center;height:64px;padding:0 20px;display:flex}.roundel{width:34px;height:34px;color:var(--c);font:700 16px/1 var(--f);font-variant-numeric:tabular-nums;background:#fff;border-radius:50%;place-items:center;display:grid}.line-meta b{font-weight:500;display:block}.line-meta small{color:var(--ink-2);font-variant-numeric:tabular-nums;font-size:.8125rem}.palette{grid-template-columns:repeat(4,minmax(0,1fr));gap:0 20px;display:grid}.palette li{border-top:1px solid var(--line-soft);align-content:start;gap:6px;padding:12px 0;display:grid}.chip{border:1px solid var(--line-soft);background:var(--s);cursor:pointer;width:100%;height:60px;padding:0;display:block}.chip:hover{outline:2px solid var(--ink);outline-offset:2px}.palette b{font-size:.8125rem;font-weight:500}.palette code{font:500 .75rem/1.2 var(--f);font-variant-numeric:tabular-nums}.palette small{color:var(--ink-2);font-size:.75rem;line-height:1.4}.copy-status{min-height:1.5em;color:var(--ink-2);font-size:.8125rem}.night{color:#f3f4f4;background:#0b0f13;margin-top:36px;padding:28px}.night-head{flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:16px;display:flex}.night-head h3{font-size:1.0625rem;font-weight:500}.night-head span{color:#9aa1a8;font-size:.75rem}.night-tokens{grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin:22px 0;display:grid}.night-tokens li{align-content:start;gap:6px;display:grid}.night-tokens .swatch{background:var(--s);border:1px solid #f3f4f42e;height:44px;display:block}.night-tokens b{font-size:.75rem;font-weight:500}.night-tokens code{color:#9aa1a8;font-variant-numeric:tabular-nums;font-size:.6875rem}.night p{color:#9aa1a8;max-width:64ch;font-size:.875rem;line-height:1.6}.night a{color:#f3f4f4}.measure{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);gap:16px;padding:24px 0;display:grid}.measure-row{grid-template-columns:minmax(0,1fr) 8rem;align-items:center;gap:16px;display:grid}.measure-track{background:var(--land-2);height:42px}.measure-bar{background:var(--ink);height:100%;display:block}.measure-bar--article{background:var(--ink-2);margin-inline:auto}.measure-row small{color:var(--ink-2);font-variant-numeric:tabular-nums;font-size:.75rem}.measure-key{color:var(--ink-2);flex-wrap:wrap;gap:6px 20px;font-size:.75rem;display:flex}.measure-key span{align-items:center;gap:7px;display:inline-flex}.measure-key i{background:var(--ink);width:22px;height:8px}.measure-key i.article{background:var(--ink-2)}.measure-key i.quiet{background:var(--land-2);border:1px solid var(--line-soft)}.signs{gap:36px;display:grid}.sign{gap:12px;display:grid}.sign figcaption{max-width:58ch;color:var(--ink-2);font-size:.8125rem}.sign figcaption b{color:var(--ink);font-weight:500}.badge{background:var(--c);color:#fff;width:30px;height:30px;font:700 15px/1 var(--f);font-variant-numeric:tabular-nums;border-radius:50%;flex:none;place-items:center;display:inline-grid}.badge--sm{width:22px;height:22px;font-size:11px}.nb{border:1px solid var(--line-soft);border-top:8px solid var(--c);background:var(--plate);border-radius:4px;overflow:hidden}.nb-top{flex-wrap:wrap;align-items:center;gap:18px;padding:24px 26px 20px;display:flex}.nb-art{background:color-mix(in srgb, var(--c) 14%, var(--plate));width:54px;height:54px;color:var(--c);border-radius:4px;flex:none;place-items:center;display:grid}.nb-art svg{fill:none;stroke:currentColor;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;width:30px;height:30px}.nb-name{min-width:0;font:700 clamp(1.75rem, 4vw, 2.75rem)/1 var(--f);letter-spacing:-.03em;text-wrap:balance}.nb-codes{gap:6px;margin-left:auto;display:flex}.nb-band{background:var(--c);color:#fff;font:700 1.25rem/1.15 var(--f);grid-template-columns:1fr 1fr;display:grid}.nb-side{align-items:center;gap:12px;min-width:0;padding:14px 24px;display:flex}.nb-side span{flex-direction:column;min-width:0;display:flex}.nb-side--next{text-align:right;justify-content:flex-end}.nb-arrow{font-size:.875rem}.markers{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;display:grid}.markers>div{border-top:1px solid var(--line-soft);align-content:start;gap:8px;padding-top:16px;display:grid}.markers svg{width:52px;height:52px}.markers b{font-size:.8125rem;font-weight:500}.markers small{color:var(--ink-2);font-size:.75rem;line-height:1.4}.strip{color:#c5ced3;scrollbar-width:none;background:#101418;border-radius:4px;padding:14px 16px 18px;overflow-x:auto}.strip::-webkit-scrollbar{display:none}.strip-head{color:#fff;white-space:nowrap;align-items:center;gap:8px;font-size:.8125rem;font-weight:700;display:flex}.strip-head .towards{color:#9aa7af;margin-left:auto;font-weight:500}.strip-stops{grid-template-columns:repeat(5,minmax(80px,1fr));margin-top:10px;display:grid}.strip-stop{justify-items:center;gap:7px;padding-top:10px;display:grid;position:relative}.strip-stop:before{content:"";background:var(--c);height:4px;position:absolute;top:15px;left:0;right:0}.strip-stop:first-child:before{left:50%}.strip-stop:last-child:before{right:50%}.strip-stop.is-past:before{background:#3a444b}.strip-stop.is-here:before{background:linear-gradient(90deg, #3a444b 50%, var(--c) 50%)}.strip-stop:first-child.is-here:before{background:var(--c)}.strip-dot{border:3px solid var(--c);background:#101418;border-radius:50%;width:14px;height:14px;position:relative}.strip-stop.is-past .strip-dot{border-color:#3a444b}.strip-stop.is-here .strip-dot{background:#fff;border-color:#fff;animation:1.6s ease-in-out infinite blink}@keyframes blink{0%,to{box-shadow:0 0 0 3px #ffffff59}50%{box-shadow:0 0 0 8px #fff0}}@media (prefers-reduced-motion:reduce){.strip-stop.is-here .strip-dot{animation:none}}.strip-name{text-align:center;font-size:.6875rem;font-weight:700;line-height:1.25}.strip-stop.is-past .strip-name{color:#6d7880}.strip-stop.is-here .strip-name{color:#fff}.exit-sample{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);grid-template-columns:40px 1fr;gap:16px;max-width:42rem;padding:18px 0;display:grid}.exit-letter{background:color-mix(in srgb, var(--c) 14%, var(--plate));width:40px;height:40px;color:var(--c);font:700 20px/1 var(--f);border-radius:4px;place-items:center;display:grid}.exit-sample h3{font:700 1.25rem/1.2 var(--f);padding-top:8px}.exit-sample p{margin-top:6px;font-size:.875rem}.exit-sample a{border-bottom:1px solid;font-weight:500;text-decoration:none}.exit-sample span{color:var(--ink-2)}.exit-sample .exit-note{margin-top:2px;margin-left:calc(1em + 10px);display:block}.sources{display:grid}.sources>div{border-top:1px solid var(--line-soft);grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr) minmax(0,1.4fr);gap:20px;padding:15px 0;font-size:.9375rem;display:grid}.sources>div:last-child{border-bottom:1px solid var(--line-soft)}.sources .head{letter-spacing:.04em;color:var(--ink-2);font-size:.75rem;font-weight:700}.sources b{color:var(--ink);font-weight:500}.sources span{color:var(--ink-2)}.sources .head span{color:inherit}.atlas-bar{flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:12px;display:flex}.seg{border:1px solid var(--line-soft);border-radius:4px;display:inline-flex;overflow:hidden}.seg button{font:500 .8125rem/1 var(--f);cursor:pointer;background:0 0;border:0;padding:6px 12px}.seg button[aria-pressed=true]{background:var(--ink);color:var(--plate)}.atlas-note{color:var(--ink-2);flex:16rem;font-size:.8125rem}.atlas-reset{border:1px solid var(--ink);font:500 .8125rem/1 var(--f);cursor:pointer;background:0 0;border-radius:4px;padding:6px 12px}.atlas-reset:hover{background:var(--ink);color:var(--plate)}.atlas-map{border:1px solid var(--line-soft);background:var(--water)}.atlas-map svg{width:100%;height:auto;display:block}.atlas-map .sea{fill:var(--water)}.atlas-map .grat{fill:none;stroke:#10141814;stroke-width:.5px}.atlas-map .land{fill:#fff;stroke:#1014181f;stroke-width:.6px}.atlas-map .land.is-lit{stroke:var(--ink);stroke-width:1px}.atlas-map .hit{cursor:pointer}.atlas-map .hit:focus{outline:none}.atlas-map .hit:focus-visible .ring{stroke:var(--ink);stroke-width:3px}.atlas-map .ring{fill:var(--ink);stroke:var(--plate);stroke-width:2px}.atlas-map .ring.is-on{stroke:var(--ink);stroke-width:4px}.atlas-map .count{fill:var(--plate);font:700 11px var(--f);text-anchor:middle;pointer-events:none}.atlas-map .place{fill:var(--ink);font:500 11px var(--f);text-anchor:middle;pointer-events:none;paint-order:stroke;stroke:var(--water);stroke-width:3px}.atlas-load{color:var(--ink-2);padding:24px;font-size:.8125rem}.world{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px;display:grid}.world [hidden]{display:none}.world-head{border-top:1px solid var(--line-soft);font:500 .9375rem/1.2 var(--f);grid-column:1/-1;padding:24px 0 10px}.world-head:first-child{border-top:0;padding-top:0}.system{border-top:1px solid var(--line-soft);flex-direction:column;gap:10px;padding:16px 0 20px;display:flex}.system-shot{margin:0 0 2px}.system-shot img{aspect-ratio:3/2;object-fit:cover;background:var(--land-2);width:100%;height:auto;display:block}.system-shot figcaption{min-height:2.8em;color:var(--ink-2);margin-top:7px;font-size:.6875rem;line-height:1.4}.system-shot a{text-underline-offset:2px;text-decoration:underline}.system-shot a:hover{text-decoration-thickness:2px}.system-top{color:var(--ink-2);justify-content:space-between;align-items:baseline;gap:12px;font-size:.75rem;display:flex}.system h4{font:500 1.125rem/1.2 var(--f);letter-spacing:-.015em}.system-idea{font-size:.9375rem;line-height:1.5}.system-took{color:var(--ink-2);font-size:.875rem;line-height:1.5}.system-took b{color:var(--ink);font-weight:500}.system details{margin-top:2px}.system summary{cursor:pointer;padding:6px 0;font-size:.8125rem;font-weight:500}.system summary:hover{text-underline-offset:2px;text-decoration:underline}.system details p{color:var(--ink-2);margin-top:6px;font-size:.8125rem;line-height:1.55}.cite{gap:4px;margin-top:10px;display:grid}.cite li{color:var(--ink-2);font-size:.75rem;line-height:1.45}.cite a{color:var(--ink);text-underline-offset:2px;text-decoration:underline}.cite a:hover{text-decoration-thickness:2px}.foot{border-top:1px solid var(--line-soft);color:var(--ink-2);flex-wrap:wrap;justify-content:space-between;gap:16px;padding:28px 0 0;font-size:.8125rem;display:flex}.foot a{color:var(--ink)}.foot p:last-child{font-weight:500}@media (width<=900px){.part{grid-template-columns:1fr;gap:24px;padding:48px 0}.rail p{max-width:52ch}.palette,.night-tokens{grid-template-columns:repeat(3,minmax(0,1fr))}.world{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px}.markers{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (width<=700px){.hero{padding-top:48px}.rows>div{grid-template-columns:1fr;gap:4px}.demo-grid{grid-template-columns:1fr}.demo-wall-name{font-size:1.25rem}.weights{gap:12px}.langs{grid-template-columns:1fr}.lines li{grid-template-columns:1fr;gap:10px}.line-block{height:56px}.strip-stops{grid-template-columns:repeat(5,minmax(0,1fr))}.strip-name{font-size:.625rem}.palette{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px}.night{padding:20px}.night-tokens{grid-template-columns:repeat(2,minmax(0,1fr))}.world{grid-template-columns:1fr}.measure-row{grid-template-columns:1fr;gap:6px}.nb-top{gap:12px;padding:18px}.nb-art{width:44px;height:44px}.nb-band{font-size:1rem}.nb-side{padding:12px 16px}.sources>div{grid-template-columns:1fr;gap:4px}.sources .head{display:none}.sources>div>span:before{content:attr(data-label) " · ";color:var(--ink-2);font-size:.75rem}}@media (width<=480px){.scale .sample{min-width:0}}.lab-tabs{border-bottom:1px solid var(--line-soft);gap:4px;margin-top:40px;display:flex}.lab-tabs button{font:500 15px var(--f);color:var(--ink-2);cursor:pointer;background:0 0;border:0;border-bottom:3px solid #0000;flex:none;margin-bottom:-1px;padding:12px 14px 10px}.lab-tabs button:first-child{padding-left:0}.lab-tabs button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--ink);font-weight:700}.lab-tabs button:hover{color:var(--ink)}.tab[hidden]{display:none}.tab>.index{border-top:0;margin-top:0}#tab-world .part{border-top:0;grid-template-columns:minmax(0,1fr);gap:20px;padding-top:40px}#tab-world .rail p{max-width:62ch}.world{grid-template-columns:repeat(4,minmax(0,1fr));gap:0 24px}.world.is-compact .system:not(.is-open)>:is(.system-idea,.system-took,details){display:none}.world.is-compact .system-shot img{cursor:pointer}.system h4{margin:0}.system h4 button{font:inherit;letter-spacing:inherit;color:inherit;text-align:left;cursor:pointer;background:0 0;border:0;padding:0}.system h4 button:hover{text-underline-offset:3px;text-decoration:underline}.system h4 button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}.system h4 button:after{content:"";border-bottom:1.5px solid;border-right:1.5px solid;width:6px;height:6px;margin:0 2px 3px 9px;display:inline-block;transform:rotate(45deg)}.system h4 button[aria-expanded=true]:after{margin-bottom:-1px;transform:rotate(-135deg)}.system.is-open{grid-column:1/-1;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);align-content:start;gap:10px 28px;display:grid}.system.is-open>.system-shot{grid-area:1/1/span 6}.system.is-open>:not(.system-shot){grid-column:2}.demo figcaption{display:block}.demo-cap{justify-content:space-between;align-items:baseline;gap:12px;display:flex}.demo-desc{color:var(--ink-2);margin-top:4px;display:block}.sound-play{flex-wrap:wrap;gap:10px;display:flex}.sound-play button{border:1px solid var(--ink);font:500 .875rem/1 var(--f);color:var(--ink);cursor:pointer;background:0 0;border-radius:4px;padding:9px 14px}.sound-play button:hover,.sound-play button[aria-pressed=true]{background:var(--ink);color:var(--plate)}@media (width<=900px){.world{grid-template-columns:repeat(3,minmax(0,1fr))}}@media (width<=700px){.world{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px}.system h4{font-size:1rem}.system.is-open{grid-template-columns:minmax(0,1fr)}.system.is-open>.system-shot,.system.is-open>:not(.system-shot){grid-area:auto/1}}</style>
+    <script type="module" crossorigin src="/assets/designSystem-CC46-YPP.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/700-C5UiCGSs.js">
+    <link rel="modulepreload" crossorigin href="/assets/player-tN0hFCya.js">
+    <link rel="modulepreload" crossorigin href="/assets/preload-helper-BLdHbfdN.js">
+    <link rel="stylesheet" crossorigin href="/assets/700-_IUOKiS0.css">
+    <link rel="stylesheet" crossorigin href="/assets/player-D2sv_nZa.css">
+    <link rel="stylesheet" crossorigin href="/assets/designSystem-Yu488gou.css">
+    <link rel="stylesheet" crossorigin href="/assets/500-R7U5Y4zK.css">
+    <link rel="stylesheet" crossorigin href="/assets/500-kVq09bmF.css">
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <a class="brand" href="/">
+        <img src="/logo.png" alt="" width="28" height="28" />
+        <span class="brand-text"><strong>roger_dsc</strong><small>together, onward</small></span>
+      </a>
+      <nav class="nav" aria-label="Back">
+        <a class="back back--quiet" href="/#/station/cultural">Cultural Center</a>
+        <a class="back" href="/">← Map</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <p class="place">Cultural Center · Exit A · Design Studio</p>
+        <h1>Metro design system</h1>
+        <p class="lede">The rules behind the map, and where they came from.</p>
+      </section>
+      <nav class="lab-tabs" role="tablist" aria-label="Metro design system">
+        <button type="button" role="tab" id="t-system" aria-controls="tab-system" aria-selected="true" data-tab="system">Our system</button>
+        <button type="button" role="tab" id="t-world" aria-controls="tab-world" aria-selected="false" tabindex="-1" data-tab="world">Around the world</button>
+      </nav>
+
+      <div class="tab" id="tab-system" role="tabpanel" aria-labelledby="t-system">
+      <nav class="index" aria-label="On this page">
+        <a href="#idea">The idea</a>
+        <a href="#type">Type</a>
+        <a href="#color">Color</a>
+        <a href="#layout">Layout</a>
+        <a href="#signs">Signs</a>
+        <a href="#motion">Motion</a>
+        <a href="#sound">Sound</a>
+        <a href="#sources">Sources</a>
+      </nav>
+
+      <section class="part" id="idea">
+        <div class="rail">
+          <h2>The idea</h2>
+          <p>The site is a city, and its metro map is how you find your way around.</p>
+        </div>
+        <div class="field">
+          <p class="statement">The city reads like a well-signed station. You always know where you are, and what is next.</p>
+          <dl class="rows">
+            <div>
+              <dt>One job per sign</dt>
+              <dd>The nameboard says where you are. The route strip says where you are on the line. Nothing else competes.</dd>
+            </div>
+            <div>
+              <dt>Loudest is where you are</dt>
+              <dd>The current station gets the biggest type and the only lit mark. Everything around it stays quiet.</dd>
+            </div>
+            <div>
+              <dt>Two ways to read a line</dt>
+              <dd>Color and number, every time. A line can be found without reading, and named without seeing its color.</dd>
+            </div>
+            <div>
+              <dt>Only what this level needs</dt>
+              <dd>Map, then station, then article. Each level answers the question that brought you to it, and offers the next one.</dd>
+            </div>
+            <div>
+              <dt>Content first</dt>
+              <dd>Signs frame the writing. They never decorate it.</dd>
+            </div>
+            <div>
+              <dt>One left edge</dt>
+              <dd>Every page begins at the same place, so moving between them feels like staying in one city.</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="part" id="type">
+        <div class="rail">
+          <h2>Type</h2>
+          <p>One typeface for each language, in three weights. Pioneer, the high-speed service, has its own.</p>
+        </div>
+        <div class="field">
+          <div class="specimen">
+            <p>Where am I, and what is next?</p>
+            <div class="weights">
+              <div><span class="aa w400">Aa</span><small>400 · text</small></div>
+              <div><span class="aa w500">Aa</span><small>500 · labels, tabs, buttons</small></div>
+              <div><span class="aa w700">Aa</span><small>700 · headings, station names</small></div>
+            </div>
+          </div>
+
+          <dl class="rows">
+            <div>
+              <dt>Signs, names, interface</dt>
+              <dd><b>Helvetica Neue</b> on Apple devices; <b>Inter</b> everywhere else. The site serves Inter itself, so every other device sees Inter, not a stand-in.</dd>
+            </div>
+            <div>
+              <dt>简体</dt>
+              <dd><b>PingFang SC</b> on Apple devices; <b>Noto Sans SC</b> everywhere else, in 500 and 700.</dd>
+            </div>
+            <div>
+              <dt>繁體</dt>
+              <dd><b>PingFang TC</b> on Apple devices; <b>Noto Sans TC</b> everywhere else.</dd>
+            </div>
+            <div>
+              <dt>日本語</dt>
+              <dd><b>Hiragino Sans</b> on Apple devices; <b>Noto Sans JP</b> everywhere else.</dd>
+            </div>
+            <div>
+              <dt>Pioneer, the high-speed service</dt>
+              <dd><b>Archivo Variable</b>: one family, three widths. A wide cut for the display line, a normal cut for prose, a condensed cut for data and labels.</dd>
+            </div>
+          </dl>
+
+          <div class="langs">
+            <div><span class="tag">English</span><p>The city is a metro map of daily life.</p></div>
+            <div><span class="tag">简体</span><p lang="zh-Hans">这座城市是一张日常生活的地铁图。</p></div>
+            <div><span class="tag">繁體</span><p lang="zh-Hant">這座城市是一張日常生活的地鐵圖。</p></div>
+            <div><span class="tag">日本語</span><p lang="ja">この街は日々の暮らしの地下鉄路線図です。</p></div>
+            <div class="night-sample"><span class="tag">Pioneer · dark mode</span><p>The high-speed service to the Frontier.</p></div>
+          </div>
+
+          <ol class="scale" aria-label="Type scale">
+            <li><span class="sample" style="font-size: 12px">Station</span><small>12 px · t-xs · labels and captions</small></li>
+            <li><span class="sample" style="font-size: 14px">Station</span><small>14 px · t-sm · secondary text</small></li>
+            <li><span class="sample" style="font-size: 16px">Station</span><small>16 px · t-md · body</small></li>
+            <li><span class="sample" style="font-size: 20px">Station</span><small>20 px · t-lg · section leads</small></li>
+            <li><span class="sample" style="font-size: 28px">Station</span><small>28 px · t-xl · station taglines</small></li>
+            <li><span class="sample" style="font-size: clamp(2.25rem, 6vw, 4rem); font-weight: 700">Central</span><small>36–64 px · t-2xl · station names</small></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="part" id="color">
+        <div class="rail">
+          <h2>Color</h2>
+          <p>Color is for the map: each line's own color, and the land's quiet tints. Nothing else is colored.</p>
+        </div>
+        <div class="field">
+          <ul class="lines">
+            <li style="--c: #e8890c">
+              <span class="line-block"><span class="roundel">1</span></span>
+              <span class="line-meta"><b>Line 1 · Exploration</b><small>#E8890C · from the mountains to the sea</small></span>
+            </li>
+            <li style="--c: #0b8f6a">
+              <span class="line-block"><span class="roundel">2</span></span>
+              <span class="line-meta"><b>Line 2 · Value Creation</b><small>#0B8F6A · west to east, where we build and give back</small></span>
+            </li>
+            <li style="--c: #2e5fa3">
+              <span class="line-block"><span class="roundel">3</span></span>
+              <span class="line-meta"><b>Line 3 · Kaizen</b><small>#2E5FA3 · the loop around the whole city</small></span>
+            </li>
+          </ul>
+          <p class="note">
+            A line's color appears on its badge, its nameboard band, its route strip and the tint behind a station's
+            pictogram, and nowhere else. <b>If something is colored, it is a route.</b> The labs are the one exception:
+            each has a palette of its own, unlike any line's.
+          </p>
+
+          <div>
+            <ul class="palette">
+              <li><button class="chip" type="button" data-hex="#FFFFFF" aria-label="Copy #FFFFFF, land" style="--s: #ffffff"></button><b>--land</b><code>#FFFFFF</code><small>Map and page ground</small></li>
+              <li><button class="chip" type="button" data-hex="#F3F4F4" aria-label="Copy #F3F4F4, land 2" style="--s: #f3f4f4"></button><b>--land-2</b><code>#F3F4F4</code><small>Quiet panels, closed exits</small></li>
+              <li><button class="chip" type="button" data-hex="#101418" aria-label="Copy #101418, ink" style="--s: #101418"></button><b>--ink</b><code>#101418</code><small>Type, markers, focus</small></li>
+              <li><button class="chip" type="button" data-hex="#5E666E" aria-label="Copy #5E666E, ink 2" style="--s: #5e666e"></button><b>--ink-2</b><code>#5E666E</code><small>Secondary text, future stations</small></li>
+              <li><button class="chip" type="button" data-hex="#DCE5EA" aria-label="Copy #DCE5EA, water" style="--s: #dce5ea"></button><b>--water</b><code>#DCE5EA</code><small>River and sea</small></li>
+              <li><button class="chip" type="button" data-hex="#7D97A6" aria-label="Copy #7D97A6, water ink" style="--s: #7d97a6"></button><b>--water-ink</b><code>#7D97A6</code><small>Water labels</small></li>
+              <li><button class="chip" type="button" data-hex="#E9ECEA" aria-label="Copy #E9ECEA, mountain" style="--s: #e9ecea"></button><b>--mountain</b><code>#E9ECEA</code><small>Highlands</small></li>
+              <li><button class="chip" type="button" data-hex="#F1EEE6" aria-label="Copy #F1EEE6, sand" style="--s: #f1eee6"></button><b>--sand</b><code>#F1EEE6</code><small>Beach</small></li>
+              <li><button class="chip" type="button" data-hex="#EDF1EC" aria-label="Copy #EDF1EC, park" style="--s: #edf1ec"></button><b>--park</b><code>#EDF1EC</code><small>Parks</small></li>
+              <li><button class="chip" type="button" data-hex="rgb(16 20 24 / 0.09)" aria-label="Copy the hairline color, ink at 9 percent" style="--s: rgb(16 20 24 / 0.09)"></button><b>--line-soft</b><code>ink / 9%</code><small>Hairlines and rules</small></li>
+            </ul>
+            <p class="copy-status" role="status" aria-live="polite">Click a swatch to copy its value.</p>
+          </div>
+
+          <div class="night">
+            <div class="night-head">
+              <h3>Dark mode · Pioneer</h3>
+              <span>The city's tokens, inverted</span>
+            </div>
+            <ul class="night-tokens">
+              <li><span class="swatch" style="--s: #0b0f13"></span><b>--land</b><code>#0B0F13</code></li>
+              <li><span class="swatch" style="--s: #14181c"></span><b>--land-2</b><code>#14181C</code></li>
+              <li><span class="swatch" style="--s: #f3f4f4"></span><b>--ink</b><code>#F3F4F4</code></li>
+              <li><span class="swatch" style="--s: #9aa1a8"></span><b>--ink-2</b><code>#9AA1A8</code></li>
+              <li><span class="swatch" style="--s: #d7dbde"></span><b>--line</b><code>#D7DBDE</code></li>
+              <li><span class="swatch" style="--s: rgb(243 244 244 / 0.14)"></span><b>--rule</b><code>ink / 14%</code></li>
+            </ul>
+            <p>
+              Pioneer, the high-speed service, is a mode of its own, not a fourth line: it swaps the city's colors, with ink as
+              the background and paper as the type. The city itself stays light. <a href="https://pioneer.rogerluo.org/">Visit Pioneer</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="part" id="layout">
+        <div class="rail">
+          <h2>Layout</h2>
+          <p>One left edge. Station pages and the City Lab start at the same place; articles sit in a narrower column for reading.</p>
+        </div>
+        <div class="field">
+          <div class="measure" aria-label="Column widths, drawn to scale">
+            <div class="measure-row">
+              <div class="measure-track"><span class="measure-bar" style="width: 100%"></span></div>
+              <small>Line pages · 1260 px</small>
+            </div>
+            <div class="measure-row">
+              <div class="measure-track"><span class="measure-bar" style="width: 93.65%"></span></div>
+              <small>Stations and the City Lab · 1180 px</small>
+            </div>
+            <div class="measure-row">
+              <div class="measure-track"><span class="measure-bar measure-bar--article" style="width: 58.73%"></span></div>
+              <small>Articles · 740 px, centered</small>
+            </div>
+            <div class="measure-row">
+              <div class="measure-track"><span class="measure-bar" style="width: 1.27%; min-width: 12px"></span></div>
+              <small>Side gutter · 16 px</small>
+            </div>
+            <div class="measure-key">
+              <span><i></i>Content</span>
+              <span><i class="article"></i>Reading column</span>
+              <span><i class="quiet"></i>Gutter</span>
+            </div>
+          </div>
+          <p class="note">
+            The station pages and the City Lab share the <b>1180 px</b> column with a <b>16 px</b> gutter, so the two
+            start at the same left edge at every width. Articles sit in a centered <b>740 px</b> reading column, about
+            75 characters a line. On a phone every page keeps the 16 px gutter, and nothing scrolls sideways.
+          </p>
+          <p class="note">
+            The top bar is the same everywhere: the logo at 28 px, the name at 20 px, the tagline at 12 px, a 60 px bar.
+            On a phone the tagline goes, then the name; the bar stays.
+          </p>
+        </div>
+      </section>
+
+      <section class="part" id="signs">
+        <div class="rail">
+          <h2>Signs</h2>
+          <p>Each sign answers one question. The patterns come from stations, not from websites.</p>
+        </div>
+        <div class="field">
+          <div class="signs">
+            <figure class="sign" style="--c: #e8890c">
+              <div class="nb">
+                <div class="nb-top">
+                  <span class="nb-art" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" /><path d="M3 16l5-5 4 4 3-3 6 6" /><circle cx="16" cy="9" r="1.5" /></svg>
+                  </span>
+                  <span class="nb-name">Cultural Center</span>
+                  <span class="nb-codes"><span class="badge">1</span></span>
+                </div>
+                <div class="nb-band">
+                  <span class="nb-side"><span class="nb-arrow">◀&#xFE0E;</span><span>University Town</span></span>
+                  <span class="nb-side nb-side--next"><span>Central</span><span class="nb-arrow">▶&#xFE0E;</span></span>
+                </div>
+              </div>
+              <figcaption><b>The nameboard</b> answers "where am I, and what is next". The name is the largest thing on the page; the line color is the band, not the background.</figcaption>
+            </figure>
+
+            <div class="markers">
+              <div>
+                <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="8" fill="#fff" stroke="#e8890c" stroke-width="4" /></svg>
+                <b>Station</b><small>A white dot with the line's ring.</small>
+              </div>
+              <div>
+                <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="10" fill="#fff" stroke="#101418" stroke-width="5" /></svg>
+                <b>Interchange</b><small>A larger dot with an ink ring.</small>
+              </div>
+              <div>
+                <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="8" fill="#fff" stroke="#5e666e" stroke-width="2.5" stroke-dasharray="4 4" /></svg>
+                <b>Unexplored</b><small>A dashed gray ring, and an italic name.</small>
+              </div>
+              <div>
+                <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="8" fill="#fff" stroke="#e8890c" stroke-width="3" stroke-dasharray="4 4" /></svg>
+                <b>Under construction</b><small>A dashed ring in the line's color.</small>
+              </div>
+            </div>
+
+            <figure class="sign" style="--c: #e8890c">
+              <div class="strip">
+                <p class="strip-head"><span class="badge badge--sm">1</span> Line 1 · Exploration <span class="towards">towards Waterfront</span></p>
+                <ol class="strip-stops">
+                  <li class="strip-stop is-past"><span class="strip-dot"></span><span class="strip-name">University Town</span></li>
+                  <li class="strip-stop is-here"><span class="strip-dot"></span><span class="strip-name">Cultural Center</span></li>
+                  <li class="strip-stop"><span class="strip-dot"></span><span class="strip-name">Central</span></li>
+                  <li class="strip-stop"><span class="strip-dot"></span><span class="strip-name">Concert Hall</span></li>
+                  <li class="strip-stop"><span class="strip-dot"></span><span class="strip-name">Central Park</span></li>
+                </ol>
+              </div>
+              <figcaption><b>The route strip</b> answers "where am I on this line". Passed stops go gray, the stop you are at takes the only lit dot, and the line's color carries the rest.</figcaption>
+            </figure>
+
+            <figure class="sign" style="--c: #e8890c">
+              <div class="exit-sample">
+                <span class="exit-letter">A</span>
+                <div>
+                  <h3>Design Studio</h3>
+                  <p><a>Metro design system</a> <span class="exit-note">The rules behind the map, and where they came from</span></p>
+                </div>
+              </div>
+              <figcaption><b>The exit directory</b> answers "what is here, and how do I reach it". A lettered building, a destination, and a plain arrow link — the letter takes the line's tint, never a color of its own.</figcaption>
+            </figure>
+          </div>
+
+          <dl class="rows">
+            <div><dt>Sentence case</dt><dd>Labels read like signs, not headlines: "Metro design system", not "METRO DESIGN SYSTEM".</dd></div>
+            <div><dt>No emoji in the interface</dt><dd>Articles may keep Roger's; the city's own signs do not use them.</dd></div>
+            <div><dt>"We", not "I"</dt><dd>Lines and station intros speak as "we", and keep "together, onward".</dd></div>
+            <div><dt>Four languages together</dt><dd>English, 简体, 繁體 and 日本語 change together. The labs are the deliberate exception: English only.</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="part" id="motion">
+        <div class="rail">
+          <h2>Motion</h2>
+          <p>Movement only helps you see where you are, then everything holds still.</p>
+        </div>
+        <div class="field">
+          <div class="motion-demos">
+            <div class="demo-grid">
+              <figure class="demo">
+                <div class="demo-stage demo-stage--map" id="demo-map">
+                  <svg viewBox="-250 0 1900 950" role="img" aria-label="The city's three metro lines draw out from Central, and their stations appear one by one">
+                    <rect x="-250" y="-2000" width="2300" height="4950" fill="#fff" />
+                    <path d="M-250,868 L2150,868 L2150,3000 L-250,3000 Z" fill="#dce5ea" />
+                    <path d="M1030,-2000 L1030,591.7157287525381 Q1030,620 1010,640 L1010,640 Q990,660 990,688.2842712474619 L990,900" fill="#dce5ea" />
+                    <g fill="none" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+                      <path class="demo-line" d="M350,100 L425,175 L500,250 L610,360 L700,450 L700,525 L700,610 L700,715 L700,820" stroke="#E8890C" />
+                      <path class="demo-line" d="M150,780 L150,615 L150,480 Q150,450 180,450 L330,450 L450,450 L570,450 L700,450 L820,450 L940,450 L1100,450 L1178.7867965644036,528.7867965644036 Q1200,550 1200,580 L1200,650 L1200,740 L1200,830" stroke="#0B8F6A" />
+                      <path class="demo-line" d="M425,175 L590,175 L760,175 L1070,175 Q1100,175 1100,205 L1100,300 L1100,450 L1100,560 L1100,680 L1100,730 Q1100,760 1078.7867965644036,781.2132034355964 L1061.2132034355964,798.7867965644036 Q1040,820 1010,820 L900,820 L700,820 L515,820 L360,820 Q330,820 330,790 L330,635 L330,450 L330,300 Q330,270 351.2132034355964,248.78679656440357 L425,175" stroke="#2E5FA3" />
+                    </g>
+                    <g>
+                      <circle class="demo-stn" cx="700" cy="450" r="11" fill="rgb(255, 255, 255)" stroke="rgb(16, 20, 24)" stroke-width="4.5" data-delay="0.9" />
+                      <circle class="demo-stn" cx="150" cy="780" r="9" fill="rgb(11, 143, 106)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.8162924406185472" />
+                      <circle class="demo-stn" cx="150" cy="615" r="11" fill="rgb(255, 255, 255)" stroke="rgb(16, 20, 24)" stroke-width="4.5" data-delay="1.720309797128686" />
+                      <circle class="demo-stn" cx="1100" cy="450" r="11" fill="rgb(255, 255, 255)" stroke="rgb(16, 20, 24)" stroke-width="4.5" data-delay="1.4714285714285715" />
+                      <circle class="demo-stn" cx="450" cy="450" r="9" fill="rgb(11, 143, 106)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.2571428571428571" />
+                      <circle class="demo-stn" cx="570" cy="450" r="9" fill="rgb(11, 143, 106)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.0857142857142859" />
+                      <circle class="demo-stn" cx="330" cy="450" r="11" fill="rgb(255, 255, 255)" stroke="rgb(16, 20, 24)" stroke-width="4.5" data-delay="1.4285714285714286" />
+                      <circle class="demo-stn" cx="820" cy="450" r="9" fill="rgb(11, 143, 106)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.0714285714285714" />
+                      <circle class="demo-stn" cx="940" cy="450" r="9" fill="rgb(11, 143, 106)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.2428571428571429" />
+                      <circle class="demo-stn" cx="1200" cy="740" r="9" fill="rgb(11, 143, 106)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.7257340580924816" />
+                      <circle class="demo-stn" cx="1200" cy="830" r="11" fill="rgb(255, 255, 255)" stroke="rgb(16, 20, 24)" stroke-width="4.5" data-delay="1.7971610553204331" />
+                      <circle class="demo-stn" cx="350" cy="100" r="9" fill="rgb(232, 137, 12)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.6071067811865476" />
+                      <circle class="demo-stn" cx="425" cy="175" r="11" fill="rgb(255, 255, 255)" stroke="rgb(16, 20, 24)" stroke-width="4.5" data-delay="1.4555838995037158" />
+                      <circle class="demo-stn" cx="500" cy="250" r="9" fill="rgb(232, 137, 12)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.3040610178208842" />
+                      <circle class="demo-stn" cx="610" cy="360" r="9" fill="rgb(232, 137, 12)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.081827458019398" />
+                      <circle class="demo-stn" cx="700" cy="525" r="9" fill="rgb(232, 137, 12)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.0071428571428571" />
+                      <circle class="demo-stn" cx="700" cy="610" r="9" fill="rgb(232, 137, 12)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.1285714285714286" />
+                      <circle class="demo-stn" cx="700" cy="715" r="9" fill="rgb(232, 137, 12)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.2785714285714285" />
+                      <circle class="demo-stn" cx="700" cy="820" r="11" fill="rgb(255, 255, 255)" stroke="rgb(16, 20, 24)" stroke-width="4.5" data-delay="1.4285714285714286" />
+                      <circle class="demo-stn" cx="760" cy="175" r="9" fill="rgb(46, 95, 163)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.3020990841439306" />
+                      <circle class="demo-stn" cx="1100" cy="560" r="9" fill="rgb(46, 95, 163)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.4926419575054726" />
+                      <circle class="demo-stn" cx="900" cy="820" r="9" fill="rgb(46, 95, 163)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.5008497384232313" />
+                      <circle class="demo-stn" cx="1100" cy="300" r="9" fill="rgb(46, 95, 163)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.5102859818083951" />
+                      <circle class="demo-stn" cx="590" cy="175" r="9" fill="rgb(46, 95, 163)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.3231200919891397" />
+                      <circle class="demo-stn" cx="1100" cy="680" r="9" fill="rgb(46, 95, 163)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.559158399717676" />
+                      <circle class="demo-stn" cx="515" cy="820" r="9" fill="rgb(46, 95, 163)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.4909608226249444" />
+                      <circle class="demo-stn" cx="330" cy="635" r="9" fill="rgb(46, 95, 163)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.4909608226249444" />
+                      <circle class="demo-stn" cx="1200" cy="650" r="9" fill="rgb(11, 143, 106)" stroke="rgb(255, 255, 255)" stroke-width="2.5" data-delay="1.6693092581620723" />
+                    </g>
+                  </svg>
+                </div>
+                <figcaption><span class="demo-cap"><b>The map draws in</b><button class="demo-btn" type="button" data-play="map">Play</button></span><span class="demo-desc">Lines appear first; stations follow outward from Central, the way a service reaches the city.</span></figcaption>
+              </figure>
+
+              <figure class="demo">
+                <div class="demo-stage demo-stage--keys" id="demo-keys" tabindex="0" aria-label="A station's name and text; use the left and right arrow keys">
+                  <button class="keys-step keys-step--prev" type="button" aria-label="Previous station">◀&#xFE0E;</button>
+                  <div class="keys-plate">
+                    <p class="keys-line"><span class="keys-code">1</span> Line 1 · Exploration</p>
+                    <p class="keys-name">University Town</p>
+                    <p class="keys-text">Learning and education.</p>
+                  </div>
+                  <button class="keys-step keys-step--next" type="button" aria-label="Next station">▶&#xFE0E;</button>
+                </div>
+                <figcaption><span class="demo-cap"><b>Arrow keys walk the line</b><span class="demo-hint">Press ← →</span></span><span class="demo-desc">Left and right step to the next station; its name and text arrive in place, then stop.</span></figcaption>
+              </figure>
+
+              <figure class="demo">
+                <div class="demo-stage demo-doors" id="demo-doors">
+                  <div class="demo-wall">
+                    <span class="demo-wall-line">Line 1 · Exploration</span>
+                    <span class="demo-wall-name">Central</span>
+                  </div>
+                  <div class="demo-door demo-door--l" aria-hidden="true"></div>
+                  <div class="demo-door demo-door--r" aria-hidden="true"></div>
+                </div>
+                <figcaption><span class="demo-cap"><b>The platform arrives</b><button class="demo-btn" type="button" data-play="doors">Open</button></span><span class="demo-desc">A station page opens like a train pulling in: glass doors part onto the nameboard and the platform wall.</span></figcaption>
+              </figure>
+
+              <figure class="demo">
+                <div class="demo-stage demo-stage--strip" id="demo-strip">
+                  <div class="strip" style="--c: #e8890c">
+                    <p class="strip-head"><span class="badge badge--sm">1</span> Line 1 · Exploration</p>
+                    <ol class="strip-stops" style="grid-template-columns: repeat(4, minmax(0, 1fr))">
+                      <li class="strip-stop is-here" role="button" tabindex="0"><span class="strip-dot"></span><span class="strip-name">University Town</span></li>
+                      <li class="strip-stop" role="button" tabindex="0"><span class="strip-dot"></span><span class="strip-name">Cultural Center</span></li>
+                      <li class="strip-stop" role="button" tabindex="0"><span class="strip-dot"></span><span class="strip-name">Central</span></li>
+                      <li class="strip-stop" role="button" tabindex="0"><span class="strip-dot"></span><span class="strip-name">Waterfront</span></li>
+                    </ol>
+                  </div>
+                </div>
+                <figcaption><span class="demo-cap"><b>"Here" is alive</b><span class="demo-hint">Choose a stop.</span></span><span class="demo-desc">The route strip marks the stop you are at with a lit dot; nothing else pulses.</span></figcaption>
+              </figure>
+
+              <figure class="demo">
+                <div class="demo-stage demo-stage--nt" id="demo-nt">
+                  <div class="ntd-page">
+                    <span class="ntd-kicker">Central</span>
+                    <p class="ntd-title">Change here for the city</p>
+                    <span class="ntd-bar"></span>
+                    <span class="ntd-bar ntd-bar--short"></span>
+                  </div>
+                  <div class="ntd-drawer">
+                    <button class="ntd-tab" type="button" aria-expanded="false" aria-controls="ntd-panel">
+                      <span class="ntd-badge" style="--c: #e8890c">1</span>
+                      <span>Next trains</span>
+                      <svg class="ntd-cue" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 6.5 5 3.5 8 6.5" /></svg>
+                    </button>
+                    <section class="ntd-panel" id="ntd-panel">
+                      <header class="ntd-head">
+                        <h3>Next trains</h3>
+                        <button class="ntd-close" type="button" aria-label="Close next trains">
+                          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" /></svg>
+                        </button>
+                      </header>
+                      <p class="ntd-board"><span class="ntd-badge" style="--c: #e8890c">1</span><span>To Waterfront</span></p>
+                      <ol class="ntd-rows">
+                        <li><span>Waterfront</span><span>2 min</span></li>
+                        <li><span>Waterfront</span><span>8 min</span></li>
+                      </ol>
+                    </section>
+                  </div>
+                </div>
+                <figcaption><span class="demo-cap"><b>The drawer rises</b><span class="demo-hint">Open it.</span></span><span class="demo-desc">A slim bar waits at the bottom edge. Tapped, it lifts up into the next trains, then holds.</span></figcaption>
+              </figure>
+
+              <figure class="demo">
+                <div class="demo-stage demo-stage--next" id="demo-next">
+                  <div class="next" role="group" aria-label="Next trains at Central">
+                    <p class="next-head"><span>Next trains · Central</span><span>Live</span></p>
+                    <ol class="next-rows">
+                      <li class="next-row"><span class="next-code" style="--c: #e8890c">1</span><span class="next-dest">Waterfront</span><span class="next-in">2 min</span></li>
+                      <li class="next-row"><span class="next-code" style="--c: #0b8f6a">2</span><span class="next-dest">Technology Park</span><span class="next-in">4 min</span></li>
+                      <li class="next-row"><span class="next-code" style="--c: #2e5fa3">3</span><span class="next-dest">Harbour</span><span class="next-in">6 min</span></li>
+                    </ol>
+                  </div>
+                </div>
+                <figcaption><span class="demo-cap"><b>The next trains</b><span class="demo-hint">Watch the times.</span></span><span class="demo-desc">The wait counts down where it is written. When a train is due, the next takes its place.</span></figcaption>
+              </figure>
+            </div>
+            <p class="note demo-note">If your device asks for less motion, each demo shows its end state without moving.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="part" id="sound">
+        <div class="rail">
+          <h2>Sound</h2>
+          <p>Quiet unless asked. One chime, then the station, in four languages.</p>
+        </div>
+        <div class="field">
+          <dl class="rows">
+            <div><dt>Off until asked</dt><dd>Sound is off by default. The speaker button on the map turns it on, and the choice is remembered.</dd></div>
+            <div><dt>One chime</dt><dd>The Held chord: three notes of our own, D, E and A, held so they ring together, in a soft bell tone.</dd></div>
+            <div><dt>Gentle on the ear</dt><dd>Comfort limits are always on: no harsh highs, clicks, fast wobble or loud peaks.</dd></div>
+            <div><dt>Four languages, one order</dt><dd>English, Cantonese, Mandarin, then Japanese, after the chime.</dd></div>
+          </dl>
+          <div class="sound-play">
+            <button type="button" data-sound="chime" aria-pressed="false">Play the chime</button>
+            <button type="button" data-sound="arrival" aria-pressed="false">Hear an arrival at Central</button>
+          </div>
+          <p class="note">Tune them in the <a href="/chime-lab.html">Chime lab</a> and the <a href="/announce-lab.html">Announcement lab</a>, reached from the Transit Lab.</p>
+        </div>
+      </section>
+
+      <section class="part" id="sources">
+        <div class="rail">
+          <h2>Sources</h2>
+          <p>What we borrowed, and how we made it ours. No rule is copied from one system; each was adapted to this city. The cards under <a href="#world">Around the world</a> carry the history and the citations.</p>
+        </div>
+        <div class="field">
+          <div class="sources">
+            <div class="head"><span>Source</span><span>Rule taken</span><span>What we did with it</span></div>
+            <div>
+              <span data-label="Source"><b>London · Harry Beck, 1933</b></span>
+              <span data-label="Rule taken">A diagram drawn only at 45° and 90°; interchanges as rings</span>
+              <span data-label="Adaptation">The map keeps 45° and 90°; the city's geography is its own.</span>
+            </div>
+            <div>
+              <span data-label="Source"><b>New York · Massimo Vignelli, 1972</b></span>
+              <span data-label="Rule taken">A round badge for each line, with its letter or number</span>
+              <span data-label="Adaptation">Our own letters, numbers and colors.</span>
+            </div>
+            <div>
+              <span data-label="Source"><b>Japan · JR</b></span>
+              <span data-label="Rule taken">A station sign that also names the stations either side</span>
+              <span data-label="Adaptation">Flattened into a high-contrast plate with a color band.</span>
+            </div>
+            <div>
+              <span data-label="Source"><b>Tokyo Metro and JR</b></span>
+              <span data-label="Rule taken">Numbered lines</span>
+              <span data-label="Adaptation">A numbered badge on every line, readable before the name.</span>
+            </div>
+            <div>
+              <span data-label="Source"><b>Hong Kong · MTR</b></span>
+              <span data-label="Rule taken">A lit route map inside the car</span>
+              <span data-label="Adaptation">A slim dark strip at the foot of a station page.</span>
+            </div>
+            <div>
+              <span data-label="Source"><b>Metros worldwide</b></span>
+              <span data-label="Rule taken">Platform screen doors</span>
+              <span data-label="Adaptation">The page-arrival transition, removed under reduced motion.</span>
+            </div>
+            <div>
+              <span data-label="Source"><b>Vancouver · SkyTrain</b></span>
+              <span data-label="Rule taken">The chime's timbre: a near-pure bell tone</span>
+              <span data-label="Adaptation">Our own notes, not its melody.</span>
+            </div>
+            <div>
+              <span data-label="Source"><b>Pioneer · SBB and JR timetables, JR formation diagrams, night trains</b></span>
+              <span data-label="Rule taken">Timetable precision; the train drawn to scale; a quiet, dark identity</span>
+              <span data-label="Adaptation">A separate dark mode, with Archivo and inverted tokens. Not a fourth line.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+
+      <div class="tab" id="tab-world" role="tabpanel" aria-labelledby="t-world" hidden>
+      <section class="part" id="world">
+        <div class="rail">
+          <h2>Around the world</h2>
+          <p>Choose a region or a country on the map, and open a card for what we took and where it came from.</p>
+        </div>
+        <div class="field">
+          <p class="note">These are references, not copies. Open a card for the history and the citations; every claim is checked against the source and linked to it. The photographs are from Wikimedia Commons, credited under each one.</p>
+
+          <div class="atlas">
+            <div class="atlas-bar">
+              <div class="seg" role="group" aria-label="Group the systems by">
+                <button type="button" data-level="region" aria-pressed="true">Region</button>
+                <button type="button" data-level="country" aria-pressed="false">Country</button>
+              </div>
+              <p class="atlas-note" id="world-note" aria-live="polite">Choose a region or a country on the map.</p>
+              <button type="button" class="atlas-reset" id="world-reset" hidden>Show all</button>
+            </div>
+            <div class="atlas-map" id="world-map"><p class="atlas-load">Drawing the map…</p></div>
+          </div>
+
+          <div class="world">
+            <h3 class="world-head">The network and its map</h3>
+
+            <article class="system" data-system="london">
+              <figure class="system-shot">
+                <img src="/images/design-system/london.jpg" alt="A roundel nameboard at High Barnet station, a train on either side" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:High_Barnet_roundel_Platform_2_2020.jpg" target="_blank" rel="noopener">TheFrog001</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>London</span><span>1908–1933</span></p>
+              <h4>London Underground</h4>
+              <p class="system-idea">A whole network can read as one system: one symbol, one alphabet, one diagram.</p>
+              <p class="system-took"><b>What we took</b> One line color and one badge, repeated everywhere; the map drawn on a grid.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>The bar-and-circle roundel went up on platform nameboards in 1908. Edward Johnston's alphabet, first submitted in 1916, gave the Underground a voice of its own. Harry Beck's diagram, printed in January 1933, drew the network with only horizontals, verticals and 45° lines.</p>
+                <ul class="cite">
+                  <li><a href="https://www.ltmuseum.co.uk/collections/stories/design/evolution-roundel" target="_blank" rel="noopener">London Transport Museum, "The evolution of the roundel"</a></li>
+                  <li><a href="https://www.ltmuseum.co.uk/collections/stories/people/edward-johnston-man-behind-londons-lettering" target="_blank" rel="noopener">London Transport Museum, "Edward Johnston: the man behind London's lettering"</a></li>
+                  <li><a href="https://www.ltmuseum.co.uk/collections/stories/design/transforming-tube-map-harry-becks-iconic-design" target="_blank" rel="noopener">London Transport Museum, "Transforming the Tube map: Harry Beck's iconic design"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="newyork">
+              <figure class="system-shot">
+                <img src="/images/design-system/newyork.jpg" alt="A black band sign at Grand Central with the round 7 badge of the Flushing Line" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:GCT_Subway_Escalator_sign_to_IRT_Flushing_Line.jpg" target="_blank" rel="noopener">DanTD</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>New York</span><span>1972</span></p>
+              <h4>New York City Subway</h4>
+              <p class="system-idea">The map is a diagram of the service, not a picture of the city.</p>
+              <p class="system-took"><b>What we took</b> 45° and 90° angles, even spacing, and one dot per station.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Unimark International, with Massimo Vignelli, Joan Charysyn and Bob Noorda, issued the diagram map in 1972. It straightened the city to make the routes legible. New York replaced it in 1979 with a geographic map.</p>
+                <ul class="cite">
+                  <li><a href="https://www.moma.org/collection/works/89300" target="_blank" rel="noopener">MoMA, "New York Subway Map, 1970–1972"</a></li>
+                  <li><a href="https://www.nytransitmuseum.org/vignelli/" target="_blank" rel="noopener">New York Transit Museum, "Towards a Better Way: The 'Vignelli' Map at 50"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="chicago">
+              <figure class="system-shot">
+                <img src="/images/design-system/chicago.jpg" alt="A red Thorndale station sign above the platform" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Thorndale_Station_Chicago_Station_Sign_2019-0202.jpg" target="_blank" rel="noopener">Paul R. Burley</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Chicago</span><span>1993</span></p>
+              <h4>Chicago "L"</h4>
+              <p class="system-idea">Name the lines by color, and the map becomes the way to talk about the system.</p>
+              <p class="system-took"><b>What we took</b> A line's color is its name, not its decoration.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>On February 21, 1993, the CTA replaced destination names such as Howard and Dan Ryan with colors, to help new riders, visitors and people who speak English as a second language. Red, Green and Blue had already marked routes on 1970s maps; the Orange Line opened that October as the first line to arrive with a color name.</p>
+                <ul class="cite">
+                  <li><a href="https://www.transitchicago.com/cta-celebrates-25-years-of-color-coding-chicago%E2%80%99s-rail-lines/" target="_blank" rel="noopener">CTA, "CTA celebrates 25 years of color-coding Chicago's rail lines"</a></li>
+                  <li><a href="https://www.wttw.com/chicago-by-l/sidetracks/how-cta-map-got-its-colors" target="_blank" rel="noopener">WTTW, "How the CTA Map Got Its Colors"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="seoul">
+              <figure class="system-shot">
+                <img src="/images/design-system/seoul.jpg" alt="A Sadang station sign with the line 4 number 433" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Seoul-metro-433-Sadang-station-sign-20181121-132256.jpg" target="_blank" rel="noopener">LERK</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Seoul</span><span>2023</span></p>
+              <h4>Seoul Metro</h4>
+              <p class="system-idea">A map for 23 lines has to be redrawn, not extended.</p>
+              <p class="system-took"><b>What we took</b> One angle system for the whole network, and two ways to read every line.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Seoul published its first full redesign in 40 years in 2023. The map moved to an octilinear grid, drew Line 2 as a circle, marked transfers like traffic lights, and added colors and patterns for people with color-vision deficiency. Eye-tracking tests cut the time to find a station by about 55%.</p>
+                <ul class="cite">
+                  <li><a href="https://english.seoul.go.kr/redesign-of-the-seoul-metro-map-for-the-first-time-in-40-years/" target="_blank" rel="noopener">Seoul Metropolitan Government, "Redesign of the Seoul Metro map for the first time in 40 years"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="saopaulo">
+              <figure class="system-shot">
+                <img src="/images/design-system/saopaulo.jpg" alt="The network map and the line strip on the platform wall at Hospital São Paulo station" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Mapa_de_linha_Esta%C3%A7%C3%A3o_Hospital_S%C3%A3o_Paulo.jpg" target="_blank" rel="noopener">LuanCampSouza93</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en/" target="_blank" rel="noopener">CC0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>São Paulo</span><span>1974</span></p>
+              <h4>São Paulo Metro</h4>
+              <p class="system-idea">A network can take its shape from its own logo.</p>
+              <p class="system-took"><b>What we took</b> One geometric idea for the whole diagram, carried through every line.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>The Metro opened on September 14, 1974, between Jabaquara and Vila Mariana, the first stretch of the North–South Line (Line 1–Blue) and the first metro line built in Brazil. Its c. 1967 conceptual map, by the São Paulo design office Cauduro Martino, drew the planned network as a diamond that echoed the Metro logo almost exactly.</p>
+                <ul class="cite">
+                  <li><a href="https://www.metro.sp.gov.br/pt_BR/2013/09/13/13-09-2013-parabens-metro-ha-39-anos-facilitando-a-mobilidade-urbana-em-sao-paulo/" target="_blank" rel="noopener">Metrô, "Parabéns Metrô! Há 39 anos facilitando a mobilidade urbana em São Paulo"</a></li>
+                  <li><a href="https://www.metro.sp.gov.br/sua-viagem/linhas-estacoes/linha-1-azul/" target="_blank" rel="noopener">Metrô, "Linha 1-Azul"</a></li>
+                  <li><a href="https://transitmap.net/sao-paulo-1967/" target="_blank" rel="noopener">Transit Maps, "Original Conceptual Map for the São Paulo Metro, c. 1967"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="medellin">
+              <figure class="system-shot">
+                <img src="/images/design-system/medellin.jpg" alt="Metrocable cabins over the hillside homes of Santo Domingo, the dark blocks of the España Library behind" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Biblioteca_de_Espa%C3%B1a_and_Metrocable_02.jpg" target="_blank" rel="noopener">JoranL</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Medellín</span><span>2004</span></p>
+              <h4>Metrocable</h4>
+              <p class="system-idea">A line can be a cable car, if that is what reaches the hills.</p>
+              <p class="system-took"><b>What we took</b> A line is defined by who it reaches, not by what runs on it.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Línea K, a cable car, opened in 2004. The publicly owned Metro company planned it to win riders for its two rail lines and to reach the informal settlements around the city, long neglected. By 2021 Medellín had five cable-car lines in its outlying barrios, all joined to the rest of the network: the rail lines, the bus rapid transit and a tram.</p>
+                <ul class="cite">
+                  <li><a href="https://revista.drclas.harvard.edu/medellins-low-carbon-metrocables" target="_blank" rel="noopener">ReVista (Harvard), Julio D. Dávila, &quot;Medellín’s Low-Carbon Metrocables&quot; (2021)</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="copenhagen">
+              <figure class="system-shot">
+                <img src="/images/design-system/copenhagen.jpg" alt="A driverless train at Amager Strand station, under the metro’s M sign" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Metro_Amager_Strand_Copenhagen_20130710_N8B0369F_(9259478999).jpg" target="_blank" rel="noopener">News Oresund</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Copenhagen</span><span>2002</span></p>
+              <h4>Copenhagen Metro</h4>
+              <p class="system-idea">With no driver, a network can run often, and all night.</p>
+              <p class="system-took"><b>What we took</b> Show the wait, not a timetable: the next train is never far away.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>The first driverless journeys ran in October 2002, on two fully automated lines. In 2009 the Metro began running 24 hours a day, seven days a week, which few metros in the world offer. Its frequent departures have won awards and been copied many times around the world.</p>
+                <ul class="cite">
+                  <li><a href="https://metroselskabet.dk/en/contact-and-press/press/press-releases/20-years-of-the-metro-has-transformed-the-capital-from-metropolis-to-metropolis/" target="_blank" rel="noopener">Metroselskabet, &quot;20 years of the Metro has transformed the capital from metropolis to metropolis&quot; (2022)</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <h3 class="world-head">Signs everyone can read</h3>
+
+            <article class="system" data-system="mexico">
+              <figure class="system-shot">
+                <img src="/images/design-system/mexico.jpg" alt="The Zócalo/Tenochtitlan station sign on the blue band of Line 2, the station symbol beside the name" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Estaci%C3%B3n_metro_Z%C3%B3calo_Tenochtitlan.jpg" target="_blank" rel="noopener">ProtoplasmaKid</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Mexico City</span><span>1969</span></p>
+              <h4>Mexico City Metro</h4>
+              <p class="system-idea">A station can be recognized without reading, in any language.</p>
+              <p class="system-took"><b>What we took</b> A symbol for the place first, the name second; a number and a color for the line.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Lance Wyman, with Arturo Quiñones and Francisco Gallardo, gave every station a pictogram drawn from its name or history: a grasshopper for Chapultepec, a duck for Candelaria. The Metro opened in 1969.</p>
+                <ul class="cite">
+                  <li><a href="https://www.theguardian.com/cities/2014/dec/09/symbolic-simplicity-mexico-city-metro-signs-lance-wyman" target="_blank" rel="noopener">The Guardian, "The symbolic simplicity of Mexico City's metro signs"</a></li>
+                  <li><a href="https://www.creativereview.co.uk/lance-wyman-and-the-mexico-city-metro/" target="_blank" rel="noopener">Creative Review, "Lance Wyman and the Mexico City Metro"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="tokyo">
+              <figure class="system-shot">
+                <img src="/images/design-system/tokyo.jpg" alt="A Tokyo Metro nameboard at Kanda with the green line circle and the station number G13" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:TokyoMetro-G13-Kanda-station-sign-20170907-170454.jpg" target="_blank" rel="noopener">LERK</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Tokyo</span><span>2004–2016</span></p>
+              <h4>Tokyo Metro and JR East</h4>
+              <p class="system-idea">A number is found faster than a name.</p>
+              <p class="system-took"><b>What we took</b> A line badge with a number, read before the station's name.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Tokyo Metro and Toei numbered their stations from April 1, 2004: one letter per line in the line's color, two digits per station. JR East followed on August 20, 2016, starting at Meguro (JY22) on the Yamanote Line.</p>
+                <ul class="cite">
+                  <li><a href="https://www.mlit.go.jp/kisha/kisha03/08/080919_.html" target="_blank" rel="noopener">MLIT, "東京の地下鉄の路線名及び駅名の記号・番号による表示について" (2003)</a></li>
+                  <li><a href="https://www.jreast.co.jp/press/2016/tokyo/20160804_t01.pdf" target="_blank" rel="noopener">JR East, "「駅ナンバリング」の導入を開始します" (PDF, 2016)</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="taipei">
+              <figure class="system-shot">
+                <img src="/images/design-system/taipei.jpg" alt="A black direction sign at Zhongshan station with line colors and station codes" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Taipei_Zhongshan_Station_direction_sign_board_20221018.jpg" target="_blank" rel="noopener">S8321414</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Taipei</span><span>2014</span></p>
+              <h4>Taipei Metro</h4>
+              <p class="system-idea">A code can carry a station across languages.</p>
+              <p class="system-took"><b>What we took</b> A line letter and a station number, read before the name.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Station numbering went network-wide with the opening of the Songshan Line on November 15, 2014. Each line code starts with the first letter of its color name in English — G for Green — so a traveler who reads neither Chinese nor English can still find the station.</p>
+                <ul class="cite">
+                  <li><a href="https://english.dorts.gov.taipei/News_Content.aspx?n=AF4EFB28D5FB6F78&amp;s=57C63AF5DC255A0E" target="_blank" rel="noopener">Taipei DORTS, "Taipei MRT signage system design elements and content"</a></li>
+                  <li><a href="https://structurae.net/en/structures/songshan-metro-station-green-line" target="_blank" rel="noopener">Structurae, "Songshan Metro Station (Green Line)"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="singapore">
+              <figure class="system-shot">
+                <img src="/images/design-system/singapore.jpg" alt="The Beauty World station sign with the MRT symbol and the code DT5" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Label_of_Beauty_World_MRT_station_in_Singapore.jpg" target="_blank" rel="noopener">Skirtick</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Singapore</span><span>2019–2020</span></p>
+              <h4>Singapore MRT</h4>
+              <p class="system-idea">A sign should work before the words do.</p>
+              <p class="system-took"><b>What we took</b> Color, number and symbol first; the name in the reader's own language.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>LTA's signage system made its debut with the first stage of the Thomson–East Coast Line in January 2020, after a three-year review. It relies on colors, numbers and symbols so that language and eyesight are less of a barrier. Station names appear in Singapore's four official languages.</p>
+                <ul class="cite">
+                  <li><a href="https://www.lta.gov.sg/content/ltagov/en/getting_around/public_transport/a_better_public_transport_experience/wayfinding.html" target="_blank" rel="noopener">LTA, "Wayfinding"</a></li>
+                  <li><a href="https://www.mddi.gov.sg/newsroom/pq-on-guidelines-on-vernacular-languages-for-signs-pa-systems/" target="_blank" rel="noopener">MDDI, parliamentary reply on vernacular languages for wayfinding signs</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="delhi">
+              <figure class="system-shot">
+                <img src="/images/design-system/delhi.jpg" alt="The platform at Karkardooma station, with platform screen doors" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Platform_of_Karkardooma_Metro_Station_of_Delhi_Metro%27s_Pink_Line.jpg" target="_blank" rel="noopener">Kool Nerd 123</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Delhi</span><span>since 2002</span></p>
+              <h4>Delhi Metro</h4>
+              <p class="system-idea">Accessibility can be designed in from the first station, not added later.</p>
+              <p class="system-took"><b>What we took</b> Tactile paths, Braille at the lift, low counters: the route works without sight or stairs.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Delhi Metro's first stations were designed for universal access before service began in December 2002, with an access audit at a station still under construction. The ITO station carries the same kit: tactile paths and warning strips at the platform edge, Braille lift buttons inside and out, low ticket counters, wider gates and dedicated toilets.</p>
+                <ul class="cite">
+                  <li><a href="https://docslib.org/doc/9919576/delhi-metro-mobility-for-all-agarwal-anjlee-samarthyam" target="_blank" rel="noopener">Samarthyam, "Delhi Metro: Mobility for All"</a></li>
+                  <li><a href="https://awards.ita-aites.org/images/Proceedings/2017/5-ITO%20Metro%20Station.pdf" target="_blank" rel="noopener">ITA-AITES, "ITO Metro Station, New Delhi" (PDF, 2017)</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="hongkong">
+              <figure class="system-shot">
+                <img src="/images/design-system/hongkong.jpg" alt="The in-car route strip on an MTR South Island Line train, lit dots marking the stops" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:MTR_South_Island_Line_route_map_in_S_Train_17-05-2022.jpg" target="_blank" rel="noopener">LN9267</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Hong Kong</span><span>in-car maps</span></p>
+              <h4>MTR</h4>
+              <p class="system-idea">The journey is shown inside the train, not only on the platform.</p>
+              <p class="system-took"><b>What we took</b> The route strip: passed stops gray, one lit dot for here, the line's color throughout.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>MTR's in-car route maps light the station you are at and the stops ahead, show where and which way to change, and say which side the doors will open.</p>
+                <ul class="cite">
+                  <li><a href="https://filosophy.org/writing/public-transport-usability-in-tokyo-and-hong-kong/" target="_blank" rel="noopener">Filosophy, "Public transport usability in Tokyo and Hong Kong"</a></li>
+                  <li><a href="https://interfaces.institute/whole-systems/mtr-station-colour/" target="_blank" rel="noopener">Interfaces Institute, "Finding a station without reading"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="washington">
+              <figure class="system-shot">
+                <img src="/images/design-system/washington.jpg" alt="The coffered concrete vault over the platforms at Metro Center, a sign pylon below" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Metro_Center_station,_Washington_DC_(18067813195).jpg" target="_blank" rel="noopener">Jeremy Segrott from Cardiff, Wales, UK</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Washington, DC</span><span>1968</span></p>
+              <h4>Washington Metro</h4>
+              <p class="system-idea">Put every sign where the decision is made, and keep the architecture clear.</p>
+              <p class="system-took"><b>What we took</b> The nameboard and the exit directory: information at the point of need, nothing stuck on for decoration.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Harry Weese asked Unimark to keep signs off his vaulted walls, so the system became freestanding pylons. WMATA still uses the Helvetica weight Vignelli specified, and moved to Helvetica Now in 2025.</p>
+                <ul class="cite">
+                  <li><a href="https://www.wmata.com/initiatives/plans-and-projects/wayfinding/wayfinding-faq.html" target="_blank" rel="noopener">WMATA, "Wayfinding design FAQs"</a></li>
+                  <li><a href="https://artsandculture.google.com/story/best-of-design-vignelli-transportation-vignelli-center/lAVRHTuvQppoIQ?hl=en" target="_blank" rel="noopener">Vignelli Center, "Best of Design: Vignelli Transportation"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="sydney">
+              <figure class="system-shot">
+                <img src="/images/design-system/sydney.jpg" alt="Platform screen doors and screens at Victoria Cross station" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Victoria_Cross_railway_station_Sydney_Metro_Platforms_1_and_2_(14_November_2025).jpg" target="_blank" rel="noopener">PEPSI697</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Sydney</span><span>2019</span></p>
+              <h4>Sydney Metro</h4>
+              <p class="system-idea">A metro with no driver has to tell you everything itself.</p>
+              <p class="system-took"><b>What we took</b> Where the train is automated, the sign and the screen carry the reassurance.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Sydney Metro opened on May 26, 2019, as Australia's first fully automated, turn-up-and-go rail service. Its wayfinding was tested with passengers before construction, using 3D models and VR to check sightlines and platform changes; stations use solar e-paper signs for live bus departures.</p>
+                <ul class="cite">
+                  <li><a href="https://www.alstom.com/sites/alstom.com/files/2019/05/25/20190526%20PR%20Sydney%20metro%20revenue%20service%20EN.pdf" target="_blank" rel="noopener">Alstom, "Sydney Metro commences revenue service" (PDF, May 26, 2019)</a></li>
+                  <li><a href="https://dws.hcltech.com/work/sydney-metro-cx/" target="_blank" rel="noopener">DWS, "Sydney Metro: customer experience case study"</a></li>
+                  <li><a href="https://www.visionect.com/blog/sydney-metro/" target="_blank" rel="noopener">Visionect, "Solar-powered urban signs with live departures"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="beijing">
+              <figure class="system-shot">
+                <img src="/images/design-system/beijing.jpg" alt="A Huayuanqiao station sign with the station name in Chinese and English and the next stations below" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Beijing_Subway_-_Huayuanqiao_Station_-_Sign.JPG" target="_blank" rel="noopener">Azylber</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Beijing</span><span>1971</span></p>
+              <h4>Beijing Subway</h4>
+              <p class="system-idea">A name written twice is read by everyone at once.</p>
+              <p class="system-took"><b>What we took</b> Chinese and English together, at the same size and weight.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Work on the first line finished in October 1969; trial passenger service began on January 15, 1971, and the line opened to the public on September 15, 1981, the first metro in mainland China. Beijing’s 2015 municipal standard for urban rail signs says sign text should use Chinese and English together.</p>
+                <ul class="cite">
+                  <li><a href="https://www.beijing.gov.cn/ywdt/gzdt/202410/t20241005_3911383.html" target="_blank" rel="noopener">Beijing Municipal Government, “地铁线路织传奇”</a></li>
+                  <li><a href="https://jtw.beijing.gov.cn/xxgk/flfg/jthy/201912/P020191231388220998778.pdf" target="_blank" rel="noopener">Beijing Municipal Bureau of Quality and Technical Supervision, “公共交通客运标志 第2部分：城市轨道交通” (DB11/T 657.2—2015, PDF)</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="shanghai">
+              <figure class="system-shot">
+                <img src="/images/design-system/shanghai.jpg" alt="A Xintiandi Line 10 platform sign with the line strip and bilingual station names" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:201512_Xintiandi_station_line_10_platform_sign.jpg" target="_blank" rel="noopener">Another Believer</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Shanghai</span><span>1993</span></p>
+              <h4>Shanghai Metro</h4>
+              <p class="system-idea">One strip can say where you are, where you are going and where you have been.</p>
+              <p class="system-took"><b>What we took</b> The current station in the line’s color, the direction ahead, and the stations behind.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Line 1’s first 6.6 km, from Xujiahui to Jinjiang Park, began operating on May 28, 1993. At its 30th anniversary the network was 831 km, 20 lines and 508 stops; the operator called it the largest metro system among cities. SPUR’s 2011 study noted a platform graphic that marks the station you are in red, the direction of travel black and the stations already passed gray; signs were in English and Chinese.</p>
+                <ul class="cite">
+                  <li><a href="https://www.shio.gov.cn/TrueCMS/shxwbgs/voices/content/20230529001820196.htm" target="_blank" rel="noopener">Shanghai Information Office, “Shanghai Metro on the right track after 30 years”</a></li>
+                  <li><a href="https://www.spur.org/publications/urbanist-article/2011-08-15/learning-world-class-transit-system" target="_blank" rel="noopener">SPUR, “Learning From a World-Class Transit System”</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="barcelona">
+              <figure class="system-shot">
+                <img src="/images/design-system/barcelona.jpg" alt="A next-train screen with the L5 line badge in its color and the metro symbol" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:INP_digital_vest%C3%ADbul_Metro_Barcelona.jpg" target="_blank" rel="noopener">Agm</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en/" target="_blank" rel="noopener">CC0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Barcelona</span><span>1924</span></p>
+              <h4>Barcelona Metro</h4>
+              <p class="system-idea">A line can be read three ways at once: by number, by color, by symbol.</p>
+              <p class="system-took"><b>What we took</b> A number and a color for every line, and one mark for the whole system.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>The first section opened on December 30, 1924, when the Gran Metro ran from Catalunya to Lesseps, the embryo of today’s L3. TMB identifies each line by number or color — L1 red, L2 purple, L3 green, L4 yellow, L5 blue — and its red diamond with a white M has long been an icon of the city; the 2023 identity manual calls it a consolidated identity.</p>
+                <ul class="cite">
+                  <li><a href="https://www.tmb.cat/ca/centenari-metro/elements-commemoratius" target="_blank" rel="noopener">TMB, “Elements commemoratius del metro”</a></li>
+                  <li><a href="https://www.tmb.cat/en/business-and-companies/special-services/map-licensing" target="_blank" rel="noopener">TMB, “Map and plan licensing”</a></li>
+                  <li><a href="https://contractaciopublica.cat/portal-api/descarrega-document/300809973/90551FD495CCE1CD36DD60A467FF3F88" target="_blank" rel="noopener">TMB, “Sistema d’identitat corporativa de TMB — Manual reduït” (PDF, 2023)</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="milan">
+              <figure class="system-shot">
+                <img src="/images/design-system/milan.jpg" alt="The red band along the wall at Cairoli station, the station name repeated along it" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Milano_Cairoli_MM.jpg" target="_blank" rel="noopener">Priscilla Jordão</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Milan</span><span>1964</span></p>
+              <h4>Milan Metro</h4>
+              <p class="system-idea">Write the station’s name all along the wall, so every carriage can read it.</p>
+              <p class="system-took"><b>What we took</b> The name repeated where the eye needs it, not left to a single sign.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Line 1 opened on November 1, 1964, with stations by Franco Albini and Franca Helg and signage by Bob Noorda. Noorda ran a colored band along the station walls, red for Line 1 and green for Line 2, and set the station’s name into it, repeated every five meters, so it could be read from every car, even while the train was moving. The project won the Compasso d’Oro in 1964.</p>
+                <ul class="cite">
+                  <li><a href="https://domusweb.it/en/design/2024/08/28/design-improves-lives-the-milan-metro-project-1964.html" target="_blank" rel="noopener">Domus, &quot;The design that changed Milan: the 1964 metro system&quot; (2024)</a></li>
+                  <li><a href="https://www.nssmag.com/en/lifestyle/26694/milano-metro-segnaletica-noorda-albini" target="_blank" rel="noopener">nss magazine, &quot;The history of Milan subway’s signage&quot; (2021)</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <h3 class="world-head">The station as a place</h3>
+
+            <article class="system" data-system="budapest">
+              <figure class="system-shot">
+                <img src="/images/design-system/budapest.jpg" alt="The name Vörösmarty-utcza set in the tiled wall, in an ornamental border" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Budapest,_M1_metr%C3%B3,_V%C3%B6r%C3%B6smarty_utca,_26.jpg" target="_blank" rel="noopener">Random photos 1989</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Budapest</span><span>1896</span></p>
+              <h4>Millennium Underground Railway</h4>
+              <p class="system-idea">The oldest line in the city is still its most ornamental.</p>
+              <p class="system-took"><b>What we took</b> A station can keep its original craft: tiles, ironwork, and a name set into the wall.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Line 1, the Millennium Underground, opened on May 2, 1896, built by Siemens &amp; Halske for the millennial exhibition. It was the first underground railway in continental Europe and the first to run on electric traction from the start. The stations kept their Zsolnay tiles, and in 2002 the line joined Andrássy Avenue on the UNESCO World Heritage list.</p>
+                <ul class="cite">
+                  <li><a href="https://whc.unesco.org/en/list/400/" target="_blank" rel="noopener">UNESCO World Heritage Centre, "Budapest, including the Banks of the Danube, the Buda Castle Quarter and Andrássy Avenue"</a></li>
+                  <li><a href="https://whc.unesco.org/archive/2002/noms/400bis.pdf" target="_blank" rel="noopener">UNESCO, nomination for the 2002 extension (PDF)</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="paris">
+              <figure class="system-shot">
+                <img src="/images/design-system/paris.jpg" alt="The Guimard entrance at Porte Dauphine, cast iron and glass" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Paris_Metro_2_Porte_Dauphine_Libellule.JPG" target="_blank" rel="noopener">Bellomonte</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Paris</span><span>1900–1913</span></p>
+              <h4>Paris Métro</h4>
+              <p class="system-idea">The way in is part of the identity.</p>
+              <p class="system-took"><b>What we took</b> A station page should feel like arriving somewhere: the platform opens before the content.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Hector Guimard's cast-iron and glass entrances gave the Métro its own style. 86 of the 167 built are protected as historic monuments.</p>
+                <ul class="cite">
+                  <li><a href="https://www.ratp.fr/en/discover/heritage/hector-guimard" target="_blank" rel="noopener">RATP, "Do you know Hector Guimard?"</a></li>
+                  <li><a href="https://www.moma.org/collection/works/2393" target="_blank" rel="noopener">MoMA, "Entrance Gate to Paris Subway (Métropolitain) Station"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="buenosaires">
+              <figure class="system-shot">
+                <img src="/images/design-system/buenosaires.jpg" alt="A wooden La Brugeoise car at Primera Junta station on Line A" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:L%C3%ADnea_A,_tren_%22Le_Brugeoise%22_en_la_estaci%C3%B3n_Primera_Junta.(buenos_Aires,_diciembre_2008).jpg" target="_blank" rel="noopener">Cristian O. Arone</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Buenos Aires</span><span>1913</span></p>
+              <h4>Buenos Aires Subte</h4>
+              <p class="system-idea">A metro can begin as a piece of the city's own history.</p>
+              <p class="system-took"><b>What we took</b> The first line keeps its first trains: the ride is part of the identity.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Line A opened on December 1, 1913, between Plaza de Mayo and Plaza Miserere, making Buenos Aires the first city in Latin America with an underground railway. Its Belgian La Brugeoise cars carried passengers until 2013.</p>
+                <ul class="cite">
+                  <li><a href="https://www.argentina.gob.ar/noticias/1-de-diciembre-inauguracion-del-1er-subterraneo-de-bs" target="_blank" rel="noopener">Argentina.gob.ar, "1 de diciembre – Inauguración del 1er. Subterráneo de Bs. As."</a></li>
+                  <li><a href="https://buenosaires.gob.ar/gcaba_historico/jefaturadegabinete/movilidad/subte/nuestra-historia/nuestra-historia/linea-a" target="_blank" rel="noopener">Buenos Aires Ciudad, "Línea A"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="moscow">
+              <figure class="system-shot">
+                <img src="/images/design-system/moscow.jpg" alt="The vaulted, mosaic-lined platform at Mayakovskaya station" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Mayakovskaya,_Moscow_Metro,_2024.jpg" target="_blank" rel="noopener">Safa.daneshvar</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Moscow</span><span>1935–1952</span></p>
+              <h4>Moscow Metro</h4>
+              <p class="system-idea">A station can be public architecture, not a service space.</p>
+              <p class="system-took"><b>What we took</b> The station page as a plate: the name is the architecture, the line is the trim.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>The Metro opened in 1935, conceived as people's palaces. Mayakovskaya (1938) lifted its ceiling into mosaics; Komsomolskaya (1952) is the baroque high point of the Stalinist style.</p>
+                <ul class="cite">
+                  <li><a href="https://www.railway-technology.com/features/moscow-metro-stations/" target="_blank" rel="noopener">Railway Technology, "Moscow Metro stations: the evolving designs of the 'people's palace'"</a></li>
+                  <li><a href="https://unesco.ru/en/news/43-komsomolskaya/" target="_blank" rel="noopener">UNESCO, "The triumph of the Stalinist Empire: Komsomolskaya"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="stockholm">
+              <figure class="system-shot">
+                <img src="/images/design-system/stockholm.jpg" alt="Blue and white leaf murals around the escalators at T-Centralen" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:T_Centralen_January_2015.jpg" target="_blank" rel="noopener">Arild Vågen</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Stockholm</span><span>since 1957</span></p>
+              <h4>Stockholm Metro</h4>
+              <p class="system-idea">Art belongs in the everyday journey.</p>
+              <p class="system-took"><b>What we took</b> A station should have a surface worth looking at; here, the nameboard and the map are the art.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Art is in 94 of the system's 100 stations, across 110 km, by 250 artists. The first work went into T-Centralen in 1957; the cave stations of the 1970s left the bedrock exposed.</p>
+                <ul class="cite">
+                  <li><a href="https://sl.se/en/help-and-contact/the-worlds-longest-art-exhibition" target="_blank" rel="noopener">SL, "The world's longest art exhibition"</a></li>
+                  <li><a href="https://www.architecturaldigest.com/gallery/stockholm-subway" target="_blank" rel="noopener">Architectural Digest, "Stockholm's subway is the world's longest art gallery"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="lisbon">
+              <figure class="system-shot">
+                <img src="/images/design-system/lisbon.jpg" alt="Green and blue azulejo panels at Intendente station" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Azulejos_at_the_Intendente_metro_station_in_Lisbon.jpg" target="_blank" rel="noopener">Cederskjold</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Lisbon</span><span>since 1959</span></p>
+              <h4>Metropolitano de Lisboa</h4>
+              <p class="system-idea">A station wall can be a work of art, not a surface for signs.</p>
+              <p class="system-took"><b>What we took</b> The station page can carry a surface: pattern and color before the text.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>The first stations opened to the public in 1959, and Maria Keil covered them in azulejo, reviving a Portuguese tradition. She was almost the only artist in the network until the early 1970s; from 1991 the program opened to many national and international artists.</p>
+                <ul class="cite">
+                  <li><a href="https://www.metrolisboa.pt/viver/arte-nas-estacoes/" target="_blank" rel="noopener">Metropolitano de Lisboa, "Arte nas estações"</a></li>
+                  <li><a href="https://gulbenkian.pt/dacosta/bibliographies/arte-publica-no-metro-de-lisboa-public-art-in-lisbon-underground-art-publique-dans-le-metro-de-lisbonne/" target="_blank" rel="noopener">Gulbenkian, "Arte Pública no Metro de Lisboa" (catalog record)</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="montreal">
+              <figure class="system-shot">
+                <img src="/images/design-system/montreal.jpg" alt="The orange platform and escalators at Lionel-Groulx station" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Station_Lionel-Groulx_-_177.jpg" target="_blank" rel="noopener">Jeangagnon</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Montreal</span><span>1966</span></p>
+              <h4>Montreal Métro</h4>
+              <p class="system-idea">No two stations need the same room.</p>
+              <p class="system-took"><b>What we took</b> Each station can have its own architecture, and a work of art made for it.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>The Métro was planned in the early 1960s with a different architect for every station and artworks throughout. A 1963 proposal to set aside part of each station's construction budget for art was ahead of its time; Quebec's 1% policy later made it standard. The collection now runs past ninety works.</p>
+                <ul class="cite">
+                  <li><a href="https://ici.radio-canada.ca/nouvelle/578519/metro-art-histoire" target="_blank" rel="noopener">Radio-Canada, "Le métro de Montréal : galerie d'art souterraine"</a></li>
+                  <li><a href="https://www.stm.info/en/press/news/2022/new-artwork-unveiled-at-prefontaine-station" target="_blank" rel="noopener">STM, "New artwork unveiled at Préfontaine station"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="cairo">
+              <figure class="system-shot">
+                <img src="/images/design-system/cairo.jpg" alt="The old Cairo station entrance, with a red M on the wall" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Cairo_Metro_Station_in_Old_Cairo,_Egypt.jpg" target="_blank" rel="noopener">Diego Delso</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Cairo</span><span>1987</span></p>
+              <h4>Cairo Metro</h4>
+              <p class="system-idea">The first metro in a region can wear the city's own face.</p>
+              <p class="system-took"><b>What we took</b> One mark on the wall can be enough; a station does not need a kit of signs.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Line 1 began service in 1987 between Helwan and Ramses, 29 km, making Cairo the first city in Africa and the Arab world with a metro. The line now runs 44 km to New El Marg. The entrance in Old Cairo carries a single red M.</p>
+                <ul class="cite">
+                  <li><a href="https://cairometro.gov.eg/en/operations/1" target="_blank" rel="noopener">Cairo Metro, "First line"</a></li>
+                  <li><a href="https://www.systra.com/en/project/cairo-metro-egypt/" target="_blank" rel="noopener">SYSTRA, "Cairo Metro – Egypt"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="dubai">
+              <figure class="system-shot">
+                <img src="/images/design-system/dubai.jpg" alt="The interior of Al Ras station, its ceiling lit in warm tones" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Dubai_Metro_Al_Ras_station.JPG" target="_blank" rel="noopener">Adbar</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Dubai</span><span>2009</span></p>
+              <h4>Dubai Metro</h4>
+              <p class="system-idea">A driverless network can still give every station a theme.</p>
+              <p class="system-took"><b>What we took</b> A station can belong to one of a few elements and still be one system.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>The Red Line opened on September 9, 2009, and every train runs without a driver; RTA describes the network as the world's largest fully automated metro. Station interiors follow four themes — air, earth, fire and water — each with its own palette.</p>
+                <ul class="cite">
+                  <li><a href="https://www.rta.ae/links/rta-e-brochures/RTA-Metro-Tram-guide-en.pdf" target="_blank" rel="noopener">RTA, "Dubai Metro &amp; Tram guide" (PDF)</a></li>
+                  <li><a href="https://gulfconstructiononline.com/Article/369673/rta-unveils-metro-interior-designs" target="_blank" rel="noopener">Gulf Construction, "RTA unveils Metro interior designs"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="vienna">
+              <figure class="system-shot">
+                <img src="/images/design-system/vienna.jpg" alt="Otto Wagner’s Karlsplatz Stadtbahn pavilion above the U-Bahn station" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Karlsplatz_Stadtbahn_Station_von_Otto_Wagner_1.JPG" target="_blank" rel="noopener">böhringer friedrich</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/at/" target="_blank" rel="noopener">CC BY-SA 3.0 AT</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Vienna</span><span>1978</span></p>
+              <h4>Vienna U-Bahn</h4>
+              <p class="system-idea">A new line can reuse the stations the city already loves.</p>
+              <p class="system-took"><b>What we took</b> Keep the old building; let the new service run through it.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Vienna’s first underground line, U1, opened on February 25, 1978, between Karlsplatz and Reumannplatz. The U4 runs on Otto Wagner’s Stadtbahn; eight of its stations keep their historic appearance almost 130 years after they were built, and Schönbrunn and Stadtpark are fully preserved.</p>
+                <ul class="cite">
+                  <li><a href="https://www.wienerlinien.at/web/wl-en/120-years-of-public-transport-in-vienna" target="_blank" rel="noopener">Wiener Linien, “120 years of public transport in Vienna”</a></li>
+                  <li><a href="https://presse.wien.gv.at/kategoriennavigation/-/asset_publisher/zraFORwNk9Zp/content/40-jahre-u-bahn-die-u4-von-der-stadtbahn-zur-u-bahn?inheritRedirect=false" target="_blank" rel="noopener">City of Vienna, “40 Jahre U-Bahn: Die U4 – von der Stadtbahn zur U-Bahn”</a></li>
+                  <li><a href="https://www.moderne.wien.info/en/experiment/otto-wagner" target="_blank" rel="noopener">WienTourismus, “Otto Wagner”</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="riyadh">
+              <figure class="system-shot">
+                <img src="/images/design-system/riyadh.jpg" alt="King Abdullah Financial District station, its white lattice shell beside the elevated track, towers behind" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Riyadh_Metro_(2024).jpg" target="_blank" rel="noopener">Saudi Press Agency (SPA)</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Riyadh</span><span>2024</span></p>
+              <h4>Riyadh Metro</h4>
+              <p class="system-idea">A new network can open whole, with its busiest interchange as a landmark.</p>
+              <p class="system-took"><b>What we took</b> The interchanges get a stronger mark than the stops around them.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>King Salman inaugurated the network on November 27, 2024, and its six lines, 176 km with 85 stops, opened between December 1, 2024, and January 5, 2025. Every train runs driverless, and every stop has platform doors. At King Abdullah Financial District, where the Blue, Yellow and Purple lines meet, Zaha Hadid Architects wrapped the interchange in a lattice of opposing sine waves that echoes the patterns desert winds leave in sand.</p>
+                <ul class="cite">
+                  <li><a href="https://www.urban-transport-magazine.com/en/officially-inaugurated-a-complete-new-network-of-metro-lines-for-riyadh/" target="_blank" rel="noopener">Urban Transport Magazine, &quot;Officially inaugurated: A complete new network of metro lines for Riyadh&quot; (2024)</a></li>
+                  <li><a href="https://www.zaha-hadid.com/architecture/king-abdullah-financial-district-metro-station/" target="_blank" rel="noopener">Zaha Hadid Architects, &quot;King Abdullah Financial District (KAFD) Metro Station&quot;</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="melbourne">
+              <figure class="system-shot">
+                <img src="/images/design-system/melbourne.jpg" alt="Trams outside Flinders Street Station in Melbourne" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Flinders_Street_Station_Melbourne_March_2021_with_trams.jpg" target="_blank" rel="noopener">Gracchus250</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Melbourne</span><span>1885</span></p>
+              <h4>Melbourne trams</h4>
+              <p class="system-idea">The street can be the network.</p>
+              <p class="system-took"><b>What we took</b> A stop belongs to the street it stands in.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Melbourne’s trams date from 1885. Today they are the world’s largest operational tram network: more than 250 kilometers of double track across 24 routes, running on roads shared with the traffic around them.</p>
+                <ul class="cite">
+                  <li><a href="https://www.transdev.com/en/reference/yarra-trams" target="_blank" rel="noopener">Transdev, &quot;Yarra Trams: the world’s largest light rail network&quot;</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <h3 class="world-head">One look, everywhere</h3>
+
+            <article class="system" data-system="sbb">
+              <figure class="system-shot">
+                <img src="/images/design-system/sbb.jpg" alt="A double-sided Swiss railway clock on a platform at Brienz" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Double-sided_Railway_Station_Clock_at_Brienz_Railway_Station_SBB,_Zentralbahn,_Br%C3%BCnig_line_2026.jpg" target="_blank" rel="noopener">Christoph 2021</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Switzerland</span><span>1944–1980</span></p>
+              <h4>Swiss Federal Railways</h4>
+              <p class="system-idea">One clock and one grid can hold a multilingual country together.</p>
+              <p class="system-took"><b>What we took</b> One grid for every page, and signs that work before the words do.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>Hans Hilfiker's station clock was standardized in 1944; its face was redrawn in 1952 and the 1955 version is still in use. From 1978, Josef Müller-Brockmann and Peter Spalinger built SBB's information system on a simple grid, with Helvetica and pictograms.</p>
+                <ul class="cite">
+                  <li><a href="https://old.eguide.ch/en/objekt/sbb-bahnhofsuhr/" target="_blank" rel="noopener">Museum für Gestaltung Zürich, "SBB Bahnhofsuhr"</a></li>
+                  <li><a href="https://old.eguide.ch/en/objekt/sbb/" target="_blank" rel="noopener">Museum für Gestaltung Zürich, "SBB CFF FFS visual information system"</a></li>
+                  <li><a href="https://blog.nationalmuseum.ch/en/2022/09/the-iconic-swiss-station-clock/" target="_blank" rel="noopener">Swiss National Museum, "The iconic Swiss station clock"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="berlin">
+              <figure class="system-shot">
+                <img src="/images/design-system/berlin.jpg" alt="A Bülowstraße U-Bahn nameboard above wooden benches" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:B%C3%BClowstra%C3%9Fe_U-Bahn_station_interior_with_name_sign.jpg" target="_blank" rel="noopener">Taejo</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Berlin</span><span>1990–1994</span></p>
+              <h4>Berliner Verkehrsbetriebe</h4>
+              <p class="system-idea">A divided network, reunited, can be given one voice.</p>
+              <p class="system-took"><b>What we took</b> One color for the city, one typeface for every sign.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>In the early 1990s, after the Wall, BVG and MetaDesign gave the two halves of the network one identity: yellow, and FF Transit, a sans serif drawn by MetaDesign after Frutiger, for every sign and notice. The work is documented in the book Berlin ist Gelb.</p>
+                <ul class="cite">
+                  <li><a href="https://www.german-design-council.de/design-perspectives/artikel-detail/berlin-ist-gelb-oder-der-schoenste-job-meines-lebens" target="_blank" rel="noopener">German Design Council, "Berlin Ist Gelb – Oder: Der Schönste Job meines Lebens"</a></li>
+                  <li><a href="https://www.typografie.info/3/hausschriften.html/berliner-verkehrsbetriebe-bvg-r50/" target="_blank" rel="noopener">Typografie.info, "Welche Hausschrift benutzt Berliner Verkehrsbetriebe (BVG)?"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="db">
+              <figure class="system-shot">
+                <img src="/images/design-system/db.jpg" alt="A Barmbek S-Bahn name sign with the S1 line badge" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:S-Bahn-Schild_Barmbek.jpg" target="_blank" rel="noopener">Alexander Svensson</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Germany</span><span>2005</span></p>
+              <h4>Deutsche Bahn</h4>
+              <p class="system-idea">A railway can speak in one typeface, from the platform to the timetable.</p>
+              <p class="system-took"><b>What we took</b> One sans serif for every voice, in three weights only.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>DB Type arrived in 2005. DB Sans, drawn by Christian Schwartz with Erik Spiekermann, carried signs, timetables, advertising and the in-train magazine; DB Neo began replacing it in 2021.</p>
+                <ul class="cite">
+                  <li><a href="https://www.christianschwartz.com/dbsans.shtml" target="_blank" rel="noopener">Christian Schwartz, "DB Sans"</a></li>
+                  <li><a href="https://fontsinuse.com/typefaces/159400/db-sans" target="_blank" rel="noopener">Fonts In Use, "DB Sans"</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="toronto">
+              <figure class="system-shot">
+                <img src="/images/design-system/toronto.jpg" alt="The word KENNEDY in large letters on a station wall" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Kennedy_station_name_post_renovation.jpg" target="_blank" rel="noopener">Transportfan70</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Toronto</span><span>1954</span></p>
+              <h4>Toronto Subway</h4>
+              <p class="system-idea">One typeface and one colored circle can carry a whole system.</p>
+              <p class="system-took"><b>What we took</b> A single sans serif for every sign, with the line’s color beside its number.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>The Yonge subway opened on March 30, 1954, Canada’s first subway. The TTC’s 2023 signage standards make Swiss 721 BT the primary typeface and give each line a number and a color — Line 1 yellow, Line 2 green, Line 4 purple — with colored circles as the second identifier.</p>
+                <ul class="cite">
+                  <li><a href="https://www.ttc.ca/transparency-and-accountability/Operating-Statistics/operating-statistics-2014/60-years-yonge" target="_blank" rel="noopener">TTC, “60 Years Yonge”</a></li>
+                  <li><a href="https://www.toronto.ca/legdocs/mmis/2025/ttc/bgrd/backgroundfile-258834.pdf" target="_blank" rel="noopener">TTC, “Signage and Wayfinding Standards” (PDF, November 2023)</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="vancouver">
+              <figure class="system-shot">
+                <img src="/images/design-system/vancouver.jpg" alt="A next-train screen at Edmonds station listing Expo Line trains beside the line&#x27;s blue" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Edmonds_platform_level_(2).jpg" target="_blank" rel="noopener">Northwest</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Vancouver</span><span>1985</span></p>
+              <h4>SkyTrain</h4>
+              <p class="system-idea">Give every service one color, and never let it change.</p>
+              <p class="system-took"><b>What we took</b> One fixed color per line, repeated on every map, sign and screen.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>SkyTrain opened on December 11, 1985, as the world’s first fully automated, driverless metro; its original line was named the Expo Line as a legacy of Expo 86. TransLink gives each service one color everywhere — Expo blue, Millennium yellow, Canada teal — so the color itself tells you what you are looking at.</p>
+                <ul class="cite">
+                  <li><a href="https://news.hitachirail.com/hitachi-rail-celebrates-40-years-of-seltrac-signalling-technology-on-vancouver-skytrain" target="_blank" rel="noopener">Hitachi Rail, “40 Years of SelTrac signalling technology on Vancouver SkyTrain”</a></li>
+                  <li><a href="https://buzzer.translink.ca/2015/12/skytrain-turns-30-today-whaaaaaat/" target="_blank" rel="noopener">The Buzzer, “SkyTrain turns 30 today!”</a></li>
+                  <li><a href="https://buzzer.translink.ca/2018/02/translink-wayfinding-101-story-of-the-t/" target="_blank" rel="noopener">The Buzzer, “TransLink Wayfinding 101: story of the T”</a></li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="system" data-system="boston">
+              <figure class="system-shot">
+                <img src="/images/design-system/boston.jpg" alt="A T sign at Haymarket station, a bus and the city behind it" width="1000" height="667" loading="lazy" decoding="async" />
+                <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:MBTA_route_92_bus_at_Haymarket_station,_July_2019.JPG" target="_blank" rel="noopener">Pi.1415926535</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, via Wikimedia Commons</figcaption>
+              </figure>
+              <p class="system-top"><span>Boston</span><span>1965</span></p>
+              <h4>MBTA</h4>
+              <p class="system-idea">One letter can stand for the whole system.</p>
+              <p class="system-took"><b>What we took</b> One mark for the network, and a color for each line, chosen for how it reads.</p>
+              <details>
+                <summary>More, and the sources</summary>
+                <p>In 1965 the MBTA unveiled a color for each of its rapid-transit lines, the work of the design firm Cambridge Seven Associates, with all seven of its founders on the project. The colors were chosen for how they looked before they were given to lines; the familiar stories of Harvard’s crimson and the harbor are not entirely true. The firm found that many European systems were branded with a single letter and none in the United States had used a T, so Boston got the T.</p>
+                <ul class="cite">
+                  <li><a href="https://www.wgbh.org/news/local/2022-12-07/how-did-the-mbta-train-lines-get-their-colors" target="_blank" rel="noopener">GBH News, &quot;How did the MBTA train lines get their colors?&quot; (2022)</a></li>
+                  <li><a href="https://www.cambridgeseven.com/about/news/cambridgesevens-work-is-on-display-at-boston-new-york-exhibitions/" target="_blank" rel="noopener">CambridgeSeven, &quot;CambridgeSeven’s work is on display at Boston, New York exhibitions&quot; (2023)</a></li>
+                </ul>
+              </details>
+            </article>
+
+
+          </div>
+          </div>
+        </div>
+      </section>
+      </div>
+
+      <footer class="foot">
+        <p>Cultural Center · Exit A · Design Studio · rogerluo.org</p>
+        <p><a href="/#/station/cultural">← Back to Cultural Center</a></p>
+      </footer>
+    </main>
+
+  </body>
+</html>

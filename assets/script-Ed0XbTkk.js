@@ -1,0 +1,1 @@
+var e=[`hans`,`hant`,`ja`],t=`hans`;try{let n=localStorage.getItem(`script`);e.includes(n)&&(t=n)}catch{}var n=new Set,r=()=>t,i=e=>{t=e;try{localStorage.setItem(`script`,e)}catch{}n.forEach(t=>t(e))},a=e=>n.add(e),o=()=>({hans:`zh-Hans`,hant:`zh-Hant`,ja:`ja`})[t],s=e=>(t===`ja`?e?.ja:e?.zh?.[t])??``;export{s as a,i,a as n,r,o as t};
